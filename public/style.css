@@ -90,9 +90,13 @@ body {
   color: var(--primary) !important;
 }
 
-.btn-primary {
-  background-color: var(--primary);
+.btn {
   outline: none;
   box-shadow: none;
   font-weight: 800;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary);
 }
