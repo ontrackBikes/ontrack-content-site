@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Dynamic SEO (JS will replace) -->
+    <title>Bike Rentals in Bangalore | Ontrack</title>
+    <meta
+      name="description"
+      content="Affordable bike rentals in Bangalore with zero deposit."
+    />
+    <link rel="canonical" href="https://on-track.in/" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+      <div class="container py-3">
+        <a class="navbar-brand" href="/">
+          <img src="/images/ontrack-logo.png" alt="Ontrack" width="120" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#ontrackNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="ontrackNavbar">
+          <ul
+            class="navbar-nav ms-auto align-items-lg-center gap-lg-4 mt-3 mt-lg-0"
+          >
+            <li class="nav-item f-gb">
+              <a
+                class="nav-link"
+                href="https://book.on-track.in/two-wheeler-rental/models"
+                >Our Fleet</a
+              >
+            </li>
+            <li class="nav-item f-gb">
+              <a class="nav-link" href="#whyus">Why Us?</a>
+            </li>
+            <li class="nav-item f-gb">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item f-gb">
+              <a
+                href="https://book.on-track.in/two-wheeler-rental/models"
+                class="btn btn-primary btn-lg"
+              >
+                Book Now
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="py-5 bg-light">
+      <div class="container text-center">
+        <h1 class="display-5 fw-bold" id="pageTitle">
+          Monthly Bike Rental in Bangalore
+        </h1>
+        <p class="text-secondary">
+          Zero deposit • Unlimited KM • Free Maintenance
+        </p>
+      </div>
+    </section>
+
+    <!-- VEHICLE LIST -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4" id="vehicleList"></div>
+      </div>
+    </section>
+
+    <script>
+      /* ---------------------------------
+     1. Extract location from URL
+     --------------------------------- */
+
+      const path = window.location.pathname;
+      // bike-rentals-in-koramangala-bangalore
+      const match = path.match(/bike-rentals-in-(.*)-bangalore/);
+
+      const locationSlug = match ? match[1] : "bangalore";
+      const locationName =
+        locationSlug.charAt(0).toUpperCase() + locationSlug.slice(1);
+
+      /* ---------------------------------
+     2. Dynamic SEO
+     --------------------------------- */
+
+      const titleText = `Bike Rentals in ${locationName}, Bangalore | Ontrack`;
+
+      document.title = titleText;
+      document.getElementById(
+        "pageTitle"
+      ).innerText = `Monthly Bike Rental in ${locationName}, Bangalore`;
+
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          "content",
+          `Rent bikes monthly in ${locationName}, Bangalore with zero deposit. Unlimited KM, free maintenance & insurance.`
+        );
+
+      document
+        .querySelector('link[rel="canonical"]')
+        .setAttribute("href", `https://on-track.in${path}`);
+
+      /* ---------------------------------
+     3. API call with location
+     --------------------------------- */
+
+      const API_URL = `https://glacier.on-track.in/api/model/list`;
+
+      const BOOKING_BASE_URL = "https://book.on-track.in/model-display";
+
+      fetch(API_URL)
+        .then((res) => res.json())
+        .then((data) => {
+          const list = document.getElementById("vehicleList");
+
+          if (!data || data.length === 0) {
+            list.innerHTML =
+              "<p class='text-center text-muted'>No vehicles available</p>";
+            return;
+          }
+
+          data.forEach((model) => {
+            const col = document.createElement("div");
+            col.className = "col-lg-3 col-md-6";
+
+            col.innerHTML = `
+          <div class="card h-100 shadow-sm rounded-4">
+            <img src="${model.image || "images/bike-placeholder.png"}"
+                 class="card-img-top rounded-top-4"
+                 alt="${model.name}" />
+
+            <div class="card-body">
+              <h5 class="card-title">${model.name}</h5>
+              <p class="text-secondary small mb-3">
+                Starting from ₹${model.price || "--"} / month
+              </p>
+
+              <a href="${BOOKING_BASE_URL}/${model.id}/${model.linkName}"
+                 class="btn btn-primary w-100">
+                Rent Now
+              </a>
+            </div>
+          </div>
+        `;
+            list.appendChild(col);
+          });
+        })
+        .catch(() => {
+          document.getElementById("vehicleList").innerHTML =
+            "<p class='text-center text-danger'>Unable to load vehicles</p>";
+        });
+    </script>
+  </body>
+</html>

@@ -1,10 +1,32 @@
 {
   "hosting": {
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "/contact",
+        "destination": "/contact.html"
+      },
+      {
+        "source": "/monthly-bike-rental-in-bangalore",
+        "destination": "/monthly-bike-rental-in-bangalore.html"
+      },
+      {
+        "source": "/bike-rental-near-me-in-bangalore",
+        "destination": "/monthly-bike-rental-in-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**",
+        "destination": "/bike-rentals.html"
+      },
+      {
+        "source": "/how-it-works",
+        "destination": "/how-it-works.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   }
 }
