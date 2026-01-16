@@ -1,0 +1,230 @@
+body {
+  font-family: "Gilroy", sans-serif;
+  color: #111;
+}
+
+/* =========================
+   COLORS
+========================= */
+:root {
+  --primary: #7968f6;
+  --orange: #ff7a00;
+  --gray: #6b7280;
+}
+
+/* =========================
+   HELPERS
+========================= */
+.text-orange {
+  color: var(--orange);
+}
+.text-primary {
+  color: var(--primary) !important;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-primary {
+  background: var(--primary);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-outline-primary {
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero-badge {
+  background: #ececff;
+  color: var(--primary);
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.hero-title {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero-desc {
+  max-width: 480px;
+  color: var(--gray);
+}
+
+/* =========================
+   QUALITY SECTION
+========================= */
+
+.quality-title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.quality-title span {
+  color: var(--primary);
+}
+
+.quality-text {
+  max-width: 480px;
+  color: var(--gray);
+}
+
+/* OEM LOGOS */
+.oem-box {
+  background: #f3f3f3;
+  border-radius: 10px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.oem-box img {
+  max-height: 28px;
+}
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+.why-choose-section {
+  padding: 80px 0;
+  border-top: 3px solid var(--orange);
+}
+
+.why-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.why-card {
+  background: #f3f3f3;
+  border-radius: 8px;
+  padding: 24px 22px 28px;
+  height: 100%;
+}
+
+.why-card-header {
+  background: var(--orange);
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 4px;
+  margin: -24px -22px 16px;
+}
+
+.why-card h6 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.why-card p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* =========================
+   REWARD SECTION
+========================= */
+.reward-section {
+  padding: 70px 0;
+  background: #f5f5f5;
+}
+
+.reward-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.reward-title span {
+  color: var(--primary);
+}
+
+.reward-img {
+  max-width: 260px;
+}
+/* =========================
+   APP DOWNLOAD SECTION
+========================= */
+
+.app-wrap {
+  background: var(--primary);
+  padding: 40px 0;
+}
+
+.app-card {
+  background: #f3f3f3;
+  border-radius: 20px;
+  padding: clamp(30px, 5vw, 60px);
+}
+
+.app-title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.app-title span {
+  color: var(--primary);
+}
+
+.store-badge {
+  height: 84px;
+  cursor: pointer;
+}
+
+.app-mockup {
+  max-width: 420px;
+}
+/* =========================
+   FOOTER
+========================= */
+
+.footer-wrap {
+  padding: 30px 0;
+  background: #ffffff;
+}
+
+.footer-logo {
+  height: 84px;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #333;
+  max-width: 320px;
+  line-height: 1.6;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-social i {
+  cursor: pointer;
+}
+.stat-icon {
+  width: 34px;
+  height: 34px;
+  background: #ff7a00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+}
