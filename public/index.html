@@ -1,86 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Basic -->
     <meta charset="UTF-8" />
-    <title>Ontrack – Monthly Bike Rentals</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO Title -->
+    <title>
+      Monthly Bike Rentals in Bengaluru | Zero Deposit Two-Wheeler Rentals –
+      Ontrack
+    </title>
+
+    <!-- SEO Description -->
+    <meta
+      name="description"
+      content="Rent bikes in Bengaluru with zero security deposit. Monthly bike rentals with unlimited kilometers, free maintenance, insurance included & EV options. Trusted since 2016."
+    />
+
+    <!-- SEO Keywords (still useful for internal & long-tail) -->
+    <meta
+      name="keywords"
+      content="monthly bike rentals bengaluru, bike rent bangalore, zero deposit bike rental, two wheeler rental bengaluru, EV bike rental bangalore, ontrack bikes"
+    />
+
+    <!-- Author -->
+    <meta name="author" content="Ontrack Technologies Pvt Ltd" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://on-track.in/" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Monthly Bike Rentals in Bengaluru | Zero Deposit – Ontrack"
+    />
+    <meta
+      property="og:description"
+      content="Zero deposit monthly bike rentals in Bengaluru. Unlimited KM, free maintenance, insurance & EV options. Download the Ontrack App today."
+    />
+    <meta property="og:url" content="https://on-track.in/" />
+    <meta
+      property="og:image"
+      content="https://on-track.in/images/og-banner.jpg"
+    />
+    <meta property="og:site_name" content="Ontrack" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Zero Deposit Monthly Bike Rentals in Bengaluru – Ontrack"
+    />
+    <meta
+      name="twitter:description"
+      content="Affordable monthly bike rentals with unlimited kilometers, free service & insurance. Serving Bengaluru since 2016."
+    />
+    <meta
+      name="twitter:image"
+      content="https://on-track.in/images/og-banner.jpg"
+    />
+
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
+    <!-- Bootstrap Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
       rel="stylesheet"
     />
 
+    <!-- Scroll Animations (AOS) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Performance: Preconnect -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   </head>
-  <body class="fs-6">
+
+  <body class="f-gm">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 800,
+        easing: "ease-out-cubic",
+      });
+    </script>
+
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-white py-3">
-      <div class="container">
-        <!-- LOGO -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+      <div class="container py-3">
         <a class="navbar-brand" href="/">
-          <img
-            src="images/images-removebg-preview.png"
-            alt="Ontrack"
-            style="height: 76px; width: 80px"
-          />
+          <img src="images/ontrack-logo.png" alt="Ontrack" width="120" />
         </a>
 
-        <!-- TOGGLER (MOBILE) -->
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#ontrackNavbar"
-          aria-controls="ontrackNavbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- MENU -->
         <div class="collapse navbar-collapse" id="ontrackNavbar">
           <ul
             class="navbar-nav ms-auto align-items-lg-center gap-lg-4 mt-3 mt-lg-0"
           >
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://book.on-track.in/two-wheeler-rental/models"
-              >
-                Our Fleet
-              </a>
+            <li class="nav-item f-gm">
+              <a class="nav-link" href="#">Our Fleet</a>
             </li>
-
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://book.on-track.in/help-and-support/frequently-asked-questions/rentals"
-              >
-                About Us
-              </a>
+            <li class="nav-item f-gm">
+              <a class="nav-link" href="#">About Us</a>
             </li>
-
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://book.on-track.in/account/help-and-support"
-              >
-                Contact
-              </a>
+            <li class="nav-item f-gm">
+              <a class="nav-link" href="#">Contact</a>
             </li>
-
-            <li class="nav-item">
-              <button
-                class="btn btn-primary ms-lg-3 w-100 w-lg-auto"
-                onclick="window.location.href='https://book.on-track.in/two-wheeler-rental/models'"
-              >
+            <li class="nav-item f-gm">
+              <a href="#" class="btn btn-primary ms-lg-3 w-100 w-lg-auto">
                 Book Now
-              </button>
+              </a>
             </li>
           </ul>
         </div>
@@ -88,363 +140,316 @@
     </nav>
 
     <!-- HERO -->
-    <section class="container py-5">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <span class="hero-badge" style="font-size: clamp(12px, 1.5vw, 14px)"
-            >Serving Bengaluru since 2016</span
-          >
-          <h1 class="hero-title mt-3">
-            monthly bike rentals with<br />
-            <span class="text-orange">zero deposit</span>
-          </h1>
-          <p class="hero-desc mt-3">
-            Empowering gig workers and professionals with flexible monthly bike
-            rentals. Unlimited kms, free maintenance, and insurance included.
-          </p>
-
-          <div class="d-flex gap-3 mt-4">
-            <button
-              onclick="window.location.href='https://book.on-track.in/two-wheeler-rental/models'"
-              class="btn btn-primary"
-            >
-              Rent Now
-            </button>
-            <button
-              onclick="window.location.href='https://play.google.com/store/apps/details?id=com.ontrack.ontrack&hl=en'"
-              class="btn btn-outline-primary"
-            >
-              Download App
-            </button>
-          </div>
-
-          <div
-            class="d-flex align-items-center gap-3 mt-4 text-muted"
-            style="font-size: clamp(12px, 1.5vw, 14px)"
-          >
-            <span class="d-flex align-items-center gap-1">
-              <i class="bi bi-infinity"></i>
-              Unlimited KM
+    <section class="py-5 fs-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="badge bg-light text-primary f-gb">
+              Serving Bengaluru Since 2016
             </span>
 
-            <span class="d-flex align-items-center gap-1">
-              <i class="bi bi-tools"></i>
-              Free Maintenance
-            </span>
+            <h1 class="display-4 f-gxb mt-3">
+              monthly bike rentals with
+              <span class="text-orange">zero deposit</span>
+            </h1>
 
-            <span class="d-flex align-items-center gap-1">
-              <i class="bi bi-shield-check"></i>
-              Insurance Included
-            </span>
-          </div>
-        </div>
-
-        <div class="col-lg-6 text-center">
-          <img src="images/banner_image.svg" class="img-fluid rounded-4" />
-          <div class="trust-box mt-3"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- STATS (single line, shrinking) -->
-    <section class="py-4 bg-light">
-      <div class="container">
-        <div
-          class="d-flex justify-content-between align-items-center"
-          style="font-size: clamp(11px, 1.6vw, 14px)"
-        >
-          <div class="d-flex justify-content-between gap-2 align-items-center">
-            <div class="stat-icon">
-              <i class="bi bi-calendar-check"></i>
-            </div>
-            <div>
-              <div class="fw-bold" style="font-size: clamp(18px, 0vw, 28px)">
-                10+
-              </div>
-              <div>Years of Trust</div>
-            </div>
-          </div>
-
-          <div class="d-flex justify-content-between gap-2 align-items-center">
-            <div class="stat-icon">
-              <i class="bi bi-people-fill"></i>
-            </div>
-            <div>
-              <div class="fw-bold" style="font-size: clamp(18px, 0vw, 28px)">
-                35,000+
-              </div>
-              <div>Happy Riders</div>
-            </div>
-          </div>
-
-          <div class="d-flex justify-content-between gap-2 align-items-center">
-            <div class="stat-icon">
-              <i class="bi bi-bicycle"></i>
-            </div>
-            <div>
-              <div class="fw-bold" style="font-size: clamp(18px, 0vw, 28px)">
-                1,000+
-              </div>
-              <div>Active Fleet</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- QUALITY -->
-    <!-- QUALITY SECTION -->
-    <section class="container py-5">
-      <div class="row align-items-center g-5">
-        <!-- LEFT: IMAGE + OEM LOGOS -->
-        <div class="col-lg-6">
-          <!-- Main Image -->
-          <img
-            src="images/workshop.png"
-            alt="Ontrack Workshop"
-            class="img-fluid rounded-4 mb-4"
-          />
-
-          <!-- OEM Logos -->
-          <div class="row g-3">
-            <div class="col-4">
-              <div class="oem-box">
-                <img src="images/oem/honda.png" alt="Honda" />
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="oem-box">
-                <img src="images/oem/tvs.png" alt="TVS" />
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="oem-box">
-                <img src="images/oem/bajaj.png" alt="Bajaj" />
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="oem-box">
-                <img src="images/oem/hero.png" alt="Hero" />
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="oem-box">
-                <img src="images/oem/suzuki.png" alt="Suzuki" />
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="oem-box">
-                <img src="images/oem/aprilia.png" alt="Aprilia" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- RIGHT: TEXT -->
-        <div class="col-lg-6">
-          <h2 class="quality-title mb-3">
-            <span>zero</span> compromise <br />
-            with <span class="text-primary">quality</span>
-          </h2>
-
-          <p class="quality-text">
-            At Ontrack, quality comes first. That’s why we offer only 2-wheelers
-            from trusted OEMs like Honda, Hero, Bajaj and TVS—with zero
-            compromise on reliability.
-          </p>
-
-          <p class="quality-text">
-            Every Ontrack bike is serviced at our in-house workshops by
-            experienced technicians, strictly as per OEM standards—so you ride
-            with complete peace of mind.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- EV & PETROL -->
-    <section class="container py-5 border-top">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <h2 class="fw-bold">
-            <span class="text-success">ev</span> and petrol
-          </h2>
-          <p class="text-muted">
-            We offer both EVs and petrol 2-wheelers, so you can ride the way you
-            prefer.
-          </p>
-          <p class="text-muted">
-            Choose between reliable petrol bikes or switch to electric.
-          </p>
-          <p class="text-success fw-semibold">
-            EVs are also available for weekly rentals.
-          </p>
-        </div>
-        <div class="col-lg-6 text-center">
-          <img src="images/ev&petrol-bike.png" class="img-fluid me-3" />
-          <!-- <img src="images/petrol-bike.png" class="img-fluid" /> -->
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY CHOOSE US -->
-    <section class="why-choose-section">
-      <div class="container">
-        <!-- Heading -->
-        <div class="text-center mb-5">
-          <h2 class="why-title">Why Riders Choose Us</h2>
-          <p class="fs-6 text-secondary">
-            Designed for the modern workforce. We eliminate the hassles of bike
-            ownership.
-          </p>
-        </div>
-
-        <!-- Cards -->
-        <div class="row g-4">
-          <div class="col-lg-4 col-md-6">
-            <div class="why-card">
-              <div class="why-card-header">Zero Security Deposit</div>
-              <h6>Simply said, we trust you.</h6>
-              <p>
-                Pay only the rental amount and start riding. No hidden charges
-                or large deposits.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="why-card">
-              <div class="why-card-header">Free Maintenance</div>
-              <h6>One Free Service Per Month</h6>
-              <p>
-                Don’t worry, we also do additional service for a nominal fee of
-                ₹450.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="why-card">
-              <div class="why-card-header">Insurance</div>
-              <h6>Comprehensive Insurance</h6>
-              <p>
-                Ride peacefully, all our bikes comes with insurance coverage.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="why-card">
-              <div class="why-card-header">Unlimited Kilometer</div>
-              <h6>No Meter Watching</h6>
-              <p>
-                Ride as much as you want without worrying about extra kilometer
-                charges.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="why-card">
-              <div class="why-card-header">No-Lock In</div>
-              <h6>True Flexibility</h6>
-              <p>
-                We never ask for any minimum commitment apart from the first
-                month rentals.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="why-card">
-              <div class="why-card-header">Road Side Assistance</div>
-              <h6>Breakdown Happens</h6>
-              <p>
-                We work with multiple RSA providers for round the clock help in
-                emergency.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- REWARD POINTS SECTION -->
-    <section class="reward-section">
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- LEFT CONTENT -->
-          <div class="col-lg-7">
-            <h3 class="reward-title">
-              10% Reward Rate – <span>Ontrack Points</span>
-            </h3>
-
-            <p>
-              Rewards by Ontrack makes every ride more rewarding. Pay through
-              the Ontrack App and earn 10% back as Ontrack Points on every
-              payment. Use your points to rent a bike or while extending an
-              existing booking—pay up to 10% of your bill using points.
+            <p class="text-secondary mt-3">
+              Flexible monthly bike rentals with unlimited kms, free maintenance
+              and insurance included.
             </p>
 
-            <p>
-              You can also earn rewards by referring friends to Ontrack and
-              getting Ontrack Points every time they rent a bike.
-            </p>
+            <div class="d-flex gap-3 mt-4 flex-wrap">
+              <a href="#" class="btn btn-primary">Rent Now</a>
+              <a href="#" class="btn btn-outline-primary">Download App</a>
+            </div>
+
+            <div class="d-flex gap-4 mt-4 text-secondary small flex-wrap fs-6">
+              <span><i class="bi bi-infinity me-1"></i>Unlimited KM</span>
+              <span><i class="bi bi-tools me-1"></i>Free Maintenance</span>
+              <span><i class="bi bi-shield-check me-1"></i>Insurance</span>
+            </div>
           </div>
 
-          <!-- RIGHT IMAGE -->
-          <div class="col-lg-5 text-center">
+          <div class="col-lg-6 text-center">
             <img
-              src="images/reward-box.png"
-              alt="Ontrack Rewards"
-              class="img-fluid reward-img"
+              width="100%"
+              src="images/banner_image.svg"
+              alt="Hero Image"
+              class="img-fluid rounded-4"
             />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- APP -->
-    <!-- APP DOWNLOAD SECTION -->
-    <section class="app-wrap">
+    <!-- STATS -->
+    <section class="bg-light py-4 fs-5">
       <div class="container">
-        <div class="app-card">
-          <div class="row align-items-center g-4">
-            <!-- LEFT CONTENT -->
-            <div class="col-lg-6">
-              <h2 class="app-title">
-                Manage your <br />
-                <span>rental on the go</span>
-              </h2>
+        <div class="row text-center g-4">
+          <div class="col-4">
+            <i class="bi bi-calendar-check fs-5 text-primary"></i>
+            <div class="f-gm fs-5 mt-1">10+</div>
+            <div class="small text-secondary">Years of Trust</div>
+          </div>
+          <div class="col-4">
+            <i class="bi bi-people-fill fs-5 text-primary"></i>
+            <div class="f-gm fs-5 mt-1">35,000+</div>
+            <div class="small text-secondary">Happy Riders</div>
+          </div>
+          <div class="col-4">
+            <i class="bi bi-bicycle fs-5 text-primary"></i>
+            <div class="f-gm fs-5 mt-1">1,000+</div>
+            <div class="small text-secondary">Active Fleet</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-              <p class="text-secondary">
-                Download the Ontrack app to book rides, schedule maintenance,
-                make payments, and get 24/7 support right from your pocket.
-              </p>
+    <!-- QUALITY -->
+    <section class="py-5 fs-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <img
+              src="images/zero_compromise.svg"
+              alt="Workshop"
+              class="img-fluid rounded-4 mb-4"
+            />
+          </div>
 
-              <div class="d-flex gap-3 flex-wrap">
-                <img
-                  onclick="window.location.href='https://play.google.com/store/apps/details?id=com.ontrack.ontrack&hl=en'"
-                  src="images/google-play-badge-logo.svg"
-                  alt="Google Play"
-                  class="store-badge"
-                />
-                <img
-                  onclick="window.location.href='https://apps.apple.com/in/app/ontrack-bike-rentals-rto/id1433908606'"
-                  src="images/on-the-app-store-apple-logo.svg"
-                  alt="App Store"
-                  class="store-badge"
-                />
+          <div class="col-lg-6">
+            <h1 class="display-5 f-gb mt-3">
+              Zero compromise with
+              <span class="text-primary">quality</span>
+            </h1>
+
+            <p class="text-secondary">
+              At Ontrack, quality comes first. That’s why we offer only
+              2-wheelers from trusted OEMs like Honda, Hero, Bajaj and TVS—with
+              zero compromise on reliability. <br />
+              <br />
+              Every Ontrack bike is serviced at our in-house workshops by
+              experienced technicians, strictly as per OEM standards—so you ride
+              with complete peace of mind.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 fs-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <h1 class="display-5 f-gb mt-3">
+              <span class="text-success">ev</span> and petrol
+            </h1>
+
+            <p class="text-secondary">
+              We offer both EVs and petrol 2-wheelers, so you can ride the way
+              you prefer. <br />
+
+              Choose from reliable petrol bikes or switch to electric. <br />
+              <br />
+
+              <span class="text-success f-gm"
+                >EVs are also available for weekly rentals.
+              </span>
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <img
+              src="images/ev_and_petrol.svg"
+              alt="Workshop"
+              class="img-fluid rounded-4 mb-4"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE -->
+    <section class="py-5 bg-light fs-5">
+      <div class="container">
+        <!-- Heading -->
+        <div class="text-center mb-5">
+          <h1 class="display-5 f-gb mt-3">Why Riders Choose Us</h1>
+          <p class="text-secondary">
+            Designed for the modern workforce. We eliminate the hassles of bike
+            ownership.
+          </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="h-100 card rounded-4 bg-light overflow-hidden">
+              <div class="bg-orange text-white text-center f-gb py-2">
+                Zero Security Deposit
+              </div>
+              <div class="p-4 text-center">
+                <p class="f-gb">Simply said, we trust you.</p>
+                <p class="text-secondary mb-0 fs-6">
+                  Pay only the rental amount and start riding. No hidden charges
+                  or large deposits.
+                </p>
               </div>
             </div>
+          </div>
 
-            <!-- RIGHT IMAGE -->
-            <div class="col-lg-6 text-center">
-              <img
-                src="images/app-mockup.png"
-                alt="Ontrack App"
-                class="img-fluid app-mockup"
-              />
+          <!-- Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="h-100 card rounded-4 bg-light overflow-hidden">
+              <div class="bg-orange text-white text-center f-gb py-2">
+                Free Maintenance
+              </div>
+              <div class="p-4 text-center">
+                <p class="f-gb">One Free Service Per Month</p>
+                <p class="text-secondary mb-0 fs-6">
+                  Don’t worry, we also do additional service for a nominal fee
+                  of ₹450.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="h-100 card rounded-4 bg-light overflow-hidden">
+              <div class="bg-orange text-white text-center f-gb py-2">
+                Insurance
+              </div>
+              <div class="p-4 text-center">
+                <p class="f-gb">Comprehensive Insurance</p>
+                <p class="text-secondary mb-0 fs-6">
+                  Ride peacefully, all our bikes comes with insurance coverage.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="h-100 card rounded-4 bg-light overflow-hidden">
+              <div class="bg-orange text-white text-center f-gb py-2">
+                Unlimited Kilometer
+              </div>
+              <div class="p-4 text-center">
+                <p class="f-gb">No Meter Watching</p>
+                <p class="text-secondary mb-0 fs-6">
+                  Ride as much as you want without worrying about extra
+                  kilometer charges.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="h-100 card rounded-4 bg-light overflow-hidden">
+              <div class="bg-orange text-white text-center f-gb py-2">
+                No-Lock In
+              </div>
+              <div class="p-4 text-center">
+                <p class="f-gb">True Flexibility</p>
+                <p class="text-secondary mb-0 fs-6">
+                  We never ask for any minimum commitment apart from the first
+                  month rentals.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="h-100 card rounded-4 bg-light overflow-hidden">
+              <div class="bg-orange text-white text-center f-gb py-2">
+                Road Side Assistance
+              </div>
+              <div class="p-4 text-center">
+                <p class="f-gb">Breakdown Happens</p>
+                <p class="text-secondary mb-0 fs-6">
+                  We work with multiple RSA providers for round the clock help
+                  in emergency.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 fs-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-8">
+            <h1 class="display-5 f-gb mt-3">
+              10% Reward Rate - <span class="text-primary">Ontrack Points</span>
+            </h1>
+
+            <p class="text-secondary">
+              Rewards by Ontrack makes every ride more rewarding. Pay through
+              the Ontrack App and earn 10% back as Ontrack Points on every
+              payment. Use your points to rent a bike or while extending an
+              existing booking—pay up to 10% of your bill using points.
+              <br />
+              <br />
+              You can also earn rewards by referring friends to Ontrack and
+              getting Ontrack Points every time they rent a bike.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <img
+              src="images/reward.svg"
+              alt="Workshop"
+              class="img-fluid rounded-4 mb-4"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 fs-5 bg-primary">
+      <div class="container">
+        <div class="card rounded-4">
+          <div class="container p-4">
+            <div class="row align-items-center g-5">
+              <div class="col-lg-8">
+                <h1 class="display-5 f-gb mt-3">
+                  Manage your
+                  <span class="text-primary">rental</span> on the go
+                </h1>
+
+                <p class="text-secondary">
+                  Download the Ontrack app to book rides, schedule maintenance,
+                  make payments, and get 24/7 support right from your pocket.
+                </p>
+
+                <div class="row align-items-center">
+                  <div class="col-lg-3 col-6">
+                    <img
+                      src="images/google-play-badge-logo.svg"
+                      alt="Workshop"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="col-lg-3 col-6">
+                    <img
+                      src="images/on-the-app-store-apple-logo.svg"
+                      alt="Workshop"
+                      class="img-fluid"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <img
+                  src="images/app_image.svg"
+                  alt="Workshop"
+                  class="img-fluid rounded-4 mb-4"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -452,121 +457,51 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer-wrap">
+    <footer class="py-5 border-top fs-5">
       <div class="container">
         <div class="row gy-4">
-          <!-- LEFT -->
           <div class="col-lg-4">
-            <img
-              src="images/images-removebg-preview.png"
-              alt="Ontrack"
-              class="footer-logo"
-            />
-
-            <p class="footer-text">
-              Bengaluru’s most trusted two-wheeler rental service since 2016.
+            <img src="images/ontrack-logo.png" width="140" />
+            <p class="text-secondary small mt-2">
+              Bengaluru's most trusted two-wheeler rental service since 2016.
               Making mobility accessible, affordable, and hassle-free for
               everyone.
             </p>
-
-            <div class="d-flex gap-3 mt-3 footer-social">
-              <a
-                class="text-secondary"
-                href="https://www.linkedin.com/company/ontrack-technologies-private-limited/posts/?feedView=all"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <i class="bi bi-linkedin"></i>
-              </a>
-
-              <a
-                class="text-secondary"
-                href="https://www.instagram.com/ontrackbikes/?hl=en"
-                aria-label="Instagram"
-              >
-                <i class="bi bi-instagram"></i>
-              </a>
-
-              <a
-                class="text-secondary"
-                href="https://www.facebook.com/ontrackBikes/"
-                aria-label="Facebook"
-              >
-                <i class="bi bi-facebook"></i>
-              </a>
-
-              <a
-                class="text-secondary"
-                href="https://x.com/tweetsbyontrack"
-                aria-label="Twitter X"
-              >
-                <i class="bi bi-twitter-x"></i>
-              </a>
-            </div>
           </div>
 
-          <!-- LEARN MORE -->
-          <div class="col-lg-2 col-md-4">
-            <h6 class="footer-title">learn more</h6>
-            <ul class="list-unstyled footer-links">
-              <li>
-                <a
-                  href="https://book.on-track.in/help-and-support/frequently-asked-questions/rentals"
-                  >frequently asked questions</a
-                >
-              </li>
-              <li>
-                <a href="https://book.on-track.in/two-wheeler-services/blogs"
-                  >blog</a
-                >
-              </li>
-              <!-- <li><a href="#">careers</a></li>
-              <li><a href="#">press and media</a></li> -->
+          <div class="col-md-4 col-lg-2 col-4">
+            <p class="f-gm">Learn More</p>
+            <ul class="list-unstyled small">
+              <li><a href="#" class="text-secondary">FAQs</a></li>
+              <li><a href="#" class="text-secondary">Blog</a></li>
             </ul>
           </div>
 
-          <!-- POLICIES -->
-          <div class="col-lg-2 col-md-4">
-            <h6 class="footer-title">policies</h6>
-            <ul class="list-unstyled footer-links">
-              <li>
-                <a
-                  href="https://book.on-track.in/help-and-support/terms-and-conditions"
-                  >terms & conditions</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://book.on-track.in/help-and-support/privacy-policy"
-                  >privacy policy</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://book.on-track.in/help-and-support/disclaimer-policy"
-                  >disclaimer policy</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://book.on-track.in/help-and-support/copyright-guidelines"
-                  >copyright guidelines</a
-                >
-              </li>
+          <div class="col-md-4 col-lg-2 col-4">
+            <p class="f-gm">Policies</p>
+            <ul class="list-unstyled small">
+              <li><a href="#" class="text-secondary">Terms</a></li>
+              <li><a href="#" class="text-secondary">Privacy</a></li>
             </ul>
           </div>
 
-          <!-- CONTACT -->
-          <div class="col-lg-2 col-md-4">
-            <h6 class="footer-title">get in touch</h6>
-            <ul class="list-unstyled footer-links">
-              <li><a href="mailto:info@on-track.in">info@on-track.in</a></li>
-              <li><a href="tel:914858401">914858401</a></li>
+          <div class="col-md-4 col-lg-2 col-4">
+            <p class="f-gm">Contact</p>
+            <ul class="list-unstyled small">
+              <li>
+                <a href="mailto:info@on-track.in" class="text-secondary"
+                  >info@on-track.in</a
+                >
+              </li>
+              <li>
+                <a href="tel:914858401" class="text-secondary">914858401</a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
