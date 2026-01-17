@@ -68,6 +68,11 @@ body {
   font-family: "Gilroy Heavy", sans-serif !important;
 }
 
+.container {
+  max-width: 1140px !important;
+  margin: auto;
+}
+
 /* =========================
    COLORS
 ========================= */
