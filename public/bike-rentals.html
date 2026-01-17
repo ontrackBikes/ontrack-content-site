@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <!-- Dynamic SEO (JS will replace) -->
     <title>Bike Rentals in Bangalore | Ontrack</title>
     <meta
@@ -10,7 +9,6 @@
       content="Affordable bike rentals in Bangalore with zero deposit."
     />
     <link rel="canonical" href="https://on-track.in/" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap -->
@@ -24,8 +22,9 @@
       rel="stylesheet"
     />
 
+    <!-- after bootstrap -->
+    <base href="/" />
     <link rel="stylesheet" href="/style.css" />
-    <!-- Favicon -->
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
   </head>
 
@@ -155,7 +154,7 @@
 
             col.innerHTML = `
           <div class="card h-100 shadow-sm rounded-4">
-            <img src="${model.image || "images/bike-placeholder.png"}"
+            <img src="${model.image || "/images/bike-placeholder.png"}"
                  class="card-img-top rounded-top-4"
                  alt="${model.name}" />
 
