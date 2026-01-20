@@ -36,6 +36,374 @@
         "destination": "/faq.html"
       },
       {
+        "source": "/bike-rentals-unlimited-km-bangalore",
+        "destination": "/bike-rentals-unlimited-km-bangalore.html"
+      },
+
+      {
+        "source": "/bike-rentals-in-**/rent-bajaj-ct-100-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-ct-100-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-navi-bangalore",
+        "destination": "/bike-rentals/rent-honda-navi-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-dio-bangalore",
+        "destination": "/bike-rentals/rent-honda-dio-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-suzuki-access-125-bangalore",
+        "destination": "/bike-rentals/rent-suzuki-access-125-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-activa-5G-bangalore",
+        "destination": "/bike-rentals/rent-honda-activa-5G-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-activa-bangalore",
+        "destination": "/bike-rentals/rent-honda-activa-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-aprilia-sr-150-bangalore",
+        "destination": "/bike-rentals/rent-aprilia-sr-150-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-bajaj-pulsar-150-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-pulsar-150-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-bajaj-avenger-150-street-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-avenger-150-street-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-bajaj-avenger-220-cruise-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-avenger-220-cruise-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-cb-hornet-bangalore",
+        "destination": "/bike-rentals/rent-honda-cb-hornet-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-aviator-bangalore",
+        "destination": "/bike-rentals/rent-honda-aviator-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-TVS-sport-bangalore",
+        "destination": "/bike-rentals/rent-TVS-sport-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-TVS-Jupiter-bangalore",
+        "destination": "/bike-rentals/rent-TVS-Jupiter-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-Hero-Maestro-bangalore",
+        "destination": "/bike-rentals/rent-Hero-Maestro-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/hero-duet-bangalore",
+        "destination": "/bike-rentals/hero-duet-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-hero-destini-bangalore",
+        "destination": "/bike-rentals/rent-hero-destini-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-hero-pleasure-bangalore",
+        "destination": "/bike-rentals/rent-hero-pleasure-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-bajaj-CT110-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-CT110-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-bajaj-CT100VI-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-CT100VI-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-hero-hf-100",
+        "destination": "/bike-rentals/rent-hero-hf-100.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-hero-hf-100-2023",
+        "destination": "/bike-rentals/rent-hero-hf-100-2023.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-hero-xoomLX-110CC",
+        "destination": "/bike-rentals/rent-hero-xoomLX-110CC.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-activa-6g",
+        "destination": "/bike-rentals/rent-honda-activa-6g.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-hero-hf-100-2024",
+        "destination": "/bike-rentals/rent-hero-hf-100-2024.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-shine-2024",
+        "destination": "/bike-rentals/rent-honda-shine-2024.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-hero-xoomLX-110CC - 2024",
+        "destination": "/bike-rentals/rent-hero-xoomLX-110CC - 2024.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-dio-2024-bangalore",
+        "destination": "/bike-rentals/rent-honda-dio-2024-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-dio-2025-bangalore",
+        "destination": "/bike-rentals/rent-honda-dio-2025-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-activa-ev-bangalore",
+        "destination": "/bike-rentals/rent-honda-activa-ev-bangalore.html"
+      },
+
+      {
+        "source": "/bike-rentals-in-**/rent-bajaj-ct-100-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-ct-100-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-navi-bangalore",
+        "destination": "/bike-rentals/rent-honda-navi-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-dio-bangalore",
+        "destination": "/bike-rentals/rent-honda-dio-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-suzuki-access-125-bangalore",
+        "destination": "/bike-rentals/rent-suzuki-access-125-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-activa-5G-bangalore",
+        "destination": "/bike-rentals/rent-honda-activa-5G-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-activa-bangalore",
+        "destination": "/bike-rentals/rent-honda-activa-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-aprilia-sr-150-bangalore",
+        "destination": "/bike-rentals/rent-aprilia-sr-150-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-bajaj-pulsar-150-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-pulsar-150-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-bajaj-avenger-150-street-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-avenger-150-street-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-bajaj-avenger-220-cruise-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-avenger-220-cruise-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-cb-hornet-bangalore",
+        "destination": "/bike-rentals/rent-honda-cb-hornet-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-aviator-bangalore",
+        "destination": "/bike-rentals/rent-honda-aviator-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-TVS-sport-bangalore",
+        "destination": "/bike-rentals/rent-TVS-sport-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-TVS-Jupiter-bangalore",
+        "destination": "/bike-rentals/rent-TVS-Jupiter-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-Hero-Maestro-bangalore",
+        "destination": "/bike-rentals/rent-Hero-Maestro-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/hero-duet-bangalore",
+        "destination": "/bike-rentals/hero-duet-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-hero-destini-bangalore",
+        "destination": "/bike-rentals/rent-hero-destini-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-hero-pleasure-bangalore",
+        "destination": "/bike-rentals/rent-hero-pleasure-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-bajaj-CT110-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-CT110-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-bajaj-CT100VI-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-CT100VI-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-hero-hf-100",
+        "destination": "/bike-rentals/rent-hero-hf-100.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-hero-hf-100-2023",
+        "destination": "/bike-rentals/rent-hero-hf-100-2023.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-hero-xoomLX-110CC",
+        "destination": "/bike-rentals/rent-hero-xoomLX-110CC.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-activa-6g",
+        "destination": "/bike-rentals/rent-honda-activa-6g.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-hero-hf-100-2024",
+        "destination": "/bike-rentals/rent-hero-hf-100-2024.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-shine-2024",
+        "destination": "/bike-rentals/rent-honda-shine-2024.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-hero-xoomLX-110CC - 2024",
+        "destination": "/bike-rentals/rent-hero-xoomLX-110CC - 2024.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-dio-2024-bangalore",
+        "destination": "/bike-rentals/rent-honda-dio-2024-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-dio-2025-bangalore",
+        "destination": "/bike-rentals/rent-honda-dio-2025-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals-in-**/rent-honda-activa-ev-bangalore",
+        "destination": "/bike-rentals/rent-honda-activa-ev-bangalore.html"
+      },
+
+      {
+        "source": "/bike-rentals/rent-bajaj-ct-100-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-ct-100-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-honda-navi-bangalore",
+        "destination": "/bike-rentals/rent-honda-navi-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-honda-dio-bangalore",
+        "destination": "/bike-rentals/rent-honda-dio-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-suzuki-access-125-bangalore",
+        "destination": "/bike-rentals/rent-suzuki-access-125-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-honda-activa-5G-bangalore",
+        "destination": "/bike-rentals/rent-honda-activa-5G-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-honda-activa-bangalore",
+        "destination": "/bike-rentals/rent-honda-activa-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-aprilia-sr-150-bangalore",
+        "destination": "/bike-rentals/rent-aprilia-sr-150-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-bajaj-pulsar-150-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-pulsar-150-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-bajaj-avenger-150-street-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-avenger-150-street-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-bajaj-avenger-220-cruise-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-avenger-220-cruise-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-honda-cb-hornet-bangalore",
+        "destination": "/bike-rentals/rent-honda-cb-hornet-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-honda-aviator-bangalore",
+        "destination": "/bike-rentals/rent-honda-aviator-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-TVS-sport-bangalore",
+        "destination": "/bike-rentals/rent-TVS-sport-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-TVS-Jupiter-bangalore",
+        "destination": "/bike-rentals/rent-TVS-Jupiter-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-Hero-Maestro-bangalore",
+        "destination": "/bike-rentals/rent-Hero-Maestro-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/hero-duet-bangalore",
+        "destination": "/bike-rentals/hero-duet-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-hero-destini-bangalore",
+        "destination": "/bike-rentals/rent-hero-destini-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-hero-pleasure-bangalore",
+        "destination": "/bike-rentals/rent-hero-pleasure-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-bajaj-CT110-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-CT110-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-bajaj-CT100VI-bangalore",
+        "destination": "/bike-rentals/rent-bajaj-CT100VI-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-hero-hf-100",
+        "destination": "/bike-rentals/rent-hero-hf-100.html"
+      },
+      {
+        "source": "/bike-rentals/rent-hero-hf-100-2023",
+        "destination": "/bike-rentals/rent-hero-hf-100-2023.html"
+      },
+      {
+        "source": "/bike-rentals/rent-hero-xoomLX-110CC",
+        "destination": "/bike-rentals/rent-hero-xoomLX-110CC.html"
+      },
+      {
+        "source": "/bike-rentals/rent-honda-activa-6g",
+        "destination": "/bike-rentals/rent-honda-activa-6g.html"
+      },
+      {
+        "source": "/bike-rentals/rent-hero-hf-100-2024",
+        "destination": "/bike-rentals/rent-hero-hf-100-2024.html"
+      },
+      {
+        "source": "/bike-rentals/rent-honda-shine-2024",
+        "destination": "/bike-rentals/rent-honda-shine-2024.html"
+      },
+      {
+        "source": "/bike-rentals/rent-hero-xoomLX-110CC - 2024",
+        "destination": "/bike-rentals/rent-hero-xoomLX-110CC - 2024.html"
+      },
+      {
+        "source": "/bike-rentals/rent-honda-dio-2024-bangalore",
+        "destination": "/bike-rentals/rent-honda-dio-2024-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-honda-dio-2025-bangalore",
+        "destination": "/bike-rentals/rent-honda-dio-2025-bangalore.html"
+      },
+      {
+        "source": "/bike-rentals/rent-honda-activa-ev-bangalore",
+        "destination": "/bike-rentals/rent-honda-activa-ev-bangalore.html"
+      },
+
+      {
         "source": "**",
         "destination": "/index.html"
       }
