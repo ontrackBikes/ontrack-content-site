@@ -18,10 +18,18 @@
       h3 {
         margin-top: 1.5em;
       }
+      .cover {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 24px;
+      }
     </style>
   </head>
   <body>
     <article>
+      <img src="{{cover}}" alt="{{title}}" class="cover" />
       <h1>{{title}}</h1>
       <p><small>{{date}} · {{author}}</small></p>
       <hr />
