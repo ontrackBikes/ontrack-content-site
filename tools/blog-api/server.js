@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const { marked } = require("marked");
 const multer = require("multer");
+const cors = require("cors");
 
 // Folder to store uploaded images
 const storage = multer.diskStorage({
