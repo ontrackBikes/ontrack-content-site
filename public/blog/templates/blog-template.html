@@ -5,6 +5,11 @@
     <title>{{title}}</title>
     <meta name="description" content="{{description}}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <base href="/" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+
     <style>
       body {
         font-family: system-ui, sans-serif;
@@ -28,6 +33,51 @@
     </style>
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+      <div class="container py-3">
+        <a class="navbar-brand" href="/">
+          <img src="../../images/ontrack-logo.png" alt="Ontrack" width="120" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#ontrackNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="ontrackNavbar">
+          <ul
+            class="navbar-nav ms-auto align-items-lg-center gap-lg-4 mt-3 mt-lg-0"
+          >
+            <li class="nav-item f-gb">
+              <a
+                class="nav-link"
+                href="https://book.on-track.in/two-wheeler-rental/models"
+                >Our Fleet</a
+              >
+            </li>
+            <li class="nav-item f-gb">
+              <a class="nav-link" href="#whyus">Why Us?</a>
+            </li>
+            <li class="nav-item f-gb">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="https://book.on-track.in/two-wheeler-rental/models"
+                class="btn btn-primary btn-lg"
+              >
+                Book Now
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <article>
       <img src="{{cover}}" alt="{{title}}" class="cover" />
       <h1>{{title}}</h1>
