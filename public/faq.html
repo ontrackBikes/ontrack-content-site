@@ -1,21 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FAQ - Ontrack Bike Rentals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
+    <!-- SEO TITLE -->
+    <title>
+      Bike Rental FAQs in Bangalore | Ontrack Bike & Scooter Rentals
+    </title>
+
+    <!-- SEO META DESCRIPTION -->
+    <meta
+      name="description"
+      content="Get answers to all your bike rental questions in Bangalore. Learn about pricing, documents, zero deposit, cancellation policy, and support at Ontrack Bike Rentals."
+    />
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://on-track.in/faq.html" />
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Bike Rental FAQs in Bangalore | Ontrack"
+    />
+    <meta
+      property="og:description"
+      content="Frequently asked questions about bike rentals in Bangalore. Zero deposit, flexible plans, trusted service since 2016."
+    />
+    <meta property="og:url" content="https://on-track.in/faq.html" />
+    <meta
+      property="og:image"
+      content="https://on-track.in/images/ontrack-og.jpg"
+    />
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Bike Rental FAQs in Bangalore | Ontrack"
+    />
+    <meta
+      name="twitter:description"
+      content="All your bike rental questions answered. Pricing, documents, policies & support."
+    />
+
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <!-- Bootstrap Icons -->
+    <!-- Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+
+    <base href="/" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- WEBSITE SCHEMA -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Ontrack Bike Rentals",
+        "url": "https://on-track.in/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://on-track.in/faq.html?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- BREADCRUMB SCHEMA -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://on-track.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "FAQs",
+            "item": "https://on-track.in/faq.html"
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body class="bg-light">
@@ -65,344 +146,303 @@
       </div>
     </nav>
 
-    <!-- HERO -->
-    <section
-      class="text-center text-white py-5"
-      style="background: linear-gradient(135deg, #4e44d8, #6b5fe0)"
-    >
-      <div class="container">
-        <h1 class="display-5 fw-bold">Frequently Asked Questions</h1>
-        <p class="lead mb-0">
-          Everything you need to know about renting bikes with Ontrack
-        </p>
-      </div>
-    </section>
-
     <!-- CONTENT -->
-    <section class="py-5">
+    <main class="py-5">
       <div class="container" style="max-width: 900px">
-        <!-- STATS -->
-        <div class="row text-center g-4 mb-5">
-          <div class="col-6 col-md-3">
-            <div class="bg-white rounded-4 p-4 shadow-sm">
-              <h3 class="fw-bold text-primary mb-1">23+</h3>
-              <small class="text-muted">Questions Answered</small>
+        <h2 class="fw-bold mb-4 text-center">
+          Frequently Asked Questions – Ontrack Bike Rentals
+        </h2>
+
+        <p class="text-muted text-center mb-5">
+          Renting a bike or scooter in Bangalore? Find all answers about zero
+          deposit, rental charges, documents required, cancellation policy and
+          customer support.
+        </p>
+
+        <div class="accordion mb-5" id="faqAccordion">
+          <section itemscope itemtype="https://schema.org/FAQPage">
+            <div class="accordion" id="faqAccordion">
+              <!-- FAQ 1 -->
+              <div
+                class="accordion-item"
+                itemscope
+                itemprop="mainEntity"
+                itemtype="https://schema.org/Question"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#how-do-i-get-a-bike-on-rent"
+                  >
+                    <span itemprop="name">How do I get a bike on rent?</span>
+                  </button>
+                </h2>
+                <div
+                  id="how-do-i-get-a-bike-on-rent"
+                  class="accordion-collapse collapse"
+                >
+                  <div
+                    class="accordion-body"
+                    itemscope
+                    itemprop="acceptedAnswer"
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <p itemprop="text">
+                      To get a bike on rent from Ontrack, sign up or log in on
+                      our website, select your preferred bike model, choose your
+                      rental duration, and complete the online payment. For
+                      assistance, our customer support team is always available.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 2 -->
+              <div
+                class="accordion-item"
+                itemscope
+                itemprop="mainEntity"
+                itemtype="https://schema.org/Question"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2"
+                  >
+                    <span itemprop="name">Is there any security deposit?</span>
+                  </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse">
+                  <div
+                    class="accordion-body"
+                    itemscope
+                    itemprop="acceptedAnswer"
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <p itemprop="text">
+                      No, Ontrack offers bike rentals with
+                      <strong>zero security deposit</strong>. You only pay the
+                      rental amount shown during checkout.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 3 -->
+              <div
+                class="accordion-item"
+                itemscope
+                itemprop="mainEntity"
+                itemtype="https://schema.org/Question"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq3"
+                  >
+                    <span itemprop="name"
+                      >Do you accept cash for bike rentals?</span
+                    >
+                  </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse">
+                  <div
+                    class="accordion-body"
+                    itemscope
+                    itemprop="acceptedAnswer"
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <p itemprop="text">
+                      No. Ontrack accepts only online payments to ensure a
+                      secure and cashless rental experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 4 -->
+              <div
+                class="accordion-item"
+                itemscope
+                itemprop="mainEntity"
+                itemtype="https://schema.org/Question"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq4"
+                  >
+                    <span itemprop="name">
+                      Can I rent a bike with a learner’s driving license?
+                    </span>
+                  </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse">
+                  <div
+                    class="accordion-body"
+                    itemscope
+                    itemprop="acceptedAnswer"
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <p itemprop="text">
+                      No. A valid and original MVWG or MVWOG driving license is
+                      mandatory. Learner’s licenses are not accepted for safety
+                      reasons.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 5 -->
+              <div
+                class="accordion-item"
+                itemscope
+                itemprop="mainEntity"
+                itemtype="https://schema.org/Question"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq5"
+                  >
+                    <span itemprop="name"
+                      >What documents are required to rent a bike?</span
+                    >
+                  </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse">
+                  <div
+                    class="accordion-body"
+                    itemscope
+                    itemprop="acceptedAnswer"
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <p itemprop="text">
+                      You must submit a signed photocopy of your valid driving
+                      license (MVWG or MVWOG) and one government-issued ID such
+                      as Aadhaar, Passport, or PAN card.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 6 -->
+              <div
+                class="accordion-item"
+                itemscope
+                itemprop="mainEntity"
+                itemtype="https://schema.org/Question"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq6"
+                  >
+                    <span itemprop="name"
+                      >What is your cancellation policy?</span
+                    >
+                  </button>
+                </h2>
+                <div id="faq6" class="accordion-collapse collapse">
+                  <div
+                    class="accordion-body"
+                    itemscope
+                    itemprop="acceptedAnswer"
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <p itemprop="text">
+                      If a booking is cancelled before the scheduled pickup or
+                      delivery time, a convenience fee of 15% of the booking
+                      amount will be charged.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 7 -->
+              <div
+                class="accordion-item"
+                itemscope
+                itemprop="mainEntity"
+                itemtype="https://schema.org/Question"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq7"
+                  >
+                    <span itemprop="name">
+                      Can I use the rented bike for Rapido, Ola, or Uber Moto?
+                    </span>
+                  </button>
+                </h2>
+                <div id="faq7" class="accordion-collapse collapse">
+                  <div
+                    class="accordion-body"
+                    itemscope
+                    itemprop="acceptedAnswer"
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <p itemprop="text">
+                      No. Using Ontrack rental vehicles for bike taxi services
+                      is strictly prohibited. Violation will result in a ₹5000
+                      fine and permanent account suspension.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="col-6 col-md-3">
-            <div class="bg-white rounded-4 p-4 shadow-sm">
-              <h3 class="fw-bold text-primary mb-1">99%</h3>
-              <small class="text-muted">Helpful Answers</small>
-            </div>
-          </div>
-          <div class="col-6 col-md-3">
-            <div class="bg-white rounded-4 p-4 shadow-sm">
-              <h3 class="fw-bold text-primary mb-1">24/7</h3>
-              <small class="text-muted">Customer Support</small>
-            </div>
-          </div>
-          <div class="col-6 col-md-3">
-            <div class="bg-white rounded-4 p-4 shadow-sm">
-              <h3 class="fw-bold text-primary mb-1">35K+</h3>
-              <small class="text-muted">Happy Riders</small>
-            </div>
-          </div>
+          </section>
         </div>
 
-        <!-- SEARCH -->
-        <!-- <input
-          id="faqSearch"
-          class="form-control form-control-lg mb-4"
-          placeholder="Search your question..."
-        /> -->
-
-        <!-- CATEGORY FILTER -->
-        <div
-          id="categoryFilter"
-          class="d-flex flex-wrap justify-content-center gap-2 mb-4"
-        >
-          <button class="btn btn-primary rounded-pill" data-category="all">
-            All
-          </button>
-
-          <button
-            class="btn btn-outline-primary rounded-pill"
-            data-category="Getting Started"
-          >
-            Getting Started
-          </button>
-
-          <button
-            class="btn btn-outline-primary rounded-pill"
-            data-category="Pricing"
-          >
-            Pricing
-          </button>
-
-          <button
-            class="btn btn-outline-primary rounded-pill"
-            data-category="Documents"
-          >
-            Documents
-          </button>
-
-          <button
-            class="btn btn-outline-primary rounded-pill"
-            data-category="Policies"
-          >
-            Policies
-          </button>
-
-          <button
-            class="btn btn-outline-primary rounded-pill"
-            data-category="Support"
-          >
-            Support
-          </button>
+        <!-- INTERNAL SEO LINKS -->
+        <div class="mt-5">
+          <h3 class="fw-bold">Popular Bike Rental Locations in Bangalore</h3>
+          <ul>
+            <li>
+              <a href="/bike-rentals-in-whitefield-bangalore/"
+                >Bike Rentals in Whitefield</a
+              >
+            </li>
+            <li>
+              <a href="/bike-rentals-in-indiranagar-bangalore/"
+                >Bike Rentals in Indiranagar</a
+              >
+            </li>
+            <li>
+              <a href="/bike-rentals-in-marathahalli-bangalore/"
+                >Bike Rentals in Marathahalli</a
+              >
+            </li>
+            <li>
+              <a href="/bike-rentals-in-koramangala-bangalore/"
+                >Bike Rentals in Koramangala</a
+              >
+            </li>
+          </ul>
         </div>
 
-        <input
-          id="faqSearch"
-          type="text"
-          class="form-control mb-3"
-          placeholder="Search your question..."
-        />
-
-        <div class="accordion mb-5" id="faqAccordion"></div>
-
-        <div id="noResults" class="text-center text-muted mt-3 d-none">
-          No questions found
-        </div>
-
-        <div class="container py-4" style="max-width: 900px">
-          <div id="faqList" class="list-group"></div>
-        </div>
-
-        <!-- CONTACT CTA -->
-        <div
-          class="text-center text-white rounded-4 p-4"
-          style="background: linear-gradient(135deg, #ff7a00, #ff9030)"
-        >
-          <h4 class="fw-bold mb-2">Still have questions?</h4>
-          <p class="mb-1">
-            <i class="bi bi-telephone-fill"></i>
-            <a class="text-white text-decoration-none" href="tel:9148518401">
-              +91-9148-518-401
-            </a>
-          </p>
-          <p class="mb-0">
-            <i class="bi bi-envelope-fill"></i>
-            <a
-              class="text-white text-decoration-none"
-              href="mailto:info@on-track.in"
-            >
+        <!-- CTA -->
+        <div class="card text-center rounded-4 p-4 mt-5">
+          <h3 class="fw-bold">Need Help with Bike Rentals?</h3>
+          <p>
+            Call us at
+            <a href="tel:9148518401" class="fw-bold"> +91-9148-518-401 </a>
+            or email
+            <a href="mailto:info@on-track.in" class="fw-bold">
               info@on-track.in
             </a>
           </p>
         </div>
       </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-dark text-white-50 py-5 fs-5">
-      <div class="container">
-        <div class="row gy-4 mb-4">
-          <div class="col-lg-4">
-            <img
-              src="./images/ontrack-logo.png"
-              width="140"
-              alt="Ontrack logo"
-              class="mb-3"
-            />
-            <p class="text-white-50 small">
-              Bengaluru's most trusted two-wheeler rental service since 2016.
-              Making mobility accessible, affordable, and hassle-free for
-              everyone.
-            </p>
-          </div>
-
-          <div class="col-md-4 col-lg-2 col-4">
-            <h6 class="f-gm text-white">Learn More</h6>
-            <ul class="list-unstyled small">
-              <li>
-                <a href="faq.html" class="text-white-50 text-decoration-none"
-                  >FAQs</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://book.on-track.in/two-wheeler-services/blogs"
-                  class="text-white-50 text-decoration-none"
-                  >Blog</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-md-4 col-lg-2 col-4">
-            <h6 class="f-gm text-white">Policies</h6>
-            <ul class="list-unstyled small">
-              <li>
-                <a
-                  href="https://book.on-track.in/help-and-support/terms-and-conditions"
-                  class="text-white-50 text-decoration-none"
-                  >Terms</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://book.on-track.in/help-and-support/privacy-policy"
-                  class="text-white-50 text-decoration-none"
-                  >Privacy</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://book.on-track.in/help-and-support/disclaimer-policy"
-                  class="text-white-50 text-decoration-none"
-                  >Disclaimer Policy</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://book.on-track.in/help-and-support/copyright-guidelines"
-                  class="text-white-50 text-decoration-none"
-                  >Copyright Guidelines</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-md-4 col-lg-2 col-4">
-            <h6 class="f-gm text-white">Contact</h6>
-            <ul class="list-unstyled small">
-              <li>
-                <a
-                  href="mailto:info@on-track.in"
-                  class="text-white-50 text-decoration-none"
-                  >info@on-track.in</a
-                >
-              </li>
-              <li>
-                <a
-                  href="tel:914858401"
-                  class="text-white-50 text-decoration-none"
-                  >+91-9048-581-401</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <hr class="border-secondary" />
-
-        <div class="text-center">
-          <p class="mb-0 small">
-            &copy; 2024 Ontrack Technologies Pvt Ltd. All rights reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      let allFaqs = [];
-      let selectedCategory = "all";
-
-      // Load FAQ data
-      fetch("./faq-data.json")
-        .then((res) => res.json())
-        .then((data) => {
-          allFaqs = data;
-          renderFAQs(allFaqs);
-        });
-
-      function renderFAQs(faqs) {
-        const accordion = document.getElementById("faqAccordion");
-        const noResults = document.getElementById("noResults");
-
-        if (!faqs.length) {
-          accordion.innerHTML = "";
-          noResults.classList.remove("d-none");
-          return;
-        }
-
-        noResults.classList.add("d-none");
-
-        accordion.innerHTML = faqs
-          .map(
-            (faq) => `
-        <div class="accordion-item mb-3 rounded-3 overflow-hidden">
-          <h2 class="accordion-header">
-            <button
-              class="accordion-button collapsed fw-semibold"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#faq-${faq.id}"
-              aria-expanded="false"
-            >
-              ${faq.question}
-            </button>
-          </h2>
-
-          <div
-            id="faq-${faq.id}"
-            class="accordion-collapse collapse"
-            data-bs-parent="#faqAccordion"
-          >
-            <div class="accordion-body">
-              ${faq.answer}
-            </div>
-          </div>
-        </div>
-      `,
-          )
-          .join("");
-      }
-
-      // SEARCH + CATEGORY FILTER
-      function applyFilters() {
-        const searchValue =
-          document.getElementById("faqSearch")?.value.toLowerCase() || "";
-
-        const filtered = allFaqs.filter((faq) => {
-          const matchSearch =
-            faq.question.toLowerCase().includes(searchValue) ||
-            faq.answer.toLowerCase().includes(searchValue);
-
-          const matchCategory =
-            selectedCategory === "all" || faq.category === selectedCategory;
-
-          return matchSearch && matchCategory;
-        });
-
-        renderFAQs(filtered);
-      }
-
-      // Search
-      document
-        .getElementById("faqSearch")
-        .addEventListener("input", applyFilters);
-
-      // Category filter
-      document
-        .getElementById("categoryFilter")
-        .addEventListener("click", (e) => {
-          if (!e.target.dataset.category) return;
-
-          selectedCategory = e.target.dataset.category;
-
-          document.querySelectorAll("#categoryFilter button").forEach((btn) => {
-            btn.classList.remove("btn-primary");
-            btn.classList.add("btn-outline-primary");
-          });
-
-          e.target.classList.remove("btn-outline-primary");
-          e.target.classList.add("btn-primary");
-
-          applyFilters();
-        });
-    </script>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

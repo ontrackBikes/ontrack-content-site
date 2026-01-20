@@ -28,6 +28,14 @@
         "destination": "/blogs.html"
       },
       {
+        "source": "/faq",
+        "destination": "/faq.html"
+      },
+      {
+        "source": "/frequently-asked-question",
+        "destination": "/faq.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
