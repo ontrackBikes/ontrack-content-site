@@ -21,32 +21,41 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-const { exec } = require("child_process");
+const { spawn } = require("child_process");
 
 function gitAddCommitDeploy(files, title) {
-  const fileStr = files.join(" ");
-  const commitMsg = `"New blog post added: ${title}"`;
+  const add = spawn("git", ["add", ...files], {
+    cwd: path.join(__dirname, "../../"),
+  });
 
-  exec(
-    `git add ${fileStr} && git commit -m ${commitMsg} && git push`,
-    { cwd: path.join(__dirname, "../../") },
-    (err, stdout, stderr) => {
-      if (err) return console.error("Git push failed:", err);
-      console.log("Git output:", stdout);
-      if (stderr) console.error(stderr);
+  add.on("close", (code) => {
+    if (code !== 0) return console.error("Git add failed");
 
-      // Firebase deploy only hosting
-      exec(
-        "firebase deploy --only hosting",
-        { cwd: path.join(__dirname, "../../") },
-        (err, out, errOut) => {
-          if (err) return console.error("Firebase deploy failed:", err);
-          console.log("Firebase deploy output:", out);
-          if (errOut) console.error(errOut);
-        },
-      );
-    },
-  );
+    const commit = spawn(
+      "git",
+      ["commit", "-m", `New blog post added: ${title}`],
+      { cwd: path.join(__dirname, "../../") },
+    );
+
+    commit.on("close", (code) => {
+      if (code !== 0) return console.error("Git commit failed");
+
+      const push = spawn("git", ["push"], {
+        cwd: path.join(__dirname, "../../"),
+      });
+
+      push.on("close", (code) => {
+        if (code !== 0) return console.error("Git push failed");
+
+        // Firebase deploy only hosting
+        const deploy = spawn("firebase", ["deploy", "--only", "hosting"], {
+          cwd: path.join(__dirname, "../../"),
+        });
+        deploy.stdout.on("data", (data) => console.log(data.toString()));
+        deploy.stderr.on("data", (data) => console.error(data.toString()));
+      });
+    });
+  });
 }
 
 const app = express();
@@ -155,7 +164,7 @@ app.post("/blog/create", upload.single("cover"), (req, res) => {
 
   writeSitemap(blogs);
 
-  const createdFiles = [`${POSTS_DIR}/${slug}.html`, BLOG_JSON];
+  const createdFiles = [`${POSTS_DIR}/${slug}.html`, BLOG_JSON, SITEMAP];
 
   if (req.file) {
     createdFiles.push(path.join(ROOT, "images/blog", req.file.filename));
