@@ -3,36 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <title>Ontrack Blog</title>
+
     <meta
       name="description"
       content="Ontrack blog — tips, guides, and updates"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Scroll Animations (AOS) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- after bootstrap -->
     <base href="/" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+
     <style>
-      body {
-        font-family: system-ui, sans-serif;
-        background: #fafafa;
-        margin: 0;
-        padding: 24px;
-      }
-
-      .container {
-        max-width: 900px;
-        margin: auto;
-      }
-
-      h1 {
-        margin-bottom: 24px;
-      }
-
+      /* Blog Card */
       .blog-card {
         background: #fff;
-        padding: 20px;
         border-radius: 12px;
-        margin-bottom: 16px;
+        padding: 20px;
+        height: 100%;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
         transition:
           transform 0.2s ease,
@@ -41,33 +58,225 @@
       }
 
       .blog-card:hover {
-        transform: translateY(-2px);
+        transform: translateY(-4px);
         box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
       }
 
-      .meta {
+      .blog-meta {
         font-size: 13px;
-        color: #666;
+        color: #6c757d;
+        margin-bottom: 6px;
+      }
+
+      .blog-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #111;
         margin-bottom: 8px;
       }
 
-      .title {
-        font-size: 20px;
-        margin: 0 0 8px;
-        color: #111;
-      }
-
-      .desc {
+      .blog-desc {
         color: #444;
+        font-size: 15px;
       }
     </style>
   </head>
-  <body>
-    <div class="container">
-      <h1>Ontrack Blog</h1>
-      <div id="blog-list">Loading blogs…</div>
-    </div>
 
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+      <div class="container py-3">
+        <a class="navbar-brand" href="/">
+          <img src="./images/ontrack-logo.png" alt="Ontrack" width="120" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#ontrackNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="ontrackNavbar">
+          <ul
+            class="navbar-nav ms-auto align-items-lg-center gap-lg-4 mt-3 mt-lg-0"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://book.on-track.in/two-wheeler-rental/models"
+                >Our Fleet</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#whyus">Why Us?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="https://book.on-track.in/two-wheeler-rental/models"
+                class="btn btn-primary btn-lg"
+              >
+                Book Now
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= BLOG LIST ================= -->
+    <section class="py-5">
+      <div class="container">
+        <h1 class="fw-bold mb-4">Ontrack Blog</h1>
+
+        <div id="blog-list" class="row g-4">
+          <p>Loading blogs…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="py-5 fs-5 bg-white border-top">
+      <div class="container">
+        <!-- Popular Rentals -->
+        <div class="mb-5">
+          <h3 class="fw-bold mb-4">Popular Bike Rentals in Bangalore</h3>
+
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="/bike-rentals/rent-hero-hf-100-2023-bangalore"
+                    >Hero HF 100 (2023) on Rent</a
+                  >
+                </li>
+                <li>
+                  <a href="/bike-rentals/rent-hero-hf-100-2024-bangalore"
+                    >Hero HF 100 (2024) on Rent</a
+                  >
+                </li>
+                <li>
+                  <a href="/bike-rentals/rent-honda-dio-bangalore"
+                    >Honda Dio on Rent</a
+                  >
+                </li>
+                <li>
+                  <a href="/bike-rentals/rent-honda-activa-ev-bangalore"
+                    >Honda Activa EV on Rent</a
+                  >
+                </li>
+                <li>
+                  <a href="/bike-rentals/rent-hero-xoom-110-lx-bangalore"
+                    >Hero Xoom 110 LX on Rent</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="/bike-rentals/rent-activa-3g-4g-bangalore"
+                    >Activa 3G / 4G on Rent</a
+                  >
+                </li>
+                <li>
+                  <a href="/bike-rentals/rent-avenger-220-cruise-bangalore"
+                    >Avenger 220 Cruise on Rent</a
+                  >
+                </li>
+                <li>
+                  <a href="/bike-rentals/rent-avenger-150-street-bangalore"
+                    >Avenger 150 Street on Rent</a
+                  >
+                </li>
+                <li>
+                  <a href="/bike-rentals/rent-honda-shine-2024-bangalore"
+                    >Honda Shine 2024 on Rent</a
+                  >
+                </li>
+                <li>
+                  <a href="/bike-rentals/rent-aprilia-sr-150-bangalore"
+                    >Aprilia SR 150 on Rent</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="/bike-rentals/rent-bajaj-pulsar-150-bangalore"
+                    >Bajaj Pulsar 150 on Rent</a
+                  >
+                </li>
+                <li>
+                  <a href="/bike-rentals/rent-honda-navi-bangalore"
+                    >Honda Navi on Rent</a
+                  >
+                </li>
+                <li>
+                  <a href="/bike-rentals/rent-honda-activa-6g-bangalore"
+                    >Honda Activa 6G on Rent</a
+                  >
+                </li>
+                <li>
+                  <a href="/bike-rentals/rent-honda-dio-2024-bangalore"
+                    >Honda Dio 2024 on Rent</a
+                  >
+                </li>
+                <li>
+                  <a href="/bike-rentals/rent-honda-dio-2025-bangalore"
+                    >Honda Dio 2025 on Rent</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <img src="/images/ontrack-logo.png" width="140" />
+            <p class="text-secondary small mt-2">
+              Bengaluru's most trusted two-wheeler rental service since 2016.
+            </p>
+          </div>
+
+          <div class="col-4 col-lg-2">
+            <p class="fw-semibold">Learn More</p>
+            <ul class="list-unstyled small">
+              <li><a href="/blogs">Blog</a></li>
+              <li><a href="/print_and_media">Stories</a></li>
+            </ul>
+          </div>
+
+          <div class="col-4 col-lg-2">
+            <p class="fw-semibold">Policies</p>
+            <ul class="list-unstyled small">
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-4 col-lg-2">
+            <p class="fw-semibold">Contact</p>
+            <ul class="list-unstyled small">
+              <li><a href="mailto:info@on-track.in">info@on-track.in</a></li>
+              <li><a href="tel:914858401">914858401</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================= SCRIPT ================= -->
     <script>
       fetch("blog/data/blogs.json")
         .then((res) => res.json())
@@ -80,26 +289,28 @@
             return;
           }
 
-          // Latest first
           blogs.reverse().forEach((blog) => {
-            const card = document.createElement("div");
-            card.className = "blog-card";
-            card.onclick = () => (window.location.href = blog.url);
+            const col = document.createElement("div");
+            col.className = "col-lg-4 col-md-6";
 
-            card.innerHTML = `
-            <div class="meta">${blog.date} · ${blog.author}</div>
-            <h2 class="title">${blog.title}</h2>
-            <p class="desc">${blog.description}</p>
-          `;
+            col.innerHTML = `
+              <div class="blog-card" onclick="location.href='${blog.url}'">
+                <img src="${blog.cover}" width="100%"></img>
+                <div class="blog-meta mt-2">${blog.date} · ${blog.author}</div>
+                <h2 class="blog-title">${blog.title}</h2>
+                <p class="blog-desc">${blog.description}</p>
+              </div>
+            `;
 
-            container.appendChild(card);
+            container.appendChild(col);
           });
         })
-        .catch((err) => {
+        .catch(() => {
           document.getElementById("blog-list").innerHTML =
             "<p>Failed to load blogs.</p>";
-          console.error(err);
         });
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
