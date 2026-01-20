@@ -402,6 +402,10 @@
         "source": "/bike-rentals/rent-honda-activa-ev-bangalore",
         "destination": "/bike-rentals/rent-honda-activa-ev-bangalore.html"
       },
+      {
+        "source": "/print_and_media",
+        "destination": "/print_and_media.html"
+      },
 
       {
         "source": "**",
