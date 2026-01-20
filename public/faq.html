@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - Ontrack Bike Rentals</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-light">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+      <div class="container py-3">
+        <a class="navbar-brand" href="/">
+          <img src="./images/ontrack-logo.png" alt="Ontrack" width="120" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#ontrackNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="ontrackNavbar">
+          <ul
+            class="navbar-nav ms-auto align-items-lg-center gap-lg-4 mt-3 mt-lg-0"
+          >
+            <li class="nav-item f-gb">
+              <a
+                class="nav-link"
+                href="https://book.on-track.in/two-wheeler-rental/models"
+                >Our Fleet</a
+              >
+            </li>
+            <li class="nav-item f-gb">
+              <a class="nav-link" href="#whyus">Why Us?</a>
+            </li>
+            <li class="nav-item f-gb">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="https://book.on-track.in/two-wheeler-rental/models"
+                class="btn btn-primary btn-lg"
+              >
+                Book Now
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section
+      class="text-center text-white py-5"
+      style="background: linear-gradient(135deg, #4e44d8, #6b5fe0)"
+    >
+      <div class="container">
+        <h1 class="display-5 fw-bold">Frequently Asked Questions</h1>
+        <p class="lead mb-0">
+          Everything you need to know about renting bikes with Ontrack
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="py-5">
+      <div class="container" style="max-width: 900px">
+        <!-- STATS -->
+        <div class="row text-center g-4 mb-5">
+          <div class="col-6 col-md-3">
+            <div class="bg-white rounded-4 p-4 shadow-sm">
+              <h3 class="fw-bold text-primary mb-1">23+</h3>
+              <small class="text-muted">Questions Answered</small>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="bg-white rounded-4 p-4 shadow-sm">
+              <h3 class="fw-bold text-primary mb-1">99%</h3>
+              <small class="text-muted">Helpful Answers</small>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="bg-white rounded-4 p-4 shadow-sm">
+              <h3 class="fw-bold text-primary mb-1">24/7</h3>
+              <small class="text-muted">Customer Support</small>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="bg-white rounded-4 p-4 shadow-sm">
+              <h3 class="fw-bold text-primary mb-1">35K+</h3>
+              <small class="text-muted">Happy Riders</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEARCH -->
+        <!-- <input
+          id="faqSearch"
+          class="form-control form-control-lg mb-4"
+          placeholder="Search your question..."
+        /> -->
+
+        <!-- CATEGORY FILTER -->
+        <div
+          id="categoryFilter"
+          class="d-flex flex-wrap justify-content-center gap-2 mb-4"
+        >
+          <button class="btn btn-primary rounded-pill" data-category="all">
+            All
+          </button>
+
+          <button
+            class="btn btn-outline-primary rounded-pill"
+            data-category="Getting Started"
+          >
+            Getting Started
+          </button>
+
+          <button
+            class="btn btn-outline-primary rounded-pill"
+            data-category="Pricing"
+          >
+            Pricing
+          </button>
+
+          <button
+            class="btn btn-outline-primary rounded-pill"
+            data-category="Documents"
+          >
+            Documents
+          </button>
+
+          <button
+            class="btn btn-outline-primary rounded-pill"
+            data-category="Policies"
+          >
+            Policies
+          </button>
+
+          <button
+            class="btn btn-outline-primary rounded-pill"
+            data-category="Support"
+          >
+            Support
+          </button>
+        </div>
+
+        <input
+          id="faqSearch"
+          type="text"
+          class="form-control mb-3"
+          placeholder="Search your question..."
+        />
+
+        <div class="accordion mb-5" id="faqAccordion"></div>
+
+        <div id="noResults" class="text-center text-muted mt-3 d-none">
+          No questions found
+        </div>
+
+        <div class="container py-4" style="max-width: 900px">
+          <div id="faqList" class="list-group"></div>
+        </div>
+
+        <!-- CONTACT CTA -->
+        <div
+          class="text-center text-white rounded-4 p-4"
+          style="background: linear-gradient(135deg, #ff7a00, #ff9030)"
+        >
+          <h4 class="fw-bold mb-2">Still have questions?</h4>
+          <p class="mb-1">
+            <i class="bi bi-telephone-fill"></i>
+            <a class="text-white text-decoration-none" href="tel:9148518401">
+              +91-9148-518-401
+            </a>
+          </p>
+          <p class="mb-0">
+            <i class="bi bi-envelope-fill"></i>
+            <a
+              class="text-white text-decoration-none"
+              href="mailto:info@on-track.in"
+            >
+              info@on-track.in
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white-50 py-5 fs-5">
+      <div class="container">
+        <div class="row gy-4 mb-4">
+          <div class="col-lg-4">
+            <img
+              src="./images/ontrack-logo.png"
+              width="140"
+              alt="Ontrack logo"
+              class="mb-3"
+            />
+            <p class="text-white-50 small">
+              Bengaluru's most trusted two-wheeler rental service since 2016.
+              Making mobility accessible, affordable, and hassle-free for
+              everyone.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-lg-2 col-4">
+            <h6 class="f-gm text-white">Learn More</h6>
+            <ul class="list-unstyled small">
+              <li>
+                <a href="faq.html" class="text-white-50 text-decoration-none"
+                  >FAQs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://book.on-track.in/two-wheeler-services/blogs"
+                  class="text-white-50 text-decoration-none"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 col-lg-2 col-4">
+            <h6 class="f-gm text-white">Policies</h6>
+            <ul class="list-unstyled small">
+              <li>
+                <a
+                  href="https://book.on-track.in/help-and-support/terms-and-conditions"
+                  class="text-white-50 text-decoration-none"
+                  >Terms</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://book.on-track.in/help-and-support/privacy-policy"
+                  class="text-white-50 text-decoration-none"
+                  >Privacy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://book.on-track.in/help-and-support/disclaimer-policy"
+                  class="text-white-50 text-decoration-none"
+                  >Disclaimer Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://book.on-track.in/help-and-support/copyright-guidelines"
+                  class="text-white-50 text-decoration-none"
+                  >Copyright Guidelines</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 col-lg-2 col-4">
+            <h6 class="f-gm text-white">Contact</h6>
+            <ul class="list-unstyled small">
+              <li>
+                <a
+                  href="mailto:info@on-track.in"
+                  class="text-white-50 text-decoration-none"
+                  >info@on-track.in</a
+                >
+              </li>
+              <li>
+                <a
+                  href="tel:914858401"
+                  class="text-white-50 text-decoration-none"
+                  >+91-9048-581-401</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="border-secondary" />
+
+        <div class="text-center">
+          <p class="mb-0 small">
+            &copy; 2024 Ontrack Technologies Pvt Ltd. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let allFaqs = [];
+      let selectedCategory = "all";
+
+      // Load FAQ data
+      fetch("./faq-data.json")
+        .then((res) => res.json())
+        .then((data) => {
+          allFaqs = data;
+          renderFAQs(allFaqs);
+        });
+
+      function renderFAQs(faqs) {
+        const accordion = document.getElementById("faqAccordion");
+        const noResults = document.getElementById("noResults");
+
+        if (!faqs.length) {
+          accordion.innerHTML = "";
+          noResults.classList.remove("d-none");
+          return;
+        }
+
+        noResults.classList.add("d-none");
+
+        accordion.innerHTML = faqs
+          .map(
+            (faq) => `
+        <div class="accordion-item mb-3 rounded-3 overflow-hidden">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fw-semibold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq-${faq.id}"
+              aria-expanded="false"
+            >
+              ${faq.question}
+            </button>
+          </h2>
+
+          <div
+            id="faq-${faq.id}"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              ${faq.answer}
+            </div>
+          </div>
+        </div>
+      `,
+          )
+          .join("");
+      }
+
+      // SEARCH + CATEGORY FILTER
+      function applyFilters() {
+        const searchValue =
+          document.getElementById("faqSearch")?.value.toLowerCase() || "";
+
+        const filtered = allFaqs.filter((faq) => {
+          const matchSearch =
+            faq.question.toLowerCase().includes(searchValue) ||
+            faq.answer.toLowerCase().includes(searchValue);
+
+          const matchCategory =
+            selectedCategory === "all" || faq.category === selectedCategory;
+
+          return matchSearch && matchCategory;
+        });
+
+        renderFAQs(filtered);
+      }
+
+      // Search
+      document
+        .getElementById("faqSearch")
+        .addEventListener("input", applyFilters);
+
+      // Category filter
+      document
+        .getElementById("categoryFilter")
+        .addEventListener("click", (e) => {
+          if (!e.target.dataset.category) return;
+
+          selectedCategory = e.target.dataset.category;
+
+          document.querySelectorAll("#categoryFilter button").forEach((btn) => {
+            btn.classList.remove("btn-primary");
+            btn.classList.add("btn-outline-primary");
+          });
+
+          e.target.classList.remove("btn-outline-primary");
+          e.target.classList.add("btn-primary");
+
+          applyFilters();
+        });
+    </script>
+  </body>
+</html>

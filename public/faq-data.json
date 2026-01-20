@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "question": "How do I get a bike on rent?",
+    "answer": "Well, you are already on our site so that's one step ahead. Kudos to you. Now, go to the login/signup page and complete the registration process. Once you are registered, go through the models and select a bike that you desire. Then, you may proceed to make the payment. For any queries or issues during this process, feel free to reach out to our customer support team.",
+    "category": "Getting Started",
+    "faqLike": 338,
+    "faqDislike": 147
+  },
+  {
+    "id": 5,
+    "question": "Is there any security deposit?",
+    "answer": "You are about to get so very lucky! We don't take any security deposits. Once you select your bike model, you may proceed to the checkout page, and then make the payment to confirm the reservation of the selected bike.",
+    "category": "Pricing",
+    "faqLike": 149,
+    "faqDislike": 29
+  },
+  {
+    "id": 4,
+    "question": "Do you accept cash for your bike rentals?",
+    "answer": "We are super eco-friendly. No 'green' notes please! We only accept online payment.",
+    "category": "Payment",
+    "faqLike": 72,
+    "faqDislike": 29
+  },
+  {
+    "id": 2,
+    "question": "Do you give bike on rent if I only have a learner's driving license?",
+    "answer": "We are not your doctors but we do care for you. You need to have a valid and original MVWG License or MVWOG (for gearless) before renting a bike",
+    "category": "Documents",
+    "faqLike": 29,
+    "faqDislike": 13
+  },
+  {
+    "id": 3,
+    "question": "Is Motor Vehicle with Gear (MVWG) or MVWOG License necessary to rent a bike?",
+    "answer": "Did you know you aren't allowed to fly a plane until you are a licensed pilot. Trust me, two-wheelers don't fly but will make you feel like you are. To feel so, it is important to submit a signed photocopy of the MVWG or MVWOG License before you take a two wheeler on rent.",
+    "category": "Documents",
+    "faqLike": 28,
+    "faqDislike": 12
+  },
+  {
+    "id": 6,
+    "question": "Can I change my bike model during the tenure period?",
+    "answer": "Oops, no. Not as of now, at least. But, do stay with us and see what we create next! We are awesome!",
+    "category": "Rentals",
+    "faqLike": 79,
+    "faqDislike": 69
+  },
+  {
+    "id": 7,
+    "question": "I want to avail a bi-monthly or other similar packages",
+    "answer": "Eh, this is not a question but okay. No, we do not offer any bi-monthly or similar packages so you can't avail them.",
+    "category": "Rentals",
+    "faqLike": 25,
+    "faqDislike": 18
+  },
+  {
+    "id": 8,
+    "question": "Do we need to submit any documents to rent a bike?",
+    "answer": "Of course buddy. We have to take the good old fashioned route. You need to submit a signed photocopy of your valid DL (Motor Vehicle with Gear - MVWG or Motor Vehicle without Gear MVWOG) License and one of the following: Aadhar card, Passport, Pan card. Just to be clear if you are holding a learners licence, we will not be able to provide you service due to safety concerns.",
+    "category": "Documents",
+    "faqLike": 50,
+    "faqDislike": 14
+  },
+  {
+    "id": 9,
+    "question": "Do you offer any discounts on the price already mentioned on your portal?",
+    "answer": "OMG. We can't believe you asked this question. Eh, No. We are sorry. Our two wheeler price is already inclusive of the bike, its maintenance, a helmet, and insurance. You see, we do love you.",
+    "category": "Pricing",
+    "faqLike": 37,
+    "faqDislike": 6
+  },
+  {
+    "id": 10,
+    "question": "After I have used the rented bike for over 2-3 months is there any reduction in the monthly rent?",
+    "answer": "Old is gold my friend. So, no. There is no reduction in the monthly rent. However, we offer every bike on rent with no lock-ins. Now, that is damn good news for you, isn't it?",
+    "category": "Pricing",
+    "faqLike": 22,
+    "faqDislike": 14
+  },
+  {
+    "id": 11,
+    "question": "What is your cancellation policy?",
+    "answer": "If the vehicle, after being booked, is cancelled by the customer prior to the scheduled slot of delivery/pickup, the customer will be liable to pay a convenience fee of 15% of the booking amount.",
+    "category": "Policies",
+    "faqLike": 61,
+    "faqDislike": 69
+  },
+  {
+    "id": 12,
+    "question": "What about the delivery and pick-up service?",
+    "answer": "What about it? Oh yes this is a FAQ. Duh. Okay so currently we offer home delivery service for which you need to pay Rs. 500. We collect Rs. 500 for the convenience of doorstep pickup and in case of vehicle recovery, charges are Rs 500 along with the pending dues. These pick up and delivery charges are for a service radius within 25km. Any distance exceeding that, we charge additional Rs 20 per kilometre.",
+    "category": "Delivery",
+    "faqLike": 47,
+    "faqDislike": 31
+  },
+  {
+    "id": 13,
+    "question": "What happens if my motorbike gets stolen?",
+    "answer": "Do you know the song run for your life? Well, in this case don't even think about it. If your bike gets stolen just give us a call and ensure to visit the nearest cop station. You must get a written complaint out with 'actual' facts. You know 'dog ate my homework' kind of a story will probably make the cops run after you. Then you probably will have to run for your life",
+    "category": "Insurance",
+    "faqLike": 12,
+    "faqDislike": 15
+  },
+  {
+    "id": 14,
+    "question": "Do you have any reservation policy? Can I reserve the bike 15 days in advance?",
+    "answer": "15 days? 1 and 5? Whoa you are on a roll here! No, you cannot reserve the bike for such a long period of time. Post making the payment you can reserve it for max 48 hours.",
+    "category": "Booking",
+    "faqLike": 15,
+    "faqDislike": 3
+  },
+  {
+    "id": 15,
+    "question": "Do you offer helmets and other gear?",
+    "answer": "Well, Due to COVID restrictions we are not providing helmets. Please carry it by yourself.",
+    "category": "Equipment",
+    "faqLike": 14,
+    "faqDislike": 10
+  },
+  {
+    "id": 16,
+    "question": "What if there are mechanical breakdowns or I get into an accident?",
+    "answer": "Any breakdowns or incidents involving your bike (not you) should be reported to us immediately. Give us a call at +91 8033923788. We do offer roadside assistance within the city for minor breakdowns (again for your bike, not you). But you need to be responsible for the bike in case of any damage and must bear the repair cost. I know guys, life is hard but two-wheelers on rent - really awesome so ride safe!",
+    "category": "Support",
+    "faqLike": 18,
+    "faqDislike": 29
+  },
+  {
+    "id": 17,
+    "question": "What is the bike rental insurance policy?",
+    "answer": "What is it? Shoot, you mean our policy? Right. The rental prices on our website is inclusive of a comprehensive insurance. You may go to our terms of use page to understand our bike rental insurance/liability policy in-depth.",
+    "category": "Insurance",
+    "faqLike": 12,
+    "faqDislike": 11
+  },
+  {
+    "id": 18,
+    "question": "Is there any refund if I return the bike before completing the rental cycle?",
+    "answer": "Sorry buddy, the fee is non refundable. No exceptions at all.",
+    "category": "Policies",
+    "faqLike": 30,
+    "faqDislike": 31
+  },
+  {
+    "id": 19,
+    "question": "Do you have any age limit for bike hire?",
+    "answer": "Yup. 75 years. Oh you mean your age. Right. No there is no age limit as long as you have a valid DL.",
+    "category": "Getting Started",
+    "faqLike": 25,
+    "faqDislike": 9
+  },
+  {
+    "id": 20,
+    "question": "Is there any penalty for not returning the bike on the scheduled date?",
+    "answer": "Oh, this is going to be terrible. We love our bikes and our customers. We wouldn't want to choose. But we LOVE our bikes. You will have to pay per day rental fee for all the extended days. Seriously, we aren't trying to hassle you guys. But believe us when we say we really do love our bikes.",
+    "category": "Policies",
+    "faqLike": 26,
+    "faqDislike": 26
+  },
+  {
+    "id": 21,
+    "question": "Are these frequently asked questions?",
+    "answer": "?%#$@! Really? Well. We really did do our best.",
+    "category": "General",
+    "faqLike": 82,
+    "faqDislike": 113
+  },
+  {
+    "id": 22,
+    "question": "Still need to contact us?",
+    "answer": "Hmm. We thought we were quite intelligent. We assumed that we covered all your queries in this FAQ. Apparently not. Well, okay get in touch with us on our number 9148518401 or email us at info@on-track.in",
+    "category": "Support",
+    "faqLike": 3,
+    "faqDislike": 4
+  },
+  {
+    "id": 84,
+    "question": "Can I use my vehicle for bike taxi services?",
+    "answer": "No, using our vehicles for bike taxi-related services (such as Rapido, Ola Bike, UberMoto, etc.) is strictly prohibited.",
+    "category": "Policies",
+    "faqLike": 338,
+    "faqDislike": 147
+  },
+  {
+    "id": 85,
+    "question": "What happens if I'm found using the vehicle for bike taxi services?",
+    "answer": "If you're found using our vehicle for such services, a fine of Rs 5000 will be imposed and your account will be permanently blocked.",
+    "category": "Policies",
+    "faqLike": 338,
+    "faqDislike": 147
+  }
+]
