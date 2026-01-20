@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Basic -->
@@ -9,6 +9,11 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
     />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link
+      rel="sitemap"
+      type="application/xml"
+      href="https://on-track.in/sitemap.xml"
+    />
 
     <!-- SEO Title -->
     <title>
@@ -88,6 +93,55 @@
     <base href="/" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Ontrack Bike Rentals",
+        "alternateName": "Ontrack",
+        "url": "https://on-track.in/",
+        "logo": "https://on-track.in/images/ontrack_icon.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-9148518401",
+          "contactType": "customer support",
+          "email": "info@on-track.in",
+          "areaServed": "IN"
+        },
+        "sameAs": [
+          "https://play.google.com/store/apps/details?id=com.ontrack.ontrack",
+          "https://www.linkedin.com/company/ontrack"
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Rentals",
+            "url": "https://book.on-track.in/two-wheeler-rental/models"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Book EV Vehicle",
+            "url": "https://book.on-track.in/model-display/44/rent-honda-activa-ev-bangalore"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Contact Us",
+            "url": "https://on-track.in/contact"
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body class="f-gm">

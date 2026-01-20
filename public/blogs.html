@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ontrack Blog</title>
+    <meta
+      name="description"
+      content="Ontrack blog — tips, guides, and updates"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        background: #fafafa;
+        margin: 0;
+        padding: 24px;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: auto;
+      }
+
+      h1 {
+        margin-bottom: 24px;
+      }
+
+      .blog-card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+        cursor: pointer;
+      }
+
+      .blog-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+      }
+
+      .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+      }
+
+      .title {
+        font-size: 20px;
+        margin: 0 0 8px;
+        color: #111;
+      }
+
+      .desc {
+        color: #444;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ontrack Blog</h1>
+      <div id="blog-list">Loading blogs…</div>
+    </div>
+
+    <script>
+      fetch("blog/data/blogs.json")
+        .then((res) => res.json())
+        .then((blogs) => {
+          const container = document.getElementById("blog-list");
+          container.innerHTML = "";
+
+          if (!blogs.length) {
+            container.innerHTML = "<p>No blog posts yet.</p>";
+            return;
+          }
+
+          // Latest first
+          blogs.reverse().forEach((blog) => {
+            const card = document.createElement("div");
+            card.className = "blog-card";
+            card.onclick = () => (window.location.href = blog.url);
+
+            card.innerHTML = `
+            <div class="meta">${blog.date} · ${blog.author}</div>
+            <h2 class="title">${blog.title}</h2>
+            <p class="desc">${blog.description}</p>
+          `;
+
+            container.appendChild(card);
+          });
+        })
+        .catch((err) => {
+          document.getElementById("blog-list").innerHTML =
+            "<p>Failed to load blogs.</p>";
+          console.error(err);
+        });
+    </script>
+  </body>
+</html>

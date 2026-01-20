@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Blog</title>
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 800px;
+        margin: auto;
+        padding: 24px;
+      }
+      input,
+      textarea,
+      button {
+        width: 100%;
+        margin-bottom: 16px;
+        padding: 10px;
+        font-size: 16px;
+      }
+      button {
+        background-color: #0d6efd;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+      }
+      button:hover {
+        background-color: #0b5ed7;
+      }
+      label {
+        font-weight: bold;
+        margin-bottom: 6px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Add New Blog</h1>
+    <form id="blogForm" enctype="multipart/form-data">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" required />
+
+      <label for="markdown">Markdown Content</label>
+      <textarea id="markdown" name="markdown" rows="10" required></textarea>
+
+      <label for="description">Description</label>
+      <input type="text" id="description" name="description" />
+
+      <label for="author">Author</label>
+      <input type="text" id="author" name="author" />
+
+      <label for="tags">Tags (comma-separated)</label>
+      <input type="text" id="tags" name="tags" />
+
+      <label for="cover">Cover Image</label>
+      <input type="file" id="cover" name="cover" accept="image/*" />
+
+      <button type="submit">Submit Blog</button>
+    </form>
+
+    <div id="response" style="margin-top: 20px"></div>
+
+    <script>
+      const form = document.getElementById("blogForm");
+      const responseDiv = document.getElementById("response");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        try {
+          const res = await fetch("http://localhost:3333/blog/create", {
+            method: "POST",
+            body: formData,
+          });
+
+          const data = await res.json();
+          if (data.success) {
+            responseDiv.innerHTML = `<p style="color:green;">Blog created successfully! <a href="${data.page}" target="_blank">View Blog</a></p>`;
+            form.reset();
+          } else {
+            responseDiv.innerHTML = `<p style="color:red;">Error: ${data.error}</p>`;
+          }
+        } catch (err) {
+          console.error(err);
+          responseDiv.innerHTML = `<p style="color:red;">Request failed.</p>`;
+        }
+      });
+    </script>
+  </body>
+</html>
