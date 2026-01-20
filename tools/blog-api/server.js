@@ -105,6 +105,8 @@ app.post("/blog/create", upload.single("cover"), (req, res) => {
     tags: tags ? tags.split(",").map((t) => t.trim()) : [],
   };
 
+  const tagsHtml = blog.tags.map((t) => `<span>${t}</span>`).join(" ");
+
   blogs.push(blog);
   fs.writeFileSync(BLOG_JSON, JSON.stringify(blogs, null, 2));
 
@@ -115,7 +117,9 @@ app.post("/blog/create", upload.single("cover"), (req, res) => {
     .replace(/{{date}}/g, blog.date)
     .replace(/{{author}}/g, blog.author)
     .replace(/{{cover}}/g, blog.cover)
-    .replace(/{{content}}/g, htmlContent);
+    .replace(/{{content}}/g, htmlContent)
+    .replace(/{{url}}/g, blog.url)
+    .replace(/{{tags}}/g, tagsHtml);
 
   fs.writeFileSync(`${POSTS_DIR}/${slug}.html`, template);
 
