@@ -81,7 +81,7 @@ app.get("/health", (_, res) => {
 });
 
 app.post("/blog/create", upload.single("cover"), (req, res) => {
-  const { title, markdown, description, author } = req.body;
+  const { title, markdown, description, author, tags } = req.body;
   if (!title || !markdown) {
     return res.status(400).json({ error: "Title & markdown required" });
   }
@@ -102,6 +102,7 @@ app.post("/blog/create", upload.single("cover"), (req, res) => {
     date,
     url: `/blog/posts/${slug}.html`,
     cover: coverPath,
+    tags: tags ? tags.split(",").map((t) => t.trim()) : [],
   };
 
   blogs.push(blog);
