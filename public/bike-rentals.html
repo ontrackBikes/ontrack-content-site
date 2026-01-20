@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -26,6 +26,16 @@
     <base href="/" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Ontrack Bike Rentals",
+        "alternateName": "Ontrack",
+        "url": "https://on-track.in/"
+      }
+    </script>
   </head>
 
   <body>
@@ -114,15 +124,14 @@
       const titleText = `Bike Rentals in ${locationName}, Bangalore | Ontrack`;
 
       document.title = titleText;
-      document.getElementById(
-        "pageTitle"
-      ).innerText = `Monthly Bike Rental in ${locationName}, Bangalore`;
+      document.getElementById("pageTitle").innerText =
+        `Monthly Bike Rental in ${locationName}, Bangalore`;
 
       document
         .querySelector('meta[name="description"]')
         .setAttribute(
           "content",
-          `Rent bikes monthly in ${locationName}, Bangalore with zero deposit. Unlimited KM, free maintenance & insurance.`
+          `Rent bikes monthly in ${locationName}, Bangalore with zero deposit. Unlimited KM, free maintenance & insurance.`,
         );
 
       document
