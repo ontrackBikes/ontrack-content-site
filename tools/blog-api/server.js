@@ -21,6 +21,34 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+const { exec } = require("child_process");
+
+function gitAddCommitDeploy(files, title) {
+  const fileStr = files.join(" ");
+  const commitMsg = `"New blog post added: ${title}"`;
+
+  exec(
+    `git add ${fileStr} && git commit -m ${commitMsg} && git push`,
+    { cwd: path.join(__dirname, "../../") },
+    (err, stdout, stderr) => {
+      if (err) return console.error("Git push failed:", err);
+      console.log("Git output:", stdout);
+      if (stderr) console.error(stderr);
+
+      // Firebase deploy only hosting
+      exec(
+        "firebase deploy --only hosting",
+        { cwd: path.join(__dirname, "../../") },
+        (err, out, errOut) => {
+          if (err) return console.error("Firebase deploy failed:", err);
+          console.log("Firebase deploy output:", out);
+          if (errOut) console.error(errOut);
+        },
+      );
+    },
+  );
+}
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -127,6 +155,13 @@ app.post("/blog/create", upload.single("cover"), (req, res) => {
 
   writeSitemap(blogs);
 
+  const createdFiles = [`${POSTS_DIR}/${slug}.html`, BLOG_JSON];
+
+  if (req.file) {
+    createdFiles.push(path.join(ROOT, "images/blog", req.file.filename));
+  }
+
+  gitAddCommitDeploy(createdFiles, title);
   res.json({ success: true, page: blog.url });
 });
 
