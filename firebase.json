@@ -416,6 +416,15 @@
       },
 
       {
+        "source": "/about",
+        "destination": "/about-us.html"
+      },
+      {
+        "source": "/about-us",
+        "destination": "/about-us.html"
+      },
+
+      {
         "source": "**",
         "destination": "/index.html"
       }
