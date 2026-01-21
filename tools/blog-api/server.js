@@ -115,18 +115,32 @@ ${urls}
   fs.writeFileSync(SITEMAP, xml);
 };
 
+const uploadFields = upload.fields([
+  { name: "cover", maxCount: 1 },
+  { name: "thumbnail", maxCount: 1 },
+]);
+
 app.get("/health", (_, res) => {
   res.json({ status: "ok", time: new Date().toISOString() });
 });
 
-app.post("/blog/create", upload.single("cover"), (req, res) => {
-  const { title, markdown, description, author, tags } = req.body;
+app.post("/blog/create", uploadFields, (req, res) => {
+  // cover and thumbnail
+  const { title, markdown, description, author, tags } = req.body; // add thumbnail also
   if (!title || !markdown) {
     return res.status(400).json({ error: "Title & markdown required" });
   }
-  const coverPath = req.file
-    ? `/images/blog/${req.file.filename}`
+  const coverFile = req.files?.cover?.[0];
+  const thumbnailFile = req.files?.thumbnail?.[0];
+
+  const coverPath = coverFile
+    ? `/images/blog/${coverFile.filename}`
     : "/images/blog/default.jpg";
+
+  // if thumbnail not uploaded → use cover
+  const thumbnailPath = thumbnailFile
+    ? `/images/blog/${thumbnailFile.filename}`
+    : coverPath;
 
   const slug = slugify(title);
   const date = new Date().toISOString().split("T")[0];
@@ -141,6 +155,7 @@ app.post("/blog/create", upload.single("cover"), (req, res) => {
     date,
     url: `/blog/posts/${slug}.html`,
     cover: coverPath,
+    thumbnail: thumbnailPath,
     tags: tags ? tags.split(",").map((t) => t.trim()) : [],
   };
 
@@ -156,6 +171,7 @@ app.post("/blog/create", upload.single("cover"), (req, res) => {
     .replace(/{{date}}/g, blog.date)
     .replace(/{{author}}/g, blog.author)
     .replace(/{{cover}}/g, blog.cover)
+    .replace(/{{thumbnail}}/g, blog.thumbnail)
     .replace(/{{content}}/g, htmlContent)
     .replace(/{{url}}/g, blog.url)
     .replace(/{{tags}}/g, tagsHtml);
@@ -166,8 +182,11 @@ app.post("/blog/create", upload.single("cover"), (req, res) => {
 
   const createdFiles = [`${POSTS_DIR}/${slug}.html`, BLOG_JSON, SITEMAP];
 
-  if (req.file) {
-    createdFiles.push(path.join(ROOT, "images/blog", req.file.filename));
+  if (coverFile) {
+    createdFiles.push(path.join(ROOT, "images/blog", coverFile.filename));
+  }
+  if (thumbnailFile) {
+    createdFiles.push(path.join(ROOT, "images/blog", thumbnailFile.filename));
   }
 
   gitAddCommitDeploy(createdFiles, title);
