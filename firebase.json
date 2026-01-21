@@ -406,6 +406,14 @@
         "source": "/print_and_media",
         "destination": "/print_and_media.html"
       },
+      {
+        "source": "/faq-2",
+        "destination": "/faq.html"
+      },
+      {
+        "source": "/careers",
+        "destination": "/careers.html"
+      },
 
       {
         "source": "**",
