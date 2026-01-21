@@ -76,10 +76,16 @@ body {
   color: var(--primary) !important;
 }
 
+h1,
+h2,
+h3 {
+  font-weight: 600 !important;
+}
+
 .btn {
   outline: none;
   box-shadow: none;
-  font-weight: 800;
+  font-weight: 600;
   border: none;
 }
 
