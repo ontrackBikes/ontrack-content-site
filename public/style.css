@@ -1,67 +1,70 @@
 /* src/assets/styles/fonts.css */
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('./fonts/Gilroy/Gilroy-Light.ttf') format('truetype');
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy/Gilroy-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('./fonts/Gilroy/Gilroy-Regular.ttf') format('truetype');
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy/Gilroy-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('./fonts/Gilroy/Gilroy-Medium.ttf') format('truetype');
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy/Gilroy-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('./fonts/Gilroy/Gilroy-Bold.ttf') format('truetype');
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy/Gilroy-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('./fonts/Gilroy/Gilroy-ExtraBold.ttf') format('truetype');
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy/Gilroy-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('./fonts/Gilroy/Gilroy-Heavy.ttf') format('truetype');
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy/Gilroy-Heavy.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 
-
 body {
-  font-family: 'Gilroy', system-ui, -apple-system, sans-serif;
+  font-family:
+    "Gilroy",
+    system-ui,
+    -apple-system,
+    sans-serif;
   color: #111;
 }
 
-.container {
+/* .container {
   max-width: 1140px !important;
   margin: auto;
-}
+} */
+*/
 
 /* =========================
    COLORS
 ========================= */
 :root {
-  --primary: #4E44D8;
+  --primary: #4e44d8;
   --orange: #ff7a00;
   --gray: #6b7280;
 }
-
 
 .bg-orange {
   background: var(--orange);
@@ -89,5 +92,11 @@ h3 {
 }
 
 .btn-primary {
-  background-color: var(--primary);
+  color: #fff;
+  background-color: #4e44d8;
+}
+
+.btn-primary:hover {
+  background-color: #4e44d2;
+  color: #fff;
 }
