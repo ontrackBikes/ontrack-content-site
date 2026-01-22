@@ -436,6 +436,33 @@
         "destination": "/zero-deposit-unlimited-km-bike-rental-for-rapido-bangalore.html"
       },
       {
+        "source": "/zero-deposit-unlimited-km-bike-rental-for-blinkit-bangalore",
+        "destination": "/zero-deposit-unlimited-km-bike-rental-for-blinkit-bangalore.html"
+      },
+      {
+        "source": "/rental-for-blinkit-delivery",
+        "destination": "/zero-deposit-unlimited-km-bike-rental-for-blinkit-bangalore.html"
+      },
+
+      {
+        "source": "/zero-deposit-unlimited-km-bike-rental-for-zomato-bangalore",
+        "destination": "/zero-deposit-unlimited-km-bike-rental-for-zomato-bangalore.html"
+      },
+      {
+        "source": "/rental-for-zomato-delivery",
+        "destination": "/zero-deposit-unlimited-km-bike-rental-for-zomato-bangalore.html"
+      },
+
+      {
+        "source": "/zero-deposit-unlimited-km-bike-rental-for-swiggy-bangalore",
+        "destination": "/zero-deposit-unlimited-km-bike-rental-for-swiggy-bangalore.html"
+      },
+      {
+        "source": "/rental-for-swiggy-delivery",
+        "destination": "/zero-deposit-unlimited-km-bike-rental-for-swiggy-bangalore.html"
+      },
+
+      {
         "source": "**",
         "destination": "/index.html"
       }
