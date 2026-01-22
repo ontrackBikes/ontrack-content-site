@@ -24,14 +24,8 @@
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
     <meta property="og:title" content="Maestro Edge on Rent in Bangalore" />
-    <meta
-      property="og:description"
-      content="The Hero Maestro Edge is the most premium model in Hero’s lineup of scooters.It has been built as a completely new product, with the focus on good looks and performance. It is powered by a brand new engine jointly developed with Austrian automotive firm AVL. This 111cc, single-cylinder air-cooled engine delivers 8bhp and 8Nm of torque through a CVT transmission. Hero MotoCorp claims an efficiency of 64kmpl for the Maestro Edge, which should make it one of the most fuel-efficient scooters in the market."
-    />
-    <meta
-      property="og:image"
-      content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-Hero-Maestro-bangalore-min.webp"
-    />
+    <meta property="og:description" content="The Hero Maestro Edge is the most premium model in Hero’s lineup of scooters.It has been built as a completely new product, with the focus on good looks and performance. It is powered by a brand new engine jointly developed with Austrian automotive firm AVL. This 111cc, single-cylinder air-cooled engine delivers 8bhp and 8Nm of torque through a CVT transmission. Hero MotoCorp claims an efficiency of 64kmpl for the Maestro Edge, which should make it one of the most fuel-efficient scooters in the market." />
+    <meta property="og:image" content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-Hero-Maestro-bangalore-min.webp" />
     <meta
       property="og:url"
       content="https://on-track.in/bike-rentals/bangalore/rent-Hero-Maestro-bangalore"
@@ -70,20 +64,20 @@
           <ul
             class="navbar-nav ms-auto align-items-lg-center gap-lg-4 mt-3 mt-lg-0"
           >
-            <li class="nav-item fw-bold">
+            <li class="nav-item f-gb">
               <a
                 class="nav-link"
                 href="https://book.on-track.in/two-wheeler-rental/models"
                 >Our Fleet</a
               >
             </li>
-            <li class="nav-item fw-bold">
+            <li class="nav-item f-gb">
               <a class="nav-link" href="#whyus">Why Us?</a>
             </li>
-            <li class="nav-item fw-bold">
+            <li class="nav-item f-gb">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
-            <li class="nav-item fw-bold">
+            <li class="nav-item f-gb">
               <a
                 href="https://book.on-track.in/two-wheeler-rental/models"
                 class="btn btn-primary btn-lg"
@@ -112,20 +106,32 @@
         <div class="col-md-6">
           <h1 class="mb-3">Maestro Edge on Rent in Bangalore</h1>
 
+          <p class="h4 mt-3">
+            <span id="bike-price-container">
+              Starting at ₹<span id="bike-price">--</span> / month
+            </span>
+            <span
+              id="out-of-stock-message"
+              class="text-danger fw-bold"
+              style="display: none"
+            >
+              Out of Stock
+            </span>
+          </p>
+
+          <div class="mt-2">
+            <p>📦 Delivery available at nominal cost</p>
+            <p>
+              🔄 Return/Exchange: Once booked, 15% cancellation charges
+              applicable
+            </p>
+          </div>
+
           <p class="lead">
             Unlimited KM • Monthly Bike Rental • Doorstep Delivery
           </p>
 
-          <p>
-            The Hero Maestro Edge is the most premium model in Hero’s lineup of
-            scooters.It has been built as a completely new product, with the
-            focus on good looks and performance. It is powered by a brand new
-            engine jointly developed with Austrian automotive firm AVL. This
-            111cc, single-cylinder air-cooled engine delivers 8bhp and 8Nm of
-            torque through a CVT transmission. Hero MotoCorp claims an
-            efficiency of 64kmpl for the Maestro Edge, which should make it one
-            of the most fuel-efficient scooters in the market.
-          </p>
+          <p>The Hero Maestro Edge is the most premium model in Hero’s lineup of scooters.It has been built as a completely new product, with the focus on good looks and performance. It is powered by a brand new engine jointly developed with Austrian automotive firm AVL. This 111cc, single-cylinder air-cooled engine delivers 8bhp and 8Nm of torque through a CVT transmission. Hero MotoCorp claims an efficiency of 64kmpl for the Maestro Edge, which should make it one of the most fuel-efficient scooters in the market.</p>
 
           <ul class="list-unstyled mt-4">
             <li>✔ Unlimited Kilometers</li>
@@ -146,10 +152,7 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2>Why Rent Maestro Edge from Ontrack?</h2>
-        <p>
-          Rent Maestro Edge in Bangalore with unlimited kilometers. Affordable
-          monthly bike rental from Ontrack.
-        </p>
+        <p>Rent Maestro Edge in Bangalore with unlimited kilometers. Affordable monthly bike rental from Ontrack.</p>
       </section>
     </div>
 
@@ -195,27 +198,89 @@
       </div>
     </div>
 
-    <!-- JSON-LD PRODUCT SCHEMA -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Maestro Edge",
-        "image": "https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-Hero-Maestro-bangalore-min.webp",
-        "description": "The Hero Maestro Edge is the most premium model in Hero’s lineup of scooters.It has been built as a completely new product, with the focus on good looks and performance. It is powered by a brand new engine jointly developed with Austrian automotive firm AVL. This 111cc, single-cylinder air-cooled engine delivers 8bhp and 8Nm of torque through a CVT transmission. Hero MotoCorp claims an efficiency of 64kmpl for the Maestro Edge, which should make it one of the most fuel-efficient scooters in the market.",
-        "brand": {
-          "@type": "Brand",
-          "name": "Ontrack"
-        },
-        "offers": {
-          "@type": "Offer",
-          "url": "https://book.on-track.in/model-display/22/rent-Hero-Maestro-bangalore",
-          "priceCurrency": "INR",
-          "availability": "https://schema.org/InStock"
-        }
-      }
-    </script>
+    <script>
+      const bikeId = 22; // Node.js replaces 22 with e.g., 44
+      fetch("https://glacier.on-track.in/api/model/list?model=" + bikeId)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data && data.length > 0) {
+            const bike = data[0]; // first / only model
 
+            // Check availability
+            const isAvailable = bike.available > 0 && bike.show !== 0;
+
+            // Show price or out-of-stock message
+            if (isAvailable) {
+              document.getElementById("bike-price").textContent = bike.price;
+              document.getElementById("out-of-stock-message").style.display =
+                "none";
+            } else {
+              document.getElementById("bike-price-container").style.display =
+                "none";
+              document.getElementById("out-of-stock-message").style.display =
+                "inline";
+            }
+
+            // JSON-LD Product schema
+            const jsonLd = {
+              "@context": "https://schema.org",
+              "@type": "Product",
+              name: bike.name,
+              image: bike.image300,
+              description: bike.description,
+              brand: {
+                "@type": "Brand",
+                name: bike.make || "Ontrack",
+              },
+              offers: {
+                "@type": "Offer",
+                url:
+                  "https://on-track.in/bike-rentals/bangalore/" + bike.linkName,
+                priceCurrency: "INR",
+                availability: isAvailable
+                  ? "https://schema.org/InStock"
+                  : "https://schema.org/OutOfStock",
+                priceSpecification: {
+                  "@type": "UnitPriceSpecification",
+                  price: bike.price,
+                  priceCurrency: "INR",
+                  referenceQuantity: {
+                    "@type": "QuantitativeValue",
+                    value: 1,
+                    unitCode: "MON",
+                  },
+                },
+                shippingDetails: {
+                  "@type": "OfferShippingDetails",
+                  shippingRate: {
+                    "@type": "MonetaryAmount",
+                    value: 500,
+                    currency: "INR",
+                    description: "Delivery available at nominal cost",
+                  },
+                  shippingDestination: {
+                    "@type": "DefinedRegion",
+                    addressCountry: "IN",
+                  },
+                },
+                returnPolicy: {
+                  "@type": "MerchantReturnPolicy",
+                  returnPolicyCategory: "https://schema.org/ReturnFees",
+                  applicableCountry: "IN",
+                  description:
+                    "Once booked, 15% cancellation charges applicable",
+                },
+              },
+            };
+
+            // Inject JSON-LD
+            const script = document.createElement("script");
+            script.type = "application/ld+json";
+            script.text = JSON.stringify(jsonLd, null, 2);
+            document.head.appendChild(script);
+          }
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
