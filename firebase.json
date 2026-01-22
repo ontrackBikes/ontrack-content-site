@@ -427,7 +427,14 @@
         "source": "/about-us",
         "destination": "/about-us.html"
       },
-
+      {
+        "source": "/zero-deposit-unlimited-km-bike-rental-for-rapido-bangalore",
+        "destination": "/zero-deposit-unlimited-km-bike-rental-for-rapido-bangalore.html"
+      },
+      {
+        "source": "/rental-for-rapido-delivery",
+        "destination": "/zero-deposit-unlimited-km-bike-rental-for-rapido-bangalore.html"
+      },
       {
         "source": "**",
         "destination": "/index.html"
