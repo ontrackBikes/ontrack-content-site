@@ -24,9 +24,15 @@
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
     <meta property="og:title" content="Honda Navi on Rent in Bangalore" />
-    <meta property="og:description" content="Honda’s aim was to create something ‘fun’ for its customers and so they launched Navi, perceived to be a cross between a motorcycle and a scooter. Navi is compact and looks quite funky and captivating. The new exciting features in this bike include tall handlebar, the edgy fuel tank cover, bold headlight etc. The Navi is powered by 110 cc engine, the same one that powers Honda Activa as well. 
-" />
-    <meta property="og:image" content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-honda-navi-bangalore-min.webp" />
+    <meta
+      property="og:description"
+      content="Honda’s aim was to create something ‘fun’ for its customers and so they launched Navi, perceived to be a cross between a motorcycle and a scooter. Navi is compact and looks quite funky and captivating. The new exciting features in this bike include tall handlebar, the edgy fuel tank cover, bold headlight etc. The Navi is powered by 110 cc engine, the same one that powers Honda Activa as well. 
+"
+    />
+    <meta
+      property="og:image"
+      content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-honda-navi-bangalore-min.webp"
+    />
     <meta
       property="og:url"
       content="https://on-track.in/bike-rentals/bangalore/rent-honda-navi-bangalore"
@@ -132,8 +138,14 @@
             Unlimited KM • Monthly Bike Rental • Doorstep Delivery
           </p>
 
-          <p>Honda’s aim was to create something ‘fun’ for its customers and so they launched Navi, perceived to be a cross between a motorcycle and a scooter. Navi is compact and looks quite funky and captivating. The new exciting features in this bike include tall handlebar, the edgy fuel tank cover, bold headlight etc. The Navi is powered by 110 cc engine, the same one that powers Honda Activa as well. 
-</p>
+          <p>
+            Honda’s aim was to create something ‘fun’ for its customers and so
+            they launched Navi, perceived to be a cross between a motorcycle and
+            a scooter. Navi is compact and looks quite funky and captivating.
+            The new exciting features in this bike include tall handlebar, the
+            edgy fuel tank cover, bold headlight etc. The Navi is powered by 110
+            cc engine, the same one that powers Honda Activa as well.
+          </p>
 
           <ul class="list-unstyled mt-4">
             <li>✔ Unlimited Kilometers</li>
@@ -154,7 +166,10 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2>Why Rent Honda Navi from Ontrack?</h2>
-        <p>Rent Honda Navi in Bangalore with unlimited kilometers. Affordable monthly bike rental from Ontrack.</p>
+        <p>
+          Rent Honda Navi in Bangalore with unlimited kilometers. Affordable
+          monthly bike rental from Ontrack.
+        </p>
       </section>
     </div>
 
@@ -202,11 +217,12 @@
 
     <script>
       const bikeId = 2; // Node.js replaces 2 with e.g., 44
-      fetch("https://glacier.on-track.in/api/model/list?model=" + bikeId)
+      fetch("https://glacier.on-track.in/api/v2/models/" + bikeId)
         .then((res) => res.json())
         .then((data) => {
           if (data && data.length > 0) {
-            const bike = data[0]; // first / only model
+            const bike = data[0].modelData;
+            bike.available = data[0].available; // first / only model
 
             // Check availability
             const isAvailable = bike.available > 0 && bike.show !== 0;

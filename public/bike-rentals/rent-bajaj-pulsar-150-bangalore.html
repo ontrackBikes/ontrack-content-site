@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
 
-    <title>Bajaj Pulsar 150 on Rent in Bangalore | Unlimited KM – Ontrack</title>
+    <title>
+      Bajaj Pulsar 150 on Rent in Bangalore | Unlimited KM – Ontrack
+    </title>
 
     <meta
       name="description"
@@ -24,8 +26,14 @@
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
     <meta property="og:title" content="Bajaj Pulsar 150 on Rent in Bangalore" />
-    <meta property="og:description" content="Bajaj Pulsar 150 is perceived to be the ‘King of the road” delivering exceptional power and torque. Bajaj calls it the ‘biggest, sportiest and manliest’ Pulsar 150 yet. The performance is amplified because of world-class features like front disc brake, alloy wheels and broad rear tire. The upright seating position, 17-inch alloy wheels, and the smooth suspension provides a superior level of comfort. " />
-    <meta property="og:image" content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-bajaj-pulsar-150-bangalore-min.webp" />
+    <meta
+      property="og:description"
+      content="Bajaj Pulsar 150 is perceived to be the ‘King of the road” delivering exceptional power and torque. Bajaj calls it the ‘biggest, sportiest and manliest’ Pulsar 150 yet. The performance is amplified because of world-class features like front disc brake, alloy wheels and broad rear tire. The upright seating position, 17-inch alloy wheels, and the smooth suspension provides a superior level of comfort. "
+    />
+    <meta
+      property="og:image"
+      content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-bajaj-pulsar-150-bangalore-min.webp"
+    />
     <meta
       property="og:url"
       content="https://on-track.in/bike-rentals/bangalore/rent-bajaj-pulsar-150-bangalore"
@@ -131,7 +139,15 @@
             Unlimited KM • Monthly Bike Rental • Doorstep Delivery
           </p>
 
-          <p>Bajaj Pulsar 150 is perceived to be the ‘King of the road” delivering exceptional power and torque. Bajaj calls it the ‘biggest, sportiest and manliest’ Pulsar 150 yet. The performance is amplified because of world-class features like front disc brake, alloy wheels and broad rear tire. The upright seating position, 17-inch alloy wheels, and the smooth suspension provides a superior level of comfort. </p>
+          <p>
+            Bajaj Pulsar 150 is perceived to be the ‘King of the road”
+            delivering exceptional power and torque. Bajaj calls it the
+            ‘biggest, sportiest and manliest’ Pulsar 150 yet. The performance is
+            amplified because of world-class features like front disc brake,
+            alloy wheels and broad rear tire. The upright seating position,
+            17-inch alloy wheels, and the smooth suspension provides a superior
+            level of comfort.
+          </p>
 
           <ul class="list-unstyled mt-4">
             <li>✔ Unlimited Kilometers</li>
@@ -152,7 +168,10 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2>Why Rent Bajaj Pulsar 150 from Ontrack?</h2>
-        <p>Rent Bajaj Pulsar 150 in Bangalore with unlimited kilometers. Affordable monthly bike rental from Ontrack.</p>
+        <p>
+          Rent Bajaj Pulsar 150 in Bangalore with unlimited kilometers.
+          Affordable monthly bike rental from Ontrack.
+        </p>
       </section>
     </div>
 
@@ -200,11 +219,12 @@
 
     <script>
       const bikeId = 13; // Node.js replaces 13 with e.g., 44
-      fetch("https://glacier.on-track.in/api/model/list?model=" + bikeId)
+      fetch("https://glacier.on-track.in/api/v2/models/" + bikeId)
         .then((res) => res.json())
         .then((data) => {
           if (data && data.length > 0) {
-            const bike = data[0]; // first / only model
+            const bike = data[0].modelData;
+            bike.available = data[0].available; // first / only model
 
             // Check availability
             const isAvailable = bike.available > 0 && bike.show !== 0;

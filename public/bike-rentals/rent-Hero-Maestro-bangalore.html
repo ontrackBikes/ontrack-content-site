@@ -24,8 +24,14 @@
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
     <meta property="og:title" content="Maestro Edge on Rent in Bangalore" />
-    <meta property="og:description" content="The Hero Maestro Edge is the most premium model in Hero’s lineup of scooters.It has been built as a completely new product, with the focus on good looks and performance. It is powered by a brand new engine jointly developed with Austrian automotive firm AVL. This 111cc, single-cylinder air-cooled engine delivers 8bhp and 8Nm of torque through a CVT transmission. Hero MotoCorp claims an efficiency of 64kmpl for the Maestro Edge, which should make it one of the most fuel-efficient scooters in the market." />
-    <meta property="og:image" content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-Hero-Maestro-bangalore-min.webp" />
+    <meta
+      property="og:description"
+      content="The Hero Maestro Edge is the most premium model in Hero’s lineup of scooters.It has been built as a completely new product, with the focus on good looks and performance. It is powered by a brand new engine jointly developed with Austrian automotive firm AVL. This 111cc, single-cylinder air-cooled engine delivers 8bhp and 8Nm of torque through a CVT transmission. Hero MotoCorp claims an efficiency of 64kmpl for the Maestro Edge, which should make it one of the most fuel-efficient scooters in the market."
+    />
+    <meta
+      property="og:image"
+      content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-Hero-Maestro-bangalore-min.webp"
+    />
     <meta
       property="og:url"
       content="https://on-track.in/bike-rentals/bangalore/rent-Hero-Maestro-bangalore"
@@ -131,7 +137,16 @@
             Unlimited KM • Monthly Bike Rental • Doorstep Delivery
           </p>
 
-          <p>The Hero Maestro Edge is the most premium model in Hero’s lineup of scooters.It has been built as a completely new product, with the focus on good looks and performance. It is powered by a brand new engine jointly developed with Austrian automotive firm AVL. This 111cc, single-cylinder air-cooled engine delivers 8bhp and 8Nm of torque through a CVT transmission. Hero MotoCorp claims an efficiency of 64kmpl for the Maestro Edge, which should make it one of the most fuel-efficient scooters in the market.</p>
+          <p>
+            The Hero Maestro Edge is the most premium model in Hero’s lineup of
+            scooters.It has been built as a completely new product, with the
+            focus on good looks and performance. It is powered by a brand new
+            engine jointly developed with Austrian automotive firm AVL. This
+            111cc, single-cylinder air-cooled engine delivers 8bhp and 8Nm of
+            torque through a CVT transmission. Hero MotoCorp claims an
+            efficiency of 64kmpl for the Maestro Edge, which should make it one
+            of the most fuel-efficient scooters in the market.
+          </p>
 
           <ul class="list-unstyled mt-4">
             <li>✔ Unlimited Kilometers</li>
@@ -152,7 +167,10 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2>Why Rent Maestro Edge from Ontrack?</h2>
-        <p>Rent Maestro Edge in Bangalore with unlimited kilometers. Affordable monthly bike rental from Ontrack.</p>
+        <p>
+          Rent Maestro Edge in Bangalore with unlimited kilometers. Affordable
+          monthly bike rental from Ontrack.
+        </p>
       </section>
     </div>
 
@@ -200,11 +218,12 @@
 
     <script>
       const bikeId = 22; // Node.js replaces 22 with e.g., 44
-      fetch("https://glacier.on-track.in/api/model/list?model=" + bikeId)
+      fetch("https://glacier.on-track.in/api/v2/models/" + bikeId)
         .then((res) => res.json())
         .then((data) => {
           if (data && data.length > 0) {
-            const bike = data[0]; // first / only model
+            const bike = data[0].modelData;
+            bike.available = data[0].available; // first / only model
 
             // Check availability
             const isAvailable = bike.available > 0 && bike.show !== 0;

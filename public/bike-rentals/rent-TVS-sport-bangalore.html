@@ -24,8 +24,14 @@
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
     <meta property="og:title" content="TVS Sport on Rent in Bangalore" />
-    <meta property="og:description" content="This sporty styled bike is said to provide unmatched fuel economy and exceptional riding comfort. According to TVS, the best features of this  model are long life engine duration, sport styling and all gear electric start. It offers a power of 7.8 PS that is said to deliver a great pick up. As TVS says, “Accelerate to feel the power!”" />
-    <meta property="og:image" content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-TVS-sport-bangalore-min.webp" />
+    <meta
+      property="og:description"
+      content="This sporty styled bike is said to provide unmatched fuel economy and exceptional riding comfort. According to TVS, the best features of this  model are long life engine duration, sport styling and all gear electric start. It offers a power of 7.8 PS that is said to deliver a great pick up. As TVS says, “Accelerate to feel the power!”"
+    />
+    <meta
+      property="og:image"
+      content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-TVS-sport-bangalore-min.webp"
+    />
     <meta
       property="og:url"
       content="https://on-track.in/bike-rentals/bangalore/rent-TVS-sport-bangalore"
@@ -131,7 +137,14 @@
             Unlimited KM • Monthly Bike Rental • Doorstep Delivery
           </p>
 
-          <p>This sporty styled bike is said to provide unmatched fuel economy and exceptional riding comfort. According to TVS, the best features of this  model are long life engine duration, sport styling and all gear electric start. It offers a power of 7.8 PS that is said to deliver a great pick up. As TVS says, “Accelerate to feel the power!”</p>
+          <p>
+            This sporty styled bike is said to provide unmatched fuel economy
+            and exceptional riding comfort. According to TVS, the best features
+            of this model are long life engine duration, sport styling and all
+            gear electric start. It offers a power of 7.8 PS that is said to
+            deliver a great pick up. As TVS says, “Accelerate to feel the
+            power!”
+          </p>
 
           <ul class="list-unstyled mt-4">
             <li>✔ Unlimited Kilometers</li>
@@ -152,7 +165,10 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2>Why Rent TVS Sport from Ontrack?</h2>
-        <p>Rent TVS Sport in Bangalore with unlimited kilometers. Affordable monthly bike rental from Ontrack.</p>
+        <p>
+          Rent TVS Sport in Bangalore with unlimited kilometers. Affordable
+          monthly bike rental from Ontrack.
+        </p>
       </section>
     </div>
 
@@ -200,11 +216,12 @@
 
     <script>
       const bikeId = 19; // Node.js replaces 19 with e.g., 44
-      fetch("https://glacier.on-track.in/api/model/list?model=" + bikeId)
+      fetch("https://glacier.on-track.in/api/v2/models/" + bikeId)
         .then((res) => res.json())
         .then((data) => {
           if (data && data.length > 0) {
-            const bike = data[0]; // first / only model
+            const bike = data[0].modelData;
+            bike.available = data[0].available; // first / only model
 
             // Check availability
             const isAvailable = bike.available > 0 && bike.show !== 0;

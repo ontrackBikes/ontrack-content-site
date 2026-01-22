@@ -24,8 +24,14 @@
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
     <meta property="og:title" content="Hero Destini on Rent in Bangalore" />
-    <meta property="og:description" content="Armed with chrome garnishes on both the front and side panels, Destini is known for its masculine bodywork with an elegant metallic body sharp, 10-inch wheels and multi-functional ignition key. Design and silhouette are quite similar to Duet 110. It is best for a day-to-day commute. The revolutionary performance, design and technology make it a great scooter for everyday commute and Bengaluru's chaotic traffic conditions. " />
-    <meta property="og:image" content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-hero-destini-bangalore-min.webp" />
+    <meta
+      property="og:description"
+      content="Armed with chrome garnishes on both the front and side panels, Destini is known for its masculine bodywork with an elegant metallic body sharp, 10-inch wheels and multi-functional ignition key. Design and silhouette are quite similar to Duet 110. It is best for a day-to-day commute. The revolutionary performance, design and technology make it a great scooter for everyday commute and Bengaluru's chaotic traffic conditions. "
+    />
+    <meta
+      property="og:image"
+      content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-hero-destini-bangalore-min.webp"
+    />
     <meta
       property="og:url"
       content="https://on-track.in/bike-rentals/bangalore/rent-hero-destini-bangalore"
@@ -131,7 +137,15 @@
             Unlimited KM • Monthly Bike Rental • Doorstep Delivery
           </p>
 
-          <p>Armed with chrome garnishes on both the front and side panels, Destini is known for its masculine bodywork with an elegant metallic body sharp, 10-inch wheels and multi-functional ignition key. Design and silhouette are quite similar to Duet 110. It is best for a day-to-day commute. The revolutionary performance, design and technology make it a great scooter for everyday commute and Bengaluru's chaotic traffic conditions. </p>
+          <p>
+            Armed with chrome garnishes on both the front and side panels,
+            Destini is known for its masculine bodywork with an elegant metallic
+            body sharp, 10-inch wheels and multi-functional ignition key. Design
+            and silhouette are quite similar to Duet 110. It is best for a
+            day-to-day commute. The revolutionary performance, design and
+            technology make it a great scooter for everyday commute and
+            Bengaluru's chaotic traffic conditions.
+          </p>
 
           <ul class="list-unstyled mt-4">
             <li>✔ Unlimited Kilometers</li>
@@ -152,7 +166,10 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2>Why Rent Hero Destini from Ontrack?</h2>
-        <p>Rent Hero Destini in Bangalore with unlimited kilometers. Affordable monthly bike rental from Ontrack.</p>
+        <p>
+          Rent Hero Destini in Bangalore with unlimited kilometers. Affordable
+          monthly bike rental from Ontrack.
+        </p>
       </section>
     </div>
 
@@ -200,11 +217,12 @@
 
     <script>
       const bikeId = 28; // Node.js replaces 28 with e.g., 44
-      fetch("https://glacier.on-track.in/api/model/list?model=" + bikeId)
+      fetch("https://glacier.on-track.in/api/v2/models/" + bikeId)
         .then((res) => res.json())
         .then((data) => {
           if (data && data.length > 0) {
-            const bike = data[0]; // first / only model
+            const bike = data[0].modelData;
+            bike.available = data[0].available; // first / only model
 
             // Check availability
             const isAvailable = bike.available > 0 && bike.show !== 0;

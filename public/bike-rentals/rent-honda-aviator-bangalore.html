@@ -24,8 +24,14 @@
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
     <meta property="og:title" content="Honda Aviator on Rent in Bangalore" />
-    <meta property="og:description" content="Honda characterizes Aviator as a bike with classy and stylish features that don’t make it hard to impress! Aviator is also popular for delivering high mileage and exceptional performance. Honda has incorporated the same engine as in other variants like Activa and Dio." />
-    <meta property="og:image" content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-honda-aviator-bangalore-min.webp" />
+    <meta
+      property="og:description"
+      content="Honda characterizes Aviator as a bike with classy and stylish features that don’t make it hard to impress! Aviator is also popular for delivering high mileage and exceptional performance. Honda has incorporated the same engine as in other variants like Activa and Dio."
+    />
+    <meta
+      property="og:image"
+      content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-honda-aviator-bangalore-min.webp"
+    />
     <meta
       property="og:url"
       content="https://on-track.in/bike-rentals/bangalore/rent-honda-aviator-bangalore"
@@ -131,7 +137,13 @@
             Unlimited KM • Monthly Bike Rental • Doorstep Delivery
           </p>
 
-          <p>Honda characterizes Aviator as a bike with classy and stylish features that don’t make it hard to impress! Aviator is also popular for delivering high mileage and exceptional performance. Honda has incorporated the same engine as in other variants like Activa and Dio.</p>
+          <p>
+            Honda characterizes Aviator as a bike with classy and stylish
+            features that don’t make it hard to impress! Aviator is also popular
+            for delivering high mileage and exceptional performance. Honda has
+            incorporated the same engine as in other variants like Activa and
+            Dio.
+          </p>
 
           <ul class="list-unstyled mt-4">
             <li>✔ Unlimited Kilometers</li>
@@ -152,7 +164,10 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2>Why Rent Honda Aviator from Ontrack?</h2>
-        <p>Rent Honda Aviator in Bangalore with unlimited kilometers. Affordable monthly bike rental from Ontrack.</p>
+        <p>
+          Rent Honda Aviator in Bangalore with unlimited kilometers. Affordable
+          monthly bike rental from Ontrack.
+        </p>
       </section>
     </div>
 
@@ -200,11 +215,12 @@
 
     <script>
       const bikeId = 18; // Node.js replaces 18 with e.g., 44
-      fetch("https://glacier.on-track.in/api/model/list?model=" + bikeId)
+      fetch("https://glacier.on-track.in/api/v2/models/" + bikeId)
         .then((res) => res.json())
         .then((data) => {
           if (data && data.length > 0) {
-            const bike = data[0]; // first / only model
+            const bike = data[0].modelData;
+            bike.available = data[0].available; // first / only model
 
             // Check availability
             const isAvailable = bike.available > 0 && bike.show !== 0;

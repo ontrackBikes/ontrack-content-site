@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
 
-    <title>Hero Xoom 110 LX - 2024 on Rent in Bangalore | Unlimited KM – Ontrack</title>
+    <title>
+      Hero Xoom 110 LX - 2024 on Rent in Bangalore | Unlimited KM – Ontrack
+    </title>
 
     <meta
       name="description"
@@ -23,14 +25,23 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
-    <meta property="og:title" content="Hero Xoom 110 LX - 2024 on Rent in Bangalore" />
-    <meta property="og:description" content="The Hero Xoom exudes a dynamic and energetic vibe, showcasing appealing aesthetics, satisfactory performance, and an array of features. Its compact size and manageable weight render it highly maneuverable in urban traffic. Notably, it boasts innovative elements such as cornering lights. Nevertheless, the scooter may generate some vibrations, contributing to a less-than-ideal riding experience.
+    <meta
+      property="og:title"
+      content="Hero Xoom 110 LX - 2024 on Rent in Bangalore"
+    />
+    <meta
+      property="og:description"
+      content="The Hero Xoom exudes a dynamic and energetic vibe, showcasing appealing aesthetics, satisfactory performance, and an array of features. Its compact size and manageable weight render it highly maneuverable in urban traffic. Notably, it boasts innovative elements such as cornering lights. Nevertheless, the scooter may generate some vibrations, contributing to a less-than-ideal riding experience.
 
 
 
 
-" />
-    <meta property="og:image" content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/4c89bac1-9f2f-4873-8c9e-82b9b2c1b54a.png" />
+"
+    />
+    <meta
+      property="og:image"
+      content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/4c89bac1-9f2f-4873-8c9e-82b9b2c1b54a.png"
+    />
     <meta
       property="og:url"
       content="https://on-track.in/bike-rentals/bangalore/rent-hero-xoomLX-110CC - 2024"
@@ -136,12 +147,15 @@
             Unlimited KM • Monthly Bike Rental • Doorstep Delivery
           </p>
 
-          <p>The Hero Xoom exudes a dynamic and energetic vibe, showcasing appealing aesthetics, satisfactory performance, and an array of features. Its compact size and manageable weight render it highly maneuverable in urban traffic. Notably, it boasts innovative elements such as cornering lights. Nevertheless, the scooter may generate some vibrations, contributing to a less-than-ideal riding experience.
-
-
-
-
-</p>
+          <p>
+            The Hero Xoom exudes a dynamic and energetic vibe, showcasing
+            appealing aesthetics, satisfactory performance, and an array of
+            features. Its compact size and manageable weight render it highly
+            maneuverable in urban traffic. Notably, it boasts innovative
+            elements such as cornering lights. Nevertheless, the scooter may
+            generate some vibrations, contributing to a less-than-ideal riding
+            experience.
+          </p>
 
           <ul class="list-unstyled mt-4">
             <li>✔ Unlimited Kilometers</li>
@@ -162,7 +176,10 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2>Why Rent Hero Xoom 110 LX - 2024 from Ontrack?</h2>
-        <p>Rent Hero Xoom 110 LX - 2024 in Bangalore with unlimited kilometers. Affordable monthly bike rental from Ontrack.</p>
+        <p>
+          Rent Hero Xoom 110 LX - 2024 in Bangalore with unlimited kilometers.
+          Affordable monthly bike rental from Ontrack.
+        </p>
       </section>
     </div>
 
@@ -210,11 +227,12 @@
 
     <script>
       const bikeId = 40; // Node.js replaces 40 with e.g., 44
-      fetch("https://glacier.on-track.in/api/model/list?model=" + bikeId)
+      fetch("https://glacier.on-track.in/api/v2/models/" + bikeId)
         .then((res) => res.json())
         .then((data) => {
           if (data && data.length > 0) {
-            const bike = data[0]; // first / only model
+            const bike = data[0].modelData;
+            bike.available = data[0].available; // first / only model
 
             // Check availability
             const isAvailable = bike.available > 0 && bike.show !== 0;

@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
 
-    <title>Avenger 220 Cruise on Rent in Bangalore | Unlimited KM – Ontrack</title>
+    <title>
+      Avenger 220 Cruise on Rent in Bangalore | Unlimited KM – Ontrack
+    </title>
 
     <meta
       name="description"
@@ -23,9 +25,18 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
-    <meta property="og:title" content="Avenger 220 Cruise on Rent in Bangalore" />
-    <meta property="og:description" content="Bajaj Avenger Cruise 220 is a leisure cruising bike with avant-garde characteristics or as Bajaj says ‘Godlike features’. They include a new digital console, an updated headlamp with LED DRLs and new insignia. The low-slung seat, extended wheelbase, and swept back handlebars delivers maximum comfort during long rides. " />
-    <meta property="og:image" content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-bajaj-avenger-220-cruise-bangalore-min.webp" />
+    <meta
+      property="og:title"
+      content="Avenger 220 Cruise on Rent in Bangalore"
+    />
+    <meta
+      property="og:description"
+      content="Bajaj Avenger Cruise 220 is a leisure cruising bike with avant-garde characteristics or as Bajaj says ‘Godlike features’. They include a new digital console, an updated headlamp with LED DRLs and new insignia. The low-slung seat, extended wheelbase, and swept back handlebars delivers maximum comfort during long rides. "
+    />
+    <meta
+      property="og:image"
+      content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-bajaj-avenger-220-cruise-bangalore-min.webp"
+    />
     <meta
       property="og:url"
       content="https://on-track.in/bike-rentals/bangalore/rent-bajaj-avenger-220-cruise-bangalore"
@@ -131,7 +142,13 @@
             Unlimited KM • Monthly Bike Rental • Doorstep Delivery
           </p>
 
-          <p>Bajaj Avenger Cruise 220 is a leisure cruising bike with avant-garde characteristics or as Bajaj says ‘Godlike features’. They include a new digital console, an updated headlamp with LED DRLs and new insignia. The low-slung seat, extended wheelbase, and swept back handlebars delivers maximum comfort during long rides. </p>
+          <p>
+            Bajaj Avenger Cruise 220 is a leisure cruising bike with avant-garde
+            characteristics or as Bajaj says ‘Godlike features’. They include a
+            new digital console, an updated headlamp with LED DRLs and new
+            insignia. The low-slung seat, extended wheelbase, and swept back
+            handlebars delivers maximum comfort during long rides.
+          </p>
 
           <ul class="list-unstyled mt-4">
             <li>✔ Unlimited Kilometers</li>
@@ -152,7 +169,10 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2>Why Rent Avenger 220 Cruise from Ontrack?</h2>
-        <p>Rent Avenger 220 Cruise in Bangalore with unlimited kilometers. Affordable monthly bike rental from Ontrack.</p>
+        <p>
+          Rent Avenger 220 Cruise in Bangalore with unlimited kilometers.
+          Affordable monthly bike rental from Ontrack.
+        </p>
       </section>
     </div>
 
@@ -200,11 +220,12 @@
 
     <script>
       const bikeId = 16; // Node.js replaces 16 with e.g., 44
-      fetch("https://glacier.on-track.in/api/model/list?model=" + bikeId)
+      fetch("https://glacier.on-track.in/api/v2/models/" + bikeId)
         .then((res) => res.json())
         .then((data) => {
           if (data && data.length > 0) {
-            const bike = data[0]; // first / only model
+            const bike = data[0].modelData;
+            bike.available = data[0].available; // first / only model
 
             // Check availability
             const isAvailable = bike.available > 0 && bike.show !== 0;
