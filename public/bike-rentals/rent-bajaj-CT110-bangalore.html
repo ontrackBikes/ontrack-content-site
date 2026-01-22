@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
 
-    <title>CT 100 (Self-Start) on Rent in Bangalore | Unlimited KM – Ontrack</title>
+    <title>
+      CT 100 (Self-Start) on Rent in Bangalore | Unlimited KM – Ontrack
+    </title>
 
     <meta
       name="description"
@@ -23,9 +25,18 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
-    <meta property="og:title" content="CT 100 (Self-Start) on Rent in Bangalore" />
-    <meta property="og:description" content="Bajaj categorizes CT100 as the jackpot bike offering superior mileage and low maintenance. Bajaj CT100 is layered with a new decal design. The SNS (Spring in Spring Suspension) technology aids in conquering the most challenging road conditions. It has a long padded seat delivering a high level of comfort and making the commute on rougher terrains easier. The powerful engine helps in extracting the maximum efficiency. " />
-    <meta property="og:image" content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-bajaj-ct-100-bangalore-min.webp" />
+    <meta
+      property="og:title"
+      content="CT 100 (Self-Start) on Rent in Bangalore"
+    />
+    <meta
+      property="og:description"
+      content="Bajaj categorizes CT100 as the jackpot bike offering superior mileage and low maintenance. Bajaj CT100 is layered with a new decal design. The SNS (Spring in Spring Suspension) technology aids in conquering the most challenging road conditions. It has a long padded seat delivering a high level of comfort and making the commute on rougher terrains easier. The powerful engine helps in extracting the maximum efficiency. "
+    />
+    <meta
+      property="og:image"
+      content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-bajaj-ct-100-bangalore-min.webp"
+    />
     <meta
       property="og:url"
       content="https://on-track.in/bike-rentals/bangalore/rent-bajaj-CT110-bangalore"
@@ -131,7 +142,15 @@
             Unlimited KM • Monthly Bike Rental • Doorstep Delivery
           </p>
 
-          <p>Bajaj categorizes CT100 as the jackpot bike offering superior mileage and low maintenance. Bajaj CT100 is layered with a new decal design. The SNS (Spring in Spring Suspension) technology aids in conquering the most challenging road conditions. It has a long padded seat delivering a high level of comfort and making the commute on rougher terrains easier. The powerful engine helps in extracting the maximum efficiency. </p>
+          <p>
+            Bajaj categorizes CT100 as the jackpot bike offering superior
+            mileage and low maintenance. Bajaj CT100 is layered with a new decal
+            design. The SNS (Spring in Spring Suspension) technology aids in
+            conquering the most challenging road conditions. It has a long
+            padded seat delivering a high level of comfort and making the
+            commute on rougher terrains easier. The powerful engine helps in
+            extracting the maximum efficiency.
+          </p>
 
           <ul class="list-unstyled mt-4">
             <li>✔ Unlimited Kilometers</li>
@@ -152,7 +171,10 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2>Why Rent CT 100 (Self-Start) from Ontrack?</h2>
-        <p>Rent CT 100 (Self-Start) in Bangalore with unlimited kilometers. Affordable monthly bike rental from Ontrack.</p>
+        <p>
+          Rent CT 100 (Self-Start) in Bangalore with unlimited kilometers.
+          Affordable monthly bike rental from Ontrack.
+        </p>
       </section>
     </div>
 
@@ -200,11 +222,12 @@
 
     <script>
       const bikeId = 31; // Node.js replaces 31 with e.g., 44
-      fetch("https://glacier.on-track.in/api/model/list?model=" + bikeId)
+      fetch("https://glacier.on-track.in/api/v2/models/" + bikeId)
         .then((res) => res.json())
         .then((data) => {
           if (data && data.length > 0) {
-            const bike = data[0]; // first / only model
+            const bike = data[0].modelData;
+            bike.available = data[0].available; // first / only model
 
             // Check availability
             const isAvailable = bike.available > 0 && bike.show !== 0;

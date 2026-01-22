@@ -24,8 +24,14 @@
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
     <meta property="og:title" content="TVS Jupiter on Rent in Bangalore" />
-    <meta property="og:description" content="TVS states that ‘captivating exterior is pure indulgence’. The 3-D insignia on the two-wheeler offers a ‘premium’ look. The bike is armed with advanced LED lights with optical guide. The same goes for the stylish yet elegant twin city lamps. The contemporary looking scooter offers comfortable ergonomics and remarkably good handling." />
-    <meta property="og:image" content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-TVS-Jupiter-bangalore-min.webp" />
+    <meta
+      property="og:description"
+      content="TVS states that ‘captivating exterior is pure indulgence’. The 3-D insignia on the two-wheeler offers a ‘premium’ look. The bike is armed with advanced LED lights with optical guide. The same goes for the stylish yet elegant twin city lamps. The contemporary looking scooter offers comfortable ergonomics and remarkably good handling."
+    />
+    <meta
+      property="og:image"
+      content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-TVS-Jupiter-bangalore-min.webp"
+    />
     <meta
       property="og:url"
       content="https://on-track.in/bike-rentals/bangalore/rent-TVS-Jupiter-bangalore"
@@ -131,7 +137,13 @@
             Unlimited KM • Monthly Bike Rental • Doorstep Delivery
           </p>
 
-          <p>TVS states that ‘captivating exterior is pure indulgence’. The 3-D insignia on the two-wheeler offers a ‘premium’ look. The bike is armed with advanced LED lights with optical guide. The same goes for the stylish yet elegant twin city lamps. The contemporary looking scooter offers comfortable ergonomics and remarkably good handling.</p>
+          <p>
+            TVS states that ‘captivating exterior is pure indulgence’. The 3-D
+            insignia on the two-wheeler offers a ‘premium’ look. The bike is
+            armed with advanced LED lights with optical guide. The same goes for
+            the stylish yet elegant twin city lamps. The contemporary looking
+            scooter offers comfortable ergonomics and remarkably good handling.
+          </p>
 
           <ul class="list-unstyled mt-4">
             <li>✔ Unlimited Kilometers</li>
@@ -152,7 +164,10 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2>Why Rent TVS Jupiter from Ontrack?</h2>
-        <p>Rent TVS Jupiter in Bangalore with unlimited kilometers. Affordable monthly bike rental from Ontrack.</p>
+        <p>
+          Rent TVS Jupiter in Bangalore with unlimited kilometers. Affordable
+          monthly bike rental from Ontrack.
+        </p>
       </section>
     </div>
 
@@ -200,11 +215,12 @@
 
     <script>
       const bikeId = 20; // Node.js replaces 20 with e.g., 44
-      fetch("https://glacier.on-track.in/api/model/list?model=" + bikeId)
+      fetch("https://glacier.on-track.in/api/v2/models/" + bikeId)
         .then((res) => res.json())
         .then((data) => {
           if (data && data.length > 0) {
-            const bike = data[0]; // first / only model
+            const bike = data[0].modelData;
+            bike.available = data[0].available; // first / only model
 
             // Check availability
             const isAvailable = bike.available > 0 && bike.show !== 0;

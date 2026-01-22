@@ -24,8 +24,14 @@
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
     <meta property="og:title" content="Activa 3G/4G on Rent in Bangalore" />
-    <meta property="og:description" content="Honda Activa is seen as the ‘King of Scooters’ since the last 15 years. Honda, with its elegant style and a standard CBS (Combined Braking System), has found a very noteworthy place in the market. If you have a lot to store during commutes, it is a spectacular choice for you as the under seat compartment offers 18 liters capacity. Even the seat is long and wide making it high on comfort for daily travel. " />
-    <meta property="og:image" content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-honda-activa-bangalore-min.webp" />
+    <meta
+      property="og:description"
+      content="Honda Activa is seen as the ‘King of Scooters’ since the last 15 years. Honda, with its elegant style and a standard CBS (Combined Braking System), has found a very noteworthy place in the market. If you have a lot to store during commutes, it is a spectacular choice for you as the under seat compartment offers 18 liters capacity. Even the seat is long and wide making it high on comfort for daily travel. "
+    />
+    <meta
+      property="og:image"
+      content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-honda-activa-bangalore-min.webp"
+    />
     <meta
       property="og:url"
       content="https://on-track.in/bike-rentals/bangalore/rent-honda-activa-bangalore"
@@ -131,7 +137,15 @@
             Unlimited KM • Monthly Bike Rental • Doorstep Delivery
           </p>
 
-          <p>Honda Activa is seen as the ‘King of Scooters’ since the last 15 years. Honda, with its elegant style and a standard CBS (Combined Braking System), has found a very noteworthy place in the market. If you have a lot to store during commutes, it is a spectacular choice for you as the under seat compartment offers 18 liters capacity. Even the seat is long and wide making it high on comfort for daily travel. </p>
+          <p>
+            Honda Activa is seen as the ‘King of Scooters’ since the last 15
+            years. Honda, with its elegant style and a standard CBS (Combined
+            Braking System), has found a very noteworthy place in the market. If
+            you have a lot to store during commutes, it is a spectacular choice
+            for you as the under seat compartment offers 18 liters capacity.
+            Even the seat is long and wide making it high on comfort for daily
+            travel.
+          </p>
 
           <ul class="list-unstyled mt-4">
             <li>✔ Unlimited Kilometers</li>
@@ -152,7 +166,10 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2>Why Rent Activa 3G/4G from Ontrack?</h2>
-        <p>Rent Activa 3G/4G in Bangalore with unlimited kilometers. Affordable monthly bike rental from Ontrack.</p>
+        <p>
+          Rent Activa 3G/4G in Bangalore with unlimited kilometers. Affordable
+          monthly bike rental from Ontrack.
+        </p>
       </section>
     </div>
 
@@ -200,11 +217,12 @@
 
     <script>
       const bikeId = 9; // Node.js replaces 9 with e.g., 44
-      fetch("https://glacier.on-track.in/api/model/list?model=" + bikeId)
+      fetch("https://glacier.on-track.in/api/v2/models/" + bikeId)
         .then((res) => res.json())
         .then((data) => {
           if (data && data.length > 0) {
-            const bike = data[0]; // first / only model
+            const bike = data[0].modelData;
+            bike.available = data[0].available; // first / only model
 
             // Check availability
             const isAvailable = bike.available > 0 && bike.show !== 0;

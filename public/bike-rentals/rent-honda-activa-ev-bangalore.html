@@ -24,8 +24,14 @@
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
     <meta property="og:title" content="Honda Activa EV on Rent in Bangalore" />
-    <meta property="og:description" content="The Honda Activa e is designed for effortless urban commuting with a smooth 6 kW motor and a practical range of up to 80 km on a single charge. Equipped with swappable lithium-ion batteries, it ensures riders never face long charging breaks, supported by 125+ battery swapping stations across Bengaluru for unmatched convenience. Lightweight and easy to handle, it features a digital instrument panel, keyless ignition, LED lighting, and Honda’s reliable Combi-Brake System for enhanced safety. Perfectly blending comfort, practicality, and eco-friendliness, the Activa e Base Model is an ideal choice for Ontrack monthly rental riders in the city." />
-    <meta property="og:image" content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/ACTIVA_EV%20%281%29-1756801591660.webp" />
+    <meta
+      property="og:description"
+      content="The Honda Activa e is designed for effortless urban commuting with a smooth 6 kW motor and a practical range of up to 80 km on a single charge. Equipped with swappable lithium-ion batteries, it ensures riders never face long charging breaks, supported by 125+ battery swapping stations across Bengaluru for unmatched convenience. Lightweight and easy to handle, it features a digital instrument panel, keyless ignition, LED lighting, and Honda’s reliable Combi-Brake System for enhanced safety. Perfectly blending comfort, practicality, and eco-friendliness, the Activa e Base Model is an ideal choice for Ontrack monthly rental riders in the city."
+    />
+    <meta
+      property="og:image"
+      content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/ACTIVA_EV%20%281%29-1756801591660.webp"
+    />
     <meta
       property="og:url"
       content="https://on-track.in/bike-rentals/bangalore/rent-honda-activa-ev-bangalore"
@@ -131,7 +137,18 @@
             Unlimited KM • Monthly Bike Rental • Doorstep Delivery
           </p>
 
-          <p>The Honda Activa e is designed for effortless urban commuting with a smooth 6 kW motor and a practical range of up to 80 km on a single charge. Equipped with swappable lithium-ion batteries, it ensures riders never face long charging breaks, supported by 125+ battery swapping stations across Bengaluru for unmatched convenience. Lightweight and easy to handle, it features a digital instrument panel, keyless ignition, LED lighting, and Honda’s reliable Combi-Brake System for enhanced safety. Perfectly blending comfort, practicality, and eco-friendliness, the Activa e Base Model is an ideal choice for Ontrack monthly rental riders in the city.</p>
+          <p>
+            The Honda Activa e is designed for effortless urban commuting with a
+            smooth 6 kW motor and a practical range of up to 80 km on a single
+            charge. Equipped with swappable lithium-ion batteries, it ensures
+            riders never face long charging breaks, supported by 125+ battery
+            swapping stations across Bengaluru for unmatched convenience.
+            Lightweight and easy to handle, it features a digital instrument
+            panel, keyless ignition, LED lighting, and Honda’s reliable
+            Combi-Brake System for enhanced safety. Perfectly blending comfort,
+            practicality, and eco-friendliness, the Activa e Base Model is an
+            ideal choice for Ontrack monthly rental riders in the city.
+          </p>
 
           <ul class="list-unstyled mt-4">
             <li>✔ Unlimited Kilometers</li>
@@ -152,7 +169,10 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2>Why Rent Honda Activa EV from Ontrack?</h2>
-        <p>Rent Honda Activa EV in Bangalore with unlimited kilometers. Affordable monthly bike rental from Ontrack.</p>
+        <p>
+          Rent Honda Activa EV in Bangalore with unlimited kilometers.
+          Affordable monthly bike rental from Ontrack.
+        </p>
       </section>
     </div>
 
@@ -200,11 +220,12 @@
 
     <script>
       const bikeId = 44; // Node.js replaces 44 with e.g., 44
-      fetch("https://glacier.on-track.in/api/model/list?model=" + bikeId)
+      fetch("https://glacier.on-track.in/api/v2/models/" + bikeId)
         .then((res) => res.json())
         .then((data) => {
           if (data && data.length > 0) {
-            const bike = data[0]; // first / only model
+            const bike = data[0].modelData;
+            bike.available = data[0].available; // first / only model
 
             // Check availability
             const isAvailable = bike.available > 0 && bike.show !== 0;

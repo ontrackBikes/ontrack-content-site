@@ -25,7 +25,10 @@
     <meta property="og:type" content="product" />
     <meta property="og:title" content="Ontrack on Rent in Bangalore" />
     <meta property="og:description" content="ADFSGHKJL" />
-    <meta property="og:image" content="https://on-track-jarvis.s3.amazonaws.com/63812_2022_Honda_CB300F_DLX_PRO_1_468x263-1724151708927.jpg" />
+    <meta
+      property="og:image"
+      content="https://on-track-jarvis.s3.amazonaws.com/63812_2022_Honda_CB300F_DLX_PRO_1_468x263-1724151708927.jpg"
+    />
     <meta
       property="og:url"
       content="https://on-track.in/bike-rentals/bangalore/63812_2022_Honda_CB300F_DLX_PRO_1_468x263-1724151708927"
@@ -152,7 +155,10 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2>Why Rent Ontrack from Ontrack?</h2>
-        <p>Rent Ontrack in Bangalore with unlimited kilometers. Affordable monthly bike rental from Ontrack.</p>
+        <p>
+          Rent Ontrack in Bangalore with unlimited kilometers. Affordable
+          monthly bike rental from Ontrack.
+        </p>
       </section>
     </div>
 
@@ -200,11 +206,12 @@
 
     <script>
       const bikeId = 39; // Node.js replaces 39 with e.g., 44
-      fetch("https://glacier.on-track.in/api/model/list?model=" + bikeId)
+      fetch("https://glacier.on-track.in/api/v2/models/" + bikeId)
         .then((res) => res.json())
         .then((data) => {
           if (data && data.length > 0) {
-            const bike = data[0]; // first / only model
+            const bike = data[0].modelData;
+            bike.available = data[0].available; // first / only model
 
             // Check availability
             const isAvailable = bike.available > 0 && bike.show !== 0;

@@ -24,9 +24,15 @@
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
     <meta property="og:title" content="Honda Dio on Rent in Bangalore" />
-    <meta property="og:description" content="Honda’s ‘Dio it your way’ has received a ‘wicked’ enhancement in its visual appeal. According to this brand, if you ride a Honda Dio, you definitely won’t go unnoticed! Dio offers a wider seat, which makes it super comfortable to ride. It’s sleek body and vibrant design makes it one of the most preferred vehicles amongst the vivacious youth. 
-" />
-    <meta property="og:image" content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-honda-dio-bangalore-min.webp" />
+    <meta
+      property="og:description"
+      content="Honda’s ‘Dio it your way’ has received a ‘wicked’ enhancement in its visual appeal. According to this brand, if you ride a Honda Dio, you definitely won’t go unnoticed! Dio offers a wider seat, which makes it super comfortable to ride. It’s sleek body and vibrant design makes it one of the most preferred vehicles amongst the vivacious youth. 
+"
+    />
+    <meta
+      property="og:image"
+      content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-honda-dio-bangalore-min.webp"
+    />
     <meta
       property="og:url"
       content="https://on-track.in/bike-rentals/bangalore/rent-honda-dio-bangalore"
@@ -132,8 +138,14 @@
             Unlimited KM • Monthly Bike Rental • Doorstep Delivery
           </p>
 
-          <p>Honda’s ‘Dio it your way’ has received a ‘wicked’ enhancement in its visual appeal. According to this brand, if you ride a Honda Dio, you definitely won’t go unnoticed! Dio offers a wider seat, which makes it super comfortable to ride. It’s sleek body and vibrant design makes it one of the most preferred vehicles amongst the vivacious youth. 
-</p>
+          <p>
+            Honda’s ‘Dio it your way’ has received a ‘wicked’ enhancement in its
+            visual appeal. According to this brand, if you ride a Honda Dio, you
+            definitely won’t go unnoticed! Dio offers a wider seat, which makes
+            it super comfortable to ride. It’s sleek body and vibrant design
+            makes it one of the most preferred vehicles amongst the vivacious
+            youth.
+          </p>
 
           <ul class="list-unstyled mt-4">
             <li>✔ Unlimited Kilometers</li>
@@ -154,7 +166,10 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2>Why Rent Honda Dio from Ontrack?</h2>
-        <p>Rent Honda Dio in Bangalore with unlimited kilometers. Affordable monthly bike rental from Ontrack.</p>
+        <p>
+          Rent Honda Dio in Bangalore with unlimited kilometers. Affordable
+          monthly bike rental from Ontrack.
+        </p>
       </section>
     </div>
 
@@ -202,11 +217,12 @@
 
     <script>
       const bikeId = 3; // Node.js replaces 3 with e.g., 44
-      fetch("https://glacier.on-track.in/api/model/list?model=" + bikeId)
+      fetch("https://glacier.on-track.in/api/v2/models/" + bikeId)
         .then((res) => res.json())
         .then((data) => {
           if (data && data.length > 0) {
-            const bike = data[0]; // first / only model
+            const bike = data[0].modelData;
+            bike.available = data[0].available; // first / only model
 
             // Check availability
             const isAvailable = bike.available > 0 && bike.show !== 0;

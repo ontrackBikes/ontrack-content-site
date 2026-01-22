@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
 
-    <title>Suzuki Access 125 on Rent in Bangalore | Unlimited KM – Ontrack</title>
+    <title>
+      Suzuki Access 125 on Rent in Bangalore | Unlimited KM – Ontrack
+    </title>
 
     <meta
       name="description"
@@ -23,10 +25,19 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
-    <meta property="og:title" content="Suzuki Access 125 on Rent in Bangalore" />
-    <meta property="og:description" content="Suzuki adopted a completely different approach in the styling and design sector with Access 125. They have introduced the lifestyle bike for your day-to-day commute. The very recent cosmetic upgrade in this bike offers a redesigned apron and chrome-induced headlamp delivering a premium feel. Access 125 is repacked with a more appealing design and is integrated with a lot of new exciting features. 
-" />
-    <meta property="og:image" content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-suzuki-access-125-bangalore-min.webp" />
+    <meta
+      property="og:title"
+      content="Suzuki Access 125 on Rent in Bangalore"
+    />
+    <meta
+      property="og:description"
+      content="Suzuki adopted a completely different approach in the styling and design sector with Access 125. They have introduced the lifestyle bike for your day-to-day commute. The very recent cosmetic upgrade in this bike offers a redesigned apron and chrome-induced headlamp delivering a premium feel. Access 125 is repacked with a more appealing design and is integrated with a lot of new exciting features. 
+"
+    />
+    <meta
+      property="og:image"
+      content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-suzuki-access-125-bangalore-min.webp"
+    />
     <meta
       property="og:url"
       content="https://on-track.in/bike-rentals/bangalore/rent-suzuki-access-125-bangalore"
@@ -132,8 +143,15 @@
             Unlimited KM • Monthly Bike Rental • Doorstep Delivery
           </p>
 
-          <p>Suzuki adopted a completely different approach in the styling and design sector with Access 125. They have introduced the lifestyle bike for your day-to-day commute. The very recent cosmetic upgrade in this bike offers a redesigned apron and chrome-induced headlamp delivering a premium feel. Access 125 is repacked with a more appealing design and is integrated with a lot of new exciting features. 
-</p>
+          <p>
+            Suzuki adopted a completely different approach in the styling and
+            design sector with Access 125. They have introduced the lifestyle
+            bike for your day-to-day commute. The very recent cosmetic upgrade
+            in this bike offers a redesigned apron and chrome-induced headlamp
+            delivering a premium feel. Access 125 is repacked with a more
+            appealing design and is integrated with a lot of new exciting
+            features.
+          </p>
 
           <ul class="list-unstyled mt-4">
             <li>✔ Unlimited Kilometers</li>
@@ -154,7 +172,10 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2>Why Rent Suzuki Access 125 from Ontrack?</h2>
-        <p>Rent Suzuki Access 125 in Bangalore with unlimited kilometers. Affordable monthly bike rental from Ontrack.</p>
+        <p>
+          Rent Suzuki Access 125 in Bangalore with unlimited kilometers.
+          Affordable monthly bike rental from Ontrack.
+        </p>
       </section>
     </div>
 
@@ -202,11 +223,12 @@
 
     <script>
       const bikeId = 4; // Node.js replaces 4 with e.g., 44
-      fetch("https://glacier.on-track.in/api/model/list?model=" + bikeId)
+      fetch("https://glacier.on-track.in/api/v2/models/" + bikeId)
         .then((res) => res.json())
         .then((data) => {
           if (data && data.length > 0) {
-            const bike = data[0]; // first / only model
+            const bike = data[0].modelData;
+            bike.available = data[0].available; // first / only model
 
             // Check availability
             const isAvailable = bike.available > 0 && bike.show !== 0;

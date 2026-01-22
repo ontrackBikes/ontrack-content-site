@@ -24,9 +24,15 @@
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
     <meta property="og:title" content="Honda CB Hornet on Rent in Bangalore" />
-    <meta property="og:description" content="Honda calls it the ‘rocking beast’ and we couldn’t agree more! CB Hornet is a premium motorbike known for its aggressive bold look. The sporty style with a trapezoidal headlamp, large fuel tank with sharp extensions and split grab rails offers a very muscular feel. It claims to hit a top speed of 110 kmph.
-" />
-    <meta property="og:image" content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-honda-cb-hornet-bangalore-min.webp" />
+    <meta
+      property="og:description"
+      content="Honda calls it the ‘rocking beast’ and we couldn’t agree more! CB Hornet is a premium motorbike known for its aggressive bold look. The sporty style with a trapezoidal headlamp, large fuel tank with sharp extensions and split grab rails offers a very muscular feel. It claims to hit a top speed of 110 kmph.
+"
+    />
+    <meta
+      property="og:image"
+      content="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-honda-cb-hornet-bangalore-min.webp"
+    />
     <meta
       property="og:url"
       content="https://on-track.in/bike-rentals/bangalore/rent-honda-cb-hornet-bangalore"
@@ -132,8 +138,13 @@
             Unlimited KM • Monthly Bike Rental • Doorstep Delivery
           </p>
 
-          <p>Honda calls it the ‘rocking beast’ and we couldn’t agree more! CB Hornet is a premium motorbike known for its aggressive bold look. The sporty style with a trapezoidal headlamp, large fuel tank with sharp extensions and split grab rails offers a very muscular feel. It claims to hit a top speed of 110 kmph.
-</p>
+          <p>
+            Honda calls it the ‘rocking beast’ and we couldn’t agree more! CB
+            Hornet is a premium motorbike known for its aggressive bold look.
+            The sporty style with a trapezoidal headlamp, large fuel tank with
+            sharp extensions and split grab rails offers a very muscular feel.
+            It claims to hit a top speed of 110 kmph.
+          </p>
 
           <ul class="list-unstyled mt-4">
             <li>✔ Unlimited Kilometers</li>
@@ -154,7 +165,10 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2>Why Rent Honda CB Hornet from Ontrack?</h2>
-        <p>Rent Honda CB Hornet in Bangalore with unlimited kilometers. Affordable monthly bike rental from Ontrack.</p>
+        <p>
+          Rent Honda CB Hornet in Bangalore with unlimited kilometers.
+          Affordable monthly bike rental from Ontrack.
+        </p>
       </section>
     </div>
 
@@ -202,11 +216,12 @@
 
     <script>
       const bikeId = 17; // Node.js replaces 17 with e.g., 44
-      fetch("https://glacier.on-track.in/api/model/list?model=" + bikeId)
+      fetch("https://glacier.on-track.in/api/v2/models/" + bikeId)
         .then((res) => res.json())
         .then((data) => {
           if (data && data.length > 0) {
-            const bike = data[0]; // first / only model
+            const bike = data[0].modelData;
+            bike.available = data[0].available; // first / only model
 
             // Check availability
             const isAvailable = bike.available > 0 && bike.show !== 0;
