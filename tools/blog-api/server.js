@@ -4,59 +4,11 @@ const path = require("path");
 const { marked } = require("marked");
 const multer = require("multer");
 const cors = require("cors");
-
-// Folder to store uploaded images
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    const dir = path.join(ROOT, "images/blog");
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-    cb(null, dir);
-  },
-  filename: function (req, file, cb) {
-    const uniqueSuffix =
-      Date.now() + "-" + file.originalname.replace(/\s+/g, "-");
-    cb(null, uniqueSuffix);
-  },
-});
-
-const upload = multer({ storage: storage });
-
 const { spawn } = require("child_process");
 
-function gitAddCommitDeploy(files, title) {
-  const add = spawn("git", ["add", ...files], {
-    cwd: path.join(__dirname, "../../"),
-  });
-
-  add.on("close", (code) => {
-    if (code !== 0) return console.error("Git add failed");
-
-    const commit = spawn(
-      "git",
-      ["commit", "-m", `New blog post added: ${title}`],
-      { cwd: path.join(__dirname, "../../") },
-    );
-
-    commit.on("close", (code) => {
-      if (code !== 0) return console.error("Git commit failed");
-
-      const push = spawn("git", ["push"], {
-        cwd: path.join(__dirname, "../../"),
-      });
-
-      push.on("close", (code) => {
-        if (code !== 0) return console.error("Git push failed");
-
-        // Firebase deploy only hosting
-        const deploy = spawn("firebase", ["deploy", "--only", "hosting"], {
-          cwd: path.join(__dirname, "../../"),
-        });
-        deploy.stdout.on("data", (data) => console.log(data.toString()));
-        deploy.stderr.on("data", (data) => console.error(data.toString()));
-      });
-    });
-  });
-}
+/* =======================
+   BASIC SETUP
+======================= */
 
 const app = express();
 app.use(cors());
@@ -64,27 +16,71 @@ app.use(express.json());
 
 const ROOT = path.join(__dirname, "../../public");
 
+/* =======================
+   PATHS
+======================= */
+
 const BLOG_JSON = path.join(ROOT, "blog/data/blogs.json");
 const POSTS_DIR = path.join(ROOT, "blog/posts");
-const TEMPLATE = path.join(ROOT, "blog/templates/blog-template.html");
 const SITEMAP = path.join(ROOT, "sitemap.xml");
+
+const BLOG_TEMPLATES = {
+  1: path.join(ROOT, "blog/templates/blog-template-1.html"), // default
+  2: path.join(ROOT, "blog/templates/blog-template-2.html"),
+  3: path.join(ROOT, "blog/templates/blog-template-3.html"),
+};
+
+/* =======================
+   ENSURE DIRS
+======================= */
 
 if (!fs.existsSync(POSTS_DIR)) {
   fs.mkdirSync(POSTS_DIR, { recursive: true });
 }
+if (!fs.existsSync(path.join(ROOT, "blog/data"))) {
+  fs.mkdirSync(path.join(ROOT, "blog/data"), { recursive: true });
+}
+if (!fs.existsSync(BLOG_JSON)) {
+  fs.writeFileSync(BLOG_JSON, "[]");
+}
 
-const slugify = (t) =>
-  t
+/* =======================
+   FILE UPLOAD (MULTER)
+======================= */
+
+const storage = multer.diskStorage({
+  destination(req, file, cb) {
+    const dir = path.join(ROOT, "images/blog");
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    cb(null, dir);
+  },
+  filename(req, file, cb) {
+    const unique = Date.now() + "-" + file.originalname.replace(/\s+/g, "-");
+    cb(null, unique);
+  },
+});
+
+const upload = multer({ storage });
+
+const uploadFields = upload.fields([
+  { name: "cover", maxCount: 1 },
+  { name: "thumbnail", maxCount: 1 },
+]);
+
+/* =======================
+   HELPERS
+======================= */
+
+const slugify = (text) =>
+  text
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 
 const readBlogs = () => {
-  if (!fs.existsSync(BLOG_JSON)) return [];
   try {
-    return JSON.parse(fs.readFileSync(BLOG_JSON));
-  } catch (e) {
-    console.error("Error reading blogs.json:", e);
+    return JSON.parse(fs.readFileSync(BLOG_JSON, "utf8"));
+  } catch {
     return [];
   }
 };
@@ -109,27 +105,61 @@ const writeSitemap = (blogs) => {
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-${urls}
+  ${urls}
 </urlset>`;
 
   fs.writeFileSync(SITEMAP, xml);
 };
 
-const uploadFields = upload.fields([
-  { name: "cover", maxCount: 1 },
-  { name: "thumbnail", maxCount: 1 },
-]);
+/* =======================
+   GIT + DEPLOY
+======================= */
+
+function gitAddCommitDeploy(files, title) {
+  const cwd = path.join(__dirname, "../../");
+
+  const add = spawn("git", ["add", ...files], { cwd });
+  add.on("close", () => {
+    const commit = spawn(
+      "git",
+      ["commit", "-m", `New blog post added: ${title}`],
+      { cwd },
+    );
+
+    commit.on("close", () => {
+      const push = spawn("git", ["push"], { cwd });
+      push.on("close", () => {
+        const deploy = spawn("firebase", ["deploy", "--only", "hosting"], {
+          cwd,
+        });
+        deploy.stdout.on("data", (d) => console.log(d.toString()));
+        deploy.stderr.on("data", (d) => console.error(d.toString()));
+      });
+    });
+  });
+}
+
+/* =======================
+   ROUTES
+======================= */
 
 app.get("/health", (_, res) => {
   res.json({ status: "ok", time: new Date().toISOString() });
 });
 
 app.post("/blog/create", uploadFields, (req, res) => {
-  // cover and thumbnail
-  const { title, markdown, description, author, tags } = req.body; // add thumbnail also
+  const { title, markdown, description, author, tags, template } = req.body;
+
   if (!title || !markdown) {
     return res.status(400).json({ error: "Title & markdown required" });
   }
+
+  /* ---------- TEMPLATE ---------- */
+  const templateId = Number(template);
+  const finalTemplateId = BLOG_TEMPLATES[templateId] ? templateId : 1;
+  const TEMPLATE_PATH = BLOG_TEMPLATES[finalTemplateId];
+
+  /* ---------- FILES ---------- */
   const coverFile = req.files?.cover?.[0];
   const thumbnailFile = req.files?.thumbnail?.[0];
 
@@ -137,16 +167,23 @@ app.post("/blog/create", uploadFields, (req, res) => {
     ? `/images/blog/${coverFile.filename}`
     : "/images/blog/default.jpg";
 
-  // if thumbnail not uploaded → use cover
   const thumbnailPath = thumbnailFile
     ? `/images/blog/${thumbnailFile.filename}`
     : coverPath;
 
+  /* ---------- BLOG DATA ---------- */
   const slug = slugify(title);
+  const blogs = readBlogs();
+
+  if (blogs.some((b) => b.slug === slug)) {
+    return res.status(409).json({
+      error: "Blog with same title already exists",
+    });
+  }
+
   const date = new Date().toISOString().split("T")[0];
   const htmlContent = marked.parse(markdown);
 
-  const blogs = readBlogs();
   const blog = {
     title,
     slug,
@@ -157,15 +194,16 @@ app.post("/blog/create", uploadFields, (req, res) => {
     cover: coverPath,
     thumbnail: thumbnailPath,
     tags: tags ? tags.split(",").map((t) => t.trim()) : [],
+    template: finalTemplateId,
   };
-
-  const tagsHtml = blog.tags.map((t) => `<span>${t}</span>`).join(" ");
 
   blogs.push(blog);
   fs.writeFileSync(BLOG_JSON, JSON.stringify(blogs, null, 2));
 
-  let template = fs
-    .readFileSync(TEMPLATE, "utf8")
+  /* ---------- HTML ---------- */
+  let templateHtml = fs.readFileSync(TEMPLATE_PATH, "utf8");
+
+  templateHtml = templateHtml
     .replace(/{{title}}/g, blog.title)
     .replace(/{{description}}/g, blog.description)
     .replace(/{{date}}/g, blog.date)
@@ -174,24 +212,32 @@ app.post("/blog/create", uploadFields, (req, res) => {
     .replace(/{{thumbnail}}/g, blog.thumbnail)
     .replace(/{{content}}/g, htmlContent)
     .replace(/{{url}}/g, blog.url)
-    .replace(/{{tags}}/g, tagsHtml);
+    .replace(/{{tags}}/g, blog.tags.join(", "));
 
-  fs.writeFileSync(`${POSTS_DIR}/${slug}.html`, template);
+  const outputFile = path.join(POSTS_DIR, `${slug}.html`);
+  fs.writeFileSync(outputFile, templateHtml);
 
   writeSitemap(blogs);
 
-  const createdFiles = [`${POSTS_DIR}/${slug}.html`, BLOG_JSON, SITEMAP];
-
-  if (coverFile) {
+  /* ---------- DEPLOY ---------- */
+  const createdFiles = [outputFile, BLOG_JSON, SITEMAP];
+  if (coverFile)
     createdFiles.push(path.join(ROOT, "images/blog", coverFile.filename));
-  }
-  if (thumbnailFile) {
+  if (thumbnailFile)
     createdFiles.push(path.join(ROOT, "images/blog", thumbnailFile.filename));
-  }
 
   gitAddCommitDeploy(createdFiles, title);
-  res.json({ success: true, page: blog.url });
+
+  res.json({
+    success: true,
+    page: blog.url,
+    template: finalTemplateId,
+  });
 });
+
+/* =======================
+   START
+======================= */
 
 app.listen(3333, () =>
   console.log("📝 Blog generator running on http://localhost:3333"),
