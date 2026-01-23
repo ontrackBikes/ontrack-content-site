@@ -49,6 +49,12 @@
       rel="stylesheet"
     />
 
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
     <base href="/" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
@@ -172,8 +178,14 @@
       <section class="mt-5">
         <h2>Why Rent CT 100 (Self-Start) from Ontrack?</h2>
         <p>
-          Rent CT 100 (Self-Start) in Bangalore with unlimited kilometers.
-          Affordable monthly bike rental from Ontrack.
+          Our monthly bike rental vehicle range includes Bajaj CT 100 B at a
+          very affordable rent. This bike for rent at bike rentals in Hyderabad
+          and Bangalore comes with Bajaj ‘SNS’ suspension in the rear and a
+          conventional suspension in the front. It comes with a fuel gauge and
+          flexible side indicators. The two-wheeler for rent uses a 102 cc
+          single-cylinder 4-stroke engine tuned to produce 7.6 bhp of power and
+          8.24 Nm of peak torque. Take this self-drive bike effortlessly around
+          your city and enjoy a hassle-free ride throughout.
         </p>
       </section>
     </div>
@@ -219,6 +231,9 @@
         </p>
       </div>
     </div>
+
+    <!-- FOOTER -->
+    <div class="mt-5" id="footer"></div>
 
     <script>
       const bikeId = 31; // Node.js replaces 31 with e.g., 44
@@ -303,6 +318,10 @@
             document.head.appendChild(script);
           }
         });
+
+      fetch("../bike-rental-footer.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("footer").innerHTML = html));
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>

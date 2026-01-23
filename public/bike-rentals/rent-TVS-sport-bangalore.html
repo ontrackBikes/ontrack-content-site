@@ -44,6 +44,12 @@
       rel="stylesheet"
     />
 
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
     <base href="/" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
@@ -166,8 +172,15 @@
       <section class="mt-5">
         <h2>Why Rent TVS Sport from Ontrack?</h2>
         <p>
-          Rent TVS Sport in Bangalore with unlimited kilometers. Affordable
-          monthly bike rental from Ontrack.
+          Monthly bike rental offers this sportier version of TVS Star City that
+          is powered by a 109cc single cylinder petrol engine that produces 7bhp
+          and 7.5Nm of torque. The engine has been infused with four-speed
+          sequential gearbox that gives power to the rear wheel through a chain
+          drive. This two-wheeler on rent includes a two-pod instrument cluster
+          and drum brakes on both the front and rear ends of the bike. The best
+          features included in this two-wheelers for rent are all gear electric
+          start, sporty head lamp & tail lamp, body graphics, comfortable seat,
+          aluminium grab rail, pass by switch and many more.
         </p>
       </section>
     </div>
@@ -213,6 +226,9 @@
         </p>
       </div>
     </div>
+
+    <!-- FOOTER -->
+    <div class="mt-5" id="footer"></div>
 
     <script>
       const bikeId = 19; // Node.js replaces 19 with e.g., 44
@@ -297,6 +313,10 @@
             document.head.appendChild(script);
           }
         });
+
+      fetch("../bike-rental-footer.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("footer").innerHTML = html));
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
