@@ -46,6 +46,12 @@
       rel="stylesheet"
     />
 
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
     <base href="/" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
@@ -169,8 +175,15 @@
       <section class="mt-5">
         <h2>Why Rent Bajaj Pulsar 150 from Ontrack?</h2>
         <p>
-          Rent Bajaj Pulsar 150 in Bangalore with unlimited kilometers.
-          Affordable monthly bike rental from Ontrack.
+          The two-wheelers for rent, Pulsar 150, at our online bike rentals,
+          gives you the modern features that keep you at par with every
+          contemporary bike in town. The latest Bajaj Pulsar comes in new colors
+          and graphics. Bajaj now abiding by the BS-IV emission norms, has
+          reduced its power by 1 PS with a 1 Nm increase in torque. It rests on
+          135 mm telescopic front forks with anti-friction bushes and a 5 step
+          adjustable Nitrox rear shock absorbers. Bajaj Pulsar 150 in our
+          motorcycle rentals model gallery is sportier and trendier. Get this
+          bike on rent today!
         </p>
       </section>
     </div>
@@ -216,6 +229,9 @@
         </p>
       </div>
     </div>
+
+    <!-- FOOTER -->
+    <div class="mt-5" id="footer"></div>
 
     <script>
       const bikeId = 13; // Node.js replaces 13 with e.g., 44
@@ -300,6 +316,10 @@
             document.head.appendChild(script);
           }
         });
+
+      fetch("../bike-rental-footer.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("footer").innerHTML = html));
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>

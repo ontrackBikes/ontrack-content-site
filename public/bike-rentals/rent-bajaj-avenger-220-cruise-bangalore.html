@@ -49,6 +49,12 @@
       rel="stylesheet"
     />
 
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
     <base href="/" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
@@ -170,8 +176,17 @@
       <section class="mt-5">
         <h2>Why Rent Avenger 220 Cruise from Ontrack?</h2>
         <p>
-          Rent Avenger 220 Cruise in Bangalore with unlimited kilometers.
-          Affordable monthly bike rental from Ontrack.
+          The fuel tank and the flashy chrome decals in Bajaj Avenger Cruise 220
+          provide a clear distinctive character. The instrument console
+          incorporates a digital display along with an analogue speedometer. The
+          other sensational elements include redesigned mirrors; spiked chrome
+          wheels and the chrome cover for the oil cooler. The new high bass
+          silencer gives ita loud and unique exhaust note. The cruiser styled
+          Avenger at motorcycle rental offers a high level of comfort with its
+          wide, soft seat and swept back handlebars. So, if your work travel
+          involves long hours this is made for you. Get the best price for this
+          two-wheeler for rent from bike rentals in Bangalore and Hyderabad
+          today!
         </p>
       </section>
     </div>
@@ -217,6 +232,9 @@
         </p>
       </div>
     </div>
+
+    <!-- FOOTER -->
+    <div class="mt-5" id="footer"></div>
 
     <script>
       const bikeId = 16; // Node.js replaces 16 with e.g., 44
@@ -301,6 +319,10 @@
             document.head.appendChild(script);
           }
         });
+
+      fetch("../bike-rental-footer.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("footer").innerHTML = html));
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>

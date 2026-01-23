@@ -50,6 +50,12 @@
       rel="stylesheet"
     />
 
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
     <base href="/" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
@@ -171,8 +177,15 @@
       <section class="mt-5">
         <h2>Why Rent Avenger 150 Street from Ontrack?</h2>
         <p>
-          Rent Avenger 150 Street in Bangalore with unlimited kilometers.
-          Affordable monthly bike rental from Ontrack.
+          This motorcycle at bike rentals in Bangalore and Hyderabad is
+          perceived to be the highest selling one in the entire Avenger series.
+          Bajaj Avenger Street 150 comes with new alloy wheels, black rubber
+          bellow on the front forks and a new silencer. The handlebar design and
+          placement have been changed for better handling. This mountain bike
+          incorporates black-theme that resembles the Harley-Davidson Street
+          750. If you wish for a cruiser style bike Avenger 150 Street is it. It
+          comes powered by 149 cc. Rent this vehicle from sport bike rental at
+          an affordable cost now!
         </p>
       </section>
     </div>
@@ -218,6 +231,9 @@
         </p>
       </div>
     </div>
+
+    <!-- FOOTER -->
+    <div class="mt-5" id="footer"></div>
 
     <script>
       const bikeId = 14; // Node.js replaces 14 with e.g., 44
@@ -302,6 +318,10 @@
             document.head.appendChild(script);
           }
         });
+
+      fetch("../bike-rental-footer.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("footer").innerHTML = html));
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
