@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
 
-    <title>Testing Model on Rent in Bangalore | Unlimited KM – Ontrack</title>
+    <title>Honda Dio 2024| Unlimited KM – Ontrack</title>
 
     <meta
       name="description"
-      content="Rent Testing Model in Bangalore with unlimited kilometers. Affordable monthly bike rental with doorstep delivery. Book Testing Model today from Ontrack."
+      content="Rent Honda Dio 2024 in Bangalore with unlimited kilometers. Affordable monthly bike rental with doorstep delivery. Book Honda Dio 2024 today from Ontrack."
     />
 
     <meta
       name="keywords"
-      content="Testing Model rent Bangalore, Testing Model bike rental, unlimited km bike rental Bangalore, Ontrack bike rental"
+      content="Honda Dio 2024 rent Bangalore, Honda Dio 2024 bike rental, unlimited km bike rental Bangalore, Ontrack bike rental"
     />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,7 +23,7 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
-    <meta property="og:title" content="Testing Model on Rent in Bangalore" />
+    <meta property="og:title" content="Honda Dio 2024 on Rent in Bangalore" />
     <meta
       property="og:description"
       content="Honda’s ‘Dio it your way’ has received a ‘wicked’ enhancement in its visual appeal. According to this brand, if you ride a Honda Dio, you definitely won’t go unnoticed! Dio offers a wider seat, which makes it super comfortable to ride. It’s sleek body and vibrant design makes it one of the most preferred vehicles amongst the vivacious youth. 
@@ -42,6 +42,12 @@
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
       rel="stylesheet"
     />
 
@@ -104,14 +110,14 @@
         <div class="col-md-6">
           <img
             src="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/monthly-rental/rent-honda-dio-bangalore-min.webp"
-            alt="Testing Model on rent in Bangalore"
+            alt="Honda Dio 2024 on rent in Bangalore"
             class="img-fluid rounded"
           />
         </div>
 
         <!-- DETAILS -->
         <div class="col-md-6">
-          <h1 class="mb-3">Testing Model on Rent in Bangalore</h1>
+          <h1 class="mb-3">Honda Dio 2024 on Rent in Bangalore</h1>
 
           <p class="h4 mt-3">
             <span id="bike-price-container">
@@ -158,17 +164,28 @@
             href="https://book.on-track.in/model-display/42/rent-honda-dio-2024-bangalore"
             class="btn btn-primary btn-lg mt-4 w-100"
           >
-            Rent Testing Model Now
+            Rent Honda Dio 2024 Now
           </a>
         </div>
       </div>
 
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
-        <h2>Why Rent Testing Model from Ontrack?</h2>
+        <h2>Why Rent Honda Dio 2024 from Ontrack?</h2>
         <p>
-          Rent Testing Model in Bangalore with unlimited kilometers. Affordable
-          monthly bike rental from Ontrack.
+          The two-wheeler for rent, Honda Dio, bears the basics of Activa in a
+          trendier and flamboyant body. The fiber body shell of this scooty on
+          rent in Bangalore makes it lighter than Activa and offers a higher
+          ground clearance. The new body graphics incorporates two white
+          positioned lamps in the front and an LED strip on the handle bar. The
+          dual-tone body color makes it look jazzier. Dio claims to deliver
+          top-speed of 83 km/h. The HET (Honda Eco Technology) technology
+          equipped engine is claimed to deliver notable mileage making it a
+          popular option in the bike rentals sector. The exciting elements that
+          make Dio a great choice in motorcycle rentals include a new 3D emblem,
+          sporty body graphics, 18 liters of under storage space, wide seat,
+          comfortable leg space in front, combi-brake system, tubeless tires
+          etc.
         </p>
       </section>
     </div>
@@ -214,6 +231,9 @@
         </p>
       </div>
     </div>
+
+    <!-- FOOTER -->
+    <div class="mt-5" id="footer"></div>
 
     <script>
       const bikeId = 42; // Node.js replaces 42 with e.g., 44
@@ -298,6 +318,10 @@
             document.head.appendChild(script);
           }
         });
+
+      fetch("../bike-rental-footer.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("footer").innerHTML = html));
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
