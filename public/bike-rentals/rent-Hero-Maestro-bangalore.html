@@ -44,6 +44,12 @@
       rel="stylesheet"
     />
 
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
     <base href="/" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
@@ -168,8 +174,14 @@
       <section class="mt-5">
         <h2>Why Rent Maestro Edge from Ontrack?</h2>
         <p>
-          Rent Maestro Edge in Bangalore with unlimited kilometers. Affordable
-          monthly bike rental from Ontrack.
+          The Hero Maestro Edge is the most premium model in Hero’s lineup of
+          scooters.It has been built as a completely new product, with the focus
+          on good looks and performance. It is powered by a brand new engine
+          jointly developed with Austrian automotive firm AVL. This 111cc,
+          single-cylinder air-cooled engine delivers 8bhp and 8Nm of torque
+          through a CVT transmission. Hero MotoCorp claims an efficiency of
+          64kmpl for the Maestro Edge, which should make it one of the most
+          fuel-efficient scooters in the market.
         </p>
       </section>
     </div>
@@ -215,6 +227,9 @@
         </p>
       </div>
     </div>
+
+    <!-- FOOTER -->
+    <div class="mt-5" id="footer"></div>
 
     <script>
       const bikeId = 22; // Node.js replaces 22 with e.g., 44
@@ -299,6 +314,10 @@
             document.head.appendChild(script);
           }
         });
+
+      fetch("../bike-rental-footer.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("footer").innerHTML = html));
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
