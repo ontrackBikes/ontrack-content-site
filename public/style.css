@@ -93,10 +93,8 @@ h3 {
 }
 
 .btn {
-  outline: none;
   box-shadow: none;
   font-weight: 600;
-  border: none;
 }
 
 .btn-primary {
