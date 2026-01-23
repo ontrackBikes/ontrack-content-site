@@ -141,140 +141,7 @@
     </section>
 
     <!-- ================= FOOTER ================= -->
-    <footer class="py-5 fs-5 bg-white border-top">
-      <div class="container">
-        <!-- Popular Rentals -->
-        <div class="mb-5">
-          <h3 class="fw-bold mb-4">Popular Bike Rentals in Bangalore</h3>
-
-          <div class="row">
-            <div class="col-md-4 mb-3">
-              <ul class="list-unstyled">
-                <li>
-                  <a href="/bike-rentals/rent-hero-hf-100-2023-bangalore"
-                    >Hero HF 100 (2023) on Rent</a
-                  >
-                </li>
-                <li>
-                  <a href="/bike-rentals/rent-hero-hf-100-2024-bangalore"
-                    >Hero HF 100 (2024) on Rent</a
-                  >
-                </li>
-                <li>
-                  <a href="/bike-rentals/rent-honda-dio-bangalore"
-                    >Honda Dio on Rent</a
-                  >
-                </li>
-                <li>
-                  <a href="/bike-rentals/rent-honda-activa-ev-bangalore"
-                    >Honda Activa EV on Rent</a
-                  >
-                </li>
-                <li>
-                  <a href="/bike-rentals/rent-hero-xoom-110-lx-bangalore"
-                    >Hero Xoom 110 LX on Rent</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-md-4 mb-3">
-              <ul class="list-unstyled">
-                <li>
-                  <a href="/bike-rentals/rent-activa-3g-4g-bangalore"
-                    >Activa 3G / 4G on Rent</a
-                  >
-                </li>
-                <li>
-                  <a href="/bike-rentals/rent-avenger-220-cruise-bangalore"
-                    >Avenger 220 Cruise on Rent</a
-                  >
-                </li>
-                <li>
-                  <a href="/bike-rentals/rent-avenger-150-street-bangalore"
-                    >Avenger 150 Street on Rent</a
-                  >
-                </li>
-                <li>
-                  <a href="/bike-rentals/rent-honda-shine-2024-bangalore"
-                    >Honda Shine 2024 on Rent</a
-                  >
-                </li>
-                <li>
-                  <a href="/bike-rentals/rent-aprilia-sr-150-bangalore"
-                    >Aprilia SR 150 on Rent</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-md-4 mb-3">
-              <ul class="list-unstyled">
-                <li>
-                  <a href="/bike-rentals/rent-bajaj-pulsar-150-bangalore"
-                    >Bajaj Pulsar 150 on Rent</a
-                  >
-                </li>
-                <li>
-                  <a href="/bike-rentals/rent-honda-navi-bangalore"
-                    >Honda Navi on Rent</a
-                  >
-                </li>
-                <li>
-                  <a href="/bike-rentals/rent-honda-activa-6g-bangalore"
-                    >Honda Activa 6G on Rent</a
-                  >
-                </li>
-                <li>
-                  <a href="/bike-rentals/rent-honda-dio-2024-bangalore"
-                    >Honda Dio 2024 on Rent</a
-                  >
-                </li>
-                <li>
-                  <a href="/bike-rentals/rent-honda-dio-2025-bangalore"
-                    >Honda Dio 2025 on Rent</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bottom Footer -->
-        <div class="row gy-4">
-          <div class="col-lg-4">
-            <img src="/images/ontrack-logo.png" width="140" />
-            <p class="text-secondary small mt-2">
-              Bengaluru's most trusted two-wheeler rental service since 2016.
-            </p>
-          </div>
-
-          <div class="col-4 col-lg-2">
-            <p class="fw-semibold">Learn More</p>
-            <ul class="list-unstyled small">
-              <li><a href="/blogs">Blog</a></li>
-              <li><a href="/print_and_media">Stories</a></li>
-            </ul>
-          </div>
-
-          <div class="col-4 col-lg-2">
-            <p class="fw-semibold">Policies</p>
-            <ul class="list-unstyled small">
-              <li><a href="#">Terms</a></li>
-              <li><a href="#">Privacy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-4 col-lg-2">
-            <p class="fw-semibold">Contact</p>
-            <ul class="list-unstyled small">
-              <li><a href="mailto:info@on-track.in">info@on-track.in</a></li>
-              <li><a href="tel:914858401">914858401</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <div class="mt-5" id="footer"></div>
 
     <!-- ================= SCRIPT ================= -->
     <script>
@@ -309,6 +176,10 @@
           document.getElementById("blog-list").innerHTML =
             "<p>Failed to load blogs.</p>";
         });
+
+      fetch("./bike-rental-footer.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("footer").innerHTML = html));
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
