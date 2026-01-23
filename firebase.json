@@ -461,7 +461,10 @@
         "source": "/rental-for-swiggy-delivery",
         "destination": "/zero-deposit-unlimited-km-bike-rental-for-swiggy-bangalore.html"
       },
-
+      {
+        "source": "/partner-with-us",
+        "destination": "/partner-with-us.html"
+      },
       {
         "source": "**",
         "destination": "/index.html"
