@@ -120,7 +120,7 @@
     </nav>
 
     <!-- MAIN -->
-   <div class="container my-5">
+    <div class="container my-5">
       <div class="row g-5 align-items-center">
         <!-- IMAGE -->
         <div class="col-md-6">
@@ -133,45 +133,105 @@
 
         <!-- DETAILS -->
         <div class="col-md-6">
-          <h1 class="mb-3">Ontrack on Rent in Bangalore</h1>
+          <h1 class="fw-bold mb-3">Ontrack on Rent in Bangalore</h1>
 
-          <p class="h4 mt-3">
-            <span id="bike-price-container">
-              Starting at ₹<span id="bike-price">--</span> / month
-            </span>
+          <!-- PRICE / STOCK -->
+          <div class="mb-3">
+            <h3 id="bike-price-container" class="fw-semibold text-success">
+              ₹<span id="bike-price">--</span>
+              <small class="text-muted fs-6">/ month</small>
+            </h3>
+
             <span
               id="out-of-stock-message"
               class="text-danger fw-bold"
               style="display: none"
             >
-              Out of Stock
+              <i class="bi bi-x-circle-fill me-1"></i> Currently Out of Stock
             </span>
-          </p>
-
-          <div class="mt-2">
-            <p>📦 Delivery available at nominal cost</p>
-            <p>
-              🔄 Return/Exchange: Once booked, 15% cancellation charges
-              applicable
-            </p>
           </div>
 
-          <p class="lead">
+          <!-- INFO -->
+          <div class="d-flex flex-column gap-2 mb-4">
+            <div>
+              <i class="bi bi-truck me-2 text-primary"></i>
+              Doorstep delivery at nominal cost
+            </div>
+            <div>
+              <i class="bi bi-arrow-repeat me-2 text-primary"></i>
+              15% cancellation charges applicable
+            </div>
+            <div>
+              <i class="bi bi-infinity me-2 text-primary"></i>
+              Unlimited KM • Monthly Rental
+            </div>
+          </div>
+
+          <div class="fw-bold mb-3">Description</div>
+          <p class="text-muted">
             Unlimited KM • Monthly Bike Rental • Doorstep Delivery
           </p>
 
-          <p>ADFSGHKJL</p>
+          <!-- FEATURES -->
+          <div class="mb-4">
+            <div class="fw-bold mb-3">Key Features</div>
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="d-flex align-items-center">
+                  <div class="rounded p-2 me-3">
+                    <i class="bi bi-speedometer2 text-primary fs-5"></i>
+                  </div>
+                  <div>
+                    <p class="mb-0 fw-semibold">Unlimited KM</p>
+                    <p class="text-muted small mb-0">No distance limits</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center">
+                  <div class="rounded p-2 me-3">
+                    <i class="bi bi-tools text-primary fs-5"></i>
+                  </div>
+                  <div>
+                    <p class="mb-0 fw-semibold">Free Maintenance</p>
+                    <p class="text-muted small mb-0">
+                      Service & repairs covered
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center">
+                  <div class="rounded p-2 me-3">
+                    <i class="bi bi-telephone text-primary fs-5"></i>
+                  </div>
+                  <div>
+                    <p class="mb-0 fw-semibold">Roadside Assistance</p>
+                    <p class="text-muted small mb-0">
+                      Get help whenever you’re on the road
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center">
+                  <div class="rounded p-2 me-3">
+                    <i class="bi bi-shield-check text-primary fs-5"></i>
+                  </div>
+                  <div>
+                    <p class="mb-0 fw-semibold">Full Insurance</p>
+                    <p class="text-muted small mb-0">Comprehensive coverage</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <ul class="list-unstyled mt-4">
-            <li>✔ Unlimited Kilometers</li>
-            <li>✔ Free Maintenance</li>
-            <li>✔ Roadside Assistance</li>
-            <li>✔ Flexible Monthly Plans</li>
-          </ul>
-
+          <!-- CTA -->
           <a
+            id="rent-btn"
             href="https://book.on-track.in/model-display/39/63812_2022_Honda_CB300F_DLX_PRO_1_468x263-1724151708927"
-            class="btn btn-primary btn-lg mt-4 w-100"
+            class="btn btn-primary btn-lg w-100"
           >
             Rent Ontrack Now
           </a>
@@ -181,7 +241,7 @@
       <!-- FOOTER CONTENT (SEO TEXT) -->
       <section class="mt-5">
         <h2 class="fw-bold">Why Rent Ontrack from Ontrack?</h2>
-        <p>
+        <p class="text-muted">
           Rent Ontrack in Bangalore with unlimited kilometers. Affordable
           monthly bike rental from Ontrack.
         </p>
@@ -226,7 +286,7 @@
     <!-- CTA -->
     <div class="container mt-5">
       <div class="card text-center rounded-4 p-4">
-        <h2 class="fw-bold">Need Help with Bike Rentals?</h3>
+        <h2 class="fw-bold">Need Help with Bike Rentals?</h2>
         <p>
           Call us at
           <a href="tel:9148518401" class="fw-bold"> +91-9148-518-401 </a>
