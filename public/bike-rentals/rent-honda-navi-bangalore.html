@@ -137,34 +137,42 @@
 
         <!-- DETAILS -->
         <div class="col-md-6">
-          <h1 class="mb-3">Honda Navi on Rent in Bangalore</h1>
+          <h1 class="fw-bold mb-3">Honda Navi on Rent in Bangalore</h1>
 
-          <p class="h4 mt-3">
-            <span id="bike-price-container">
-              Starting at ₹<span id="bike-price">--</span> / month
-            </span>
+          <!-- PRICE / STOCK -->
+          <div class="mb-3">
+            <h3 id="bike-price-container" class="fw-semibold text-success">
+              ₹<span id="bike-price">--</span>
+              <small class="text-muted fs-6">/ month</small>
+            </h3>
+
             <span
               id="out-of-stock-message"
               class="text-danger fw-bold"
               style="display: none"
             >
-              Out of Stock
+              <i class="bi bi-x-circle-fill me-1"></i> Currently Out of Stock
             </span>
-          </p>
-
-          <div class="mt-2">
-            <p>📦 Delivery available at nominal cost</p>
-            <p>
-              🔄 Return/Exchange: Once booked, 15% cancellation charges
-              applicable
-            </p>
           </div>
 
-          <p class="lead">
-            Unlimited KM • Monthly Bike Rental • Doorstep Delivery
-          </p>
+          <!-- INFO -->
+          <div class="d-flex flex-column gap-2 mb-4">
+            <div>
+              <i class="bi bi-truck me-2 text-primary"></i>
+              Doorstep delivery at nominal cost
+            </div>
+            <div>
+              <i class="bi bi-arrow-repeat me-2 text-primary"></i>
+              15% cancellation charges applicable
+            </div>
+            <div>
+              <i class="bi bi-infinity me-2 text-primary"></i>
+              Unlimited KM • Monthly Rental
+            </div>
+          </div>
 
-          <p>
+          <div class="fw-bold mb-3">Description</div>
+          <p class="text-muted">
             Honda’s aim was to create something ‘fun’ for its customers and so
             they launched Navi, perceived to be a cross between a motorcycle and
             a scooter. Navi is compact and looks quite funky and captivating.
@@ -173,16 +181,66 @@
             cc engine, the same one that powers Honda Activa as well.
           </p>
 
-          <ul class="list-unstyled mt-4">
-            <li>✔ Unlimited Kilometers</li>
-            <li>✔ Free Maintenance</li>
-            <li>✔ Roadside Assistance</li>
-            <li>✔ Flexible Monthly Plans</li>
-          </ul>
+          <!-- FEATURES -->
+          <div class="mb-4">
+            <div class="fw-bold mb-3">Key Features</div>
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="d-flex align-items-center">
+                  <div class="rounded p-2 me-3">
+                    <i class="bi bi-speedometer2 text-primary fs-5"></i>
+                  </div>
+                  <div>
+                    <p class="mb-0 fw-semibold">Unlimited KM</p>
+                    <p class="text-muted small mb-0">No distance limits</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center">
+                  <div class="rounded p-2 me-3">
+                    <i class="bi bi-tools text-primary fs-5"></i>
+                  </div>
+                  <div>
+                    <p class="mb-0 fw-semibold">Free Maintenance</p>
+                    <p class="text-muted small mb-0">
+                      Service & repairs covered
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center">
+                  <div class="rounded p-2 me-3">
+                    <i class="bi bi-telephone text-primary fs-5"></i>
+                  </div>
+                  <div>
+                    <p class="mb-0 fw-semibold">Roadside Assistance</p>
+                    <p class="text-muted small mb-0">
+                      Get help whenever you’re on the road
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center">
+                  <div class="rounded p-2 me-3">
+                    <i class="bi bi-shield-check text-primary fs-5"></i>
+                  </div>
+                  <div>
+                    <p class="mb-0 fw-semibold">Full Insurance</p>
+                    <p class="text-muted small mb-0">Comprehensive coverage</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <!-- CTA -->
           <a
+            id="rent-btn"
             href="https://book.on-track.in/model-display/2/rent-honda-navi-bangalore"
-            class="btn btn-primary btn-lg mt-4 w-100"
+            class="btn btn-primary btn-lg w-100"
           >
             Rent Honda Navi Now
           </a>
