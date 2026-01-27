@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
@@ -32,7 +32,7 @@
     />
 
     <!-- after bootstrap -->
-    <base href="/" />
+    <!-- <base href="/" /> -->
     <link rel="stylesheet" href="/style.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <link
@@ -117,7 +117,7 @@
     <!-- Header -->
     <section class="py-5 bg-light text-center">
       <div class="container">
-        <h1 class="fw-bolder mb-2">Help & Support</h1>
+        <h1 class="fw-bold mb-4 text-center">Help & Support</h1>
         <p class="text-muted">
           We’re here to help you. Reach out to us anytime.
         </p>
@@ -131,7 +131,7 @@
           <!-- Contact Info -->
           <div class="col-lg-5">
             <div class="card contact-card h-100 p-4">
-              <h4 class="fw-bolder mb-4">Get in Touch</h4>
+              <h3 class="fw-bolder mb-4">Get in Touch</h3>
 
               <div class="d-flex mb-4">
                 <div class="contact-icon me-3">
@@ -168,7 +168,9 @@
                   <h6 class="mb-1">Office Address</h6>
                   <p class="mb-0 text-muted">
                     Ontrack Technologies Pvt Ltd,<br />
-                    Bengaluru, India
+                    3rd Floor, 9th Avenue, 442, <br />
+                    9th Main, HAL 2nd Stage, <br />
+                    Indiranager, Bengaluru, India
                   </p>
                 </div>
               </div>
@@ -178,7 +180,7 @@
           <!-- Contact Form -->
           <div class="col-lg-7">
             <div class="container">
-              <div class="card contact-card h-100 px-4">
+              <div class="card contact-card h-100 px-4 py-4">
                 <iframe
                   src="https://tally.so/r/9qZrxE"
                   width="100%"
@@ -195,13 +197,13 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-4 bg-light text-center">
-      <div class="container">
-        <p class="mb-0 text-muted">
-          © 2026 Ontrack Technologies Pvt Ltd. All rights reserved.
-        </p>
-      </div>
-    </footer>
+    <!-- FOOTER -->
+    <div class="mt-5" id="footer"></div>
+
+    <script>
+      fetch("./bike-rental-footer.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("footer").innerHTML = html));
+    </script>
   </body>
 </html>

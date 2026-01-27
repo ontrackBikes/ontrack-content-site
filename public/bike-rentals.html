@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
@@ -108,7 +108,7 @@
     <!-- HEADER -->
     <section class="py-5 bg-light">
       <div class="container text-center">
-        <h1 class="display-5 fw-bold" id="pageTitle">
+        <h1 class="fw-bold mb-4" id="pageTitle">
           Monthly Bike Rental in Bangalore
         </h1>
         <p class="text-secondary">
@@ -144,8 +144,9 @@
       const titleText = `Bike Rentals in ${locationName}, Bangalore | Ontrack`;
 
       document.title = titleText;
-      document.getElementById("pageTitle").innerText =
-        `Monthly Bike Rental in ${locationName}, Bangalore`;
+      document.getElementById(
+        "pageTitle",
+      ).innerText = `Monthly Bike Rental in ${locationName}, Bangalore`;
 
       document
         .querySelector('meta[name="description"]')
