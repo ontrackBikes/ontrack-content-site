@@ -260,6 +260,8 @@
 
     <script>
       const bikeId = 32; // Node.js replaces 32 with e.g., 44
+      const rentBtn = document.getElementById("rent-btn");
+
       fetch("https://glacier.on-track.in/api/v2/models/" + bikeId)
         .then((res) => res.json())
         .then((data) => {
@@ -280,6 +282,12 @@
                 "none";
               document.getElementById("out-of-stock-message").style.display =
                 "inline";
+
+              rentBtn.classList.remove("btn-primary");
+              rentBtn.classList.add("btn-secondary", "disabled");
+              rentBtn.textContent = "Currently Out of Stock";
+              rentBtn.removeAttribute("href");
+              rentBtn.setAttribute("aria-disabled", "true");
             }
 
             // JSON-LD Product schema
