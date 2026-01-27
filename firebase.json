@@ -428,6 +428,14 @@
         "destination": "/about-us.html"
       },
       {
+        "source": "/monthly-bike-rental-per-day",
+        "destination": "/monthly-bike-rental-per-day.html"
+      },
+      {
+        "source": "/electric-bike-rental",
+        "destination": "/electric-bike-rental.html"
+      },
+      {
         "source": "/zero-deposit-unlimited-km-bike-rental-for-rapido-bangalore",
         "destination": "/zero-deposit-unlimited-km-bike-rental-for-rapido-bangalore.html"
       },
