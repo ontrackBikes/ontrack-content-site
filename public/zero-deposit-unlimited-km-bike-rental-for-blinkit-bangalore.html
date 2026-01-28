@@ -154,14 +154,10 @@
 
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
       <div class="container py-3">
         <a class="navbar-brand" href="/">
-          <img
-            src="./images/ontrack-logo.png"
-            alt="Ontrack Bike Rentals"
-            width="120"
-          />
+          <img src="./images/ontrack-logo.png" alt="Ontrack" width="120" />
         </a>
 
         <button
@@ -174,11 +170,13 @@
         </button>
 
         <div class="collapse navbar-collapse" id="ontrackNavbar">
-          <ul class="navbar-nav ms-auto gap-lg-4 mt-3 mt-lg-0">
-            <li class="nav-item">
+          <ul
+            class="navbar-nav ms-auto align-items-lg-center gap-lg-4 mt-3 mt-lg-0"
+          >
+            <li class="nav-item fw-bold">
               <a class="nav-link" href="/how-it-works">How It Works</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item fw-bold">
               <a class="nav-link" href="/contact/">Contact</a>
             </li>
             <li class="nav-item">
@@ -196,70 +194,105 @@
 
     <!-- Hero Section -->
     <section class="py-5 bg-primary bg-opacity-10">
-      <div class="container py-5">
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-            <div class="badge bg-light text-dark py-2 px-3 mb-3 rounded-pill">
-              Special Offer for Blinkit Partners
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-7" data-aos="fade-right">
+            <!-- Badge -->
+            <div class="mb-4">
+              <span
+                class="badge bg-primary bg-opacity-10 text-primary fs-6 fw-semibold px-4 py-3 rounded-pill border border-primary border-opacity-25"
+              >
+                <i class="bi bi-gift-fill me-2"></i>Special Offer for Blinkit
+                Partners
+              </span>
             </div>
-            <h1 class="display-5 fw-bold mb-4">
+
+            <!-- Headline -->
+            <h1 class="display-4 fw-bold mb-4">
               Zero Deposit Bike Rental for
               <span class="text-primary">Blinkit</span> Delivery Partners
             </h1>
-            <p class="lead mb-4">
+
+            <!-- Description -->
+            <p class="lead text-muted fw-medium mb-4">
               Start your Blinkit delivery journey with our exclusive zero
               security deposit bike rental plans. Earn ₹25,000-₹40,000 monthly
               with flexible rental options.
             </p>
-            <div class="d-flex flex-wrap gap-3">
+
+            <!-- CTA Buttons -->
+            <div class="d-flex flex-wrap gap-3 mb-5">
               <a
                 href="https://book.on-track.in/two-wheeler-rental/models"
-                class="btn btn-primary btn-lg px-4"
+                class="btn btn-primary btn-lg px-5 py-3 fw-bold rounded-pill shadow-sm"
               >
                 View Rental Plans <i class="bi bi-arrow-right ms-2"></i>
               </a>
               <a
                 href="https://api.whatsapp.com/send?phone=919148518401&text=Hi%20I%20am%20interested"
                 target="_blank"
-                class="btn btn-outline-success btn-lg px-4"
+                class="btn btn-outline-success btn-lg px-5 py-3 fw-semibold rounded-pill border-2"
               >
                 <i class="bi bi-whatsapp me-2"></i> WhatsApp
               </a>
             </div>
 
-            <!-- Trust Indicators -->
-            <div class="row text-black mt-5">
-              <div class="col-md-4 mb-3">
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-people-fill fs-3 text-primary me-3"></i>
+            <!-- Features -->
+            <div class="row g-3 mb-4">
+              <div class="col-md-4">
+                <div
+                  class="d-flex align-items-center bg-primary bg-opacity-10 p-3 rounded-3 border"
+                >
+                  <i class="bi bi-people-fill fs-2 text-primary me-3"></i>
                   <div>
-                    <h4 class="fw-bold mb-0">50,000+</h4>
-                    <small class="text-black">Active Partners</small>
+                    <h5 class="fw-bold mb-0">50,000+</h5>
+                    <div class="text-muted fw-medium">Active Partners</div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 mb-3">
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-currency-rupee fs-3 text-primary me-3"></i>
+
+              <div class="col-md-4">
+                <div
+                  class="d-flex align-items-center bg-primary bg-opacity-10 p-3 rounded-3 border"
+                >
+                  <i class="bi bi-currency-rupee fs-2 text-primary me-3"></i>
                   <div>
-                    <h4 class="fw-bold mb-0">5000+</h4>
-                    <small class="text-black">Avg. Weekly Earnings</small>
+                    <h5 class="fw-bold mb-0">5000+</h5>
+                    <div class="text-muted fw-medium">Weekly Earnings</div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 mb-3">
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-clock-history fs-3 text-primary me-3"></i>
+
+              <div class="col-md-4">
+                <div
+                  class="d-flex align-items-center bg-primary bg-opacity-10 p-3 rounded-3 border"
+                >
+                  <i class="bi bi-telephone fs-2 text-primary me-3"></i>
                   <div>
-                    <h4 class="fw-bold mb-0">24/7</h4>
-                    <small class="text-black">Support Available</small>
+                    <h5 class="fw-bold mb-0">Support</h5>
+                    <div class="text-muted fw-medium">Roadside Assistance</div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- Trust Indicators -->
+            <div class="d-flex align-items-center gap-4 mt-4">
+              <div class="d-flex">
+                <i class="bi bi-star-fill text-success fs-5"></i>
+                <i class="bi bi-star-fill text-success fs-5"></i>
+                <i class="bi bi-star-fill text-success fs-5"></i>
+                <i class="bi bi-star-fill text-success fs-5"></i>
+                <i class="bi bi-star-half text-success fs-5"></i>
+              </div>
+              <div class="text-muted fw-medium">
+                <span class="fw-bold">4.8/5</span> from 3,500+ Happy Blinkit
+                Delivery Partners
+              </div>
+            </div>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-left">
+          <div class="col-lg-5" data-aos="fade-left">
             <div class="card border-0 shadow-lg rounded-3 overflow-hidden">
               <img
                 src="https://on-track-jarvis.s3.ap-south-1.amazonaws.com/food-delivery-boy-driving-scooter-with-box-with-food-wearing-mask-1769065271354.jpg"
@@ -277,8 +310,10 @@
     <section id="how-it-works" class="py-5 bg-light">
       <div class="container py-5">
         <div class="text-center mb-5" data-aos="fade-up">
-          <h2 class="fw-bold mb-3">How It Works</h2>
-          <p class="lead text-muted">Start earning in just 4 simple steps</p>
+          <h2 class="display-5 fw-bold mb-3">How It Works</h2>
+          <p class="lead text-muted fw-medium mx-auto">
+            Start earning in just 4 simple steps
+          </p>
         </div>
 
         <div class="row g-4">
@@ -296,10 +331,10 @@
                   <span class="fs-4 fw-bold text-primary">1</span>
                 </div>
                 <h4 class="fw-bold mb-3">Sign Up</h4>
-                <p class="text-muted">
+                <div class="text-muted fw-medium">
                   Complete the online registration form with your basic details
                   and documents
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -318,10 +353,9 @@
                   <span class="fs-4 fw-bold text-primary">2</span>
                 </div>
                 <h4 class="fw-bold mb-3">Get Verified</h4>
-                <p class="text-muted">
-                  Upload required documents for background verification (24-48
-                  hours)
-                </p>
+                <div class="text-muted fw-medium">
+                  Upload required documents for background verification.
+                </div>
               </div>
             </div>
           </div>
@@ -340,10 +374,10 @@
                   <span class="fs-4 fw-bold text-primary">3</span>
                 </div>
                 <h4 class="fw-bold mb-3">Get Onboarded</h4>
-                <p class="text-muted">
+                <div class="text-muted fw-medium">
                   Complete training and install the Blinkit Captain app on your
                   phone
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -362,9 +396,9 @@
                   <span class="fs-4 fw-bold text-primary">4</span>
                 </div>
                 <h4 class="fw-bold mb-3">Start Earning</h4>
-                <p class="text-muted">
+                <div class="text-muted fw-medium">
                   Accept delivery requests and start earning money immediately
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -376,10 +410,10 @@
     <section class="py-5">
       <div class="container py-5">
         <div class="text-center mb-5">
-          <h2 class="fw-bold mb-3">
+          <h2 class="display-5 fw-bold mb-3">
             Why Blinkit Delivery Partners Choose Ontrack
           </h2>
-          <p class="lead text-muted">
+          <p class="lead text-muted fw-medium">
             Specially designed bike rental solutions for Blinkit captains
           </p>
         </div>
@@ -395,10 +429,10 @@
                   <i class="bi bi-currency-rupee text-primary fs-4"></i>
                 </div>
                 <h4 class="fw-bold mb-3">Affordable Weekly Plans</h4>
-                <p class="text-muted mb-0">
-                  Start with ₹1299/week plans. Perfect for new Blinkit partners
+                <div class="text-muted fw-medium">
+                  Start with ₹2,750/week plans. Perfect for new Blinkit partners
                   to test delivery work before committing.
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -417,10 +451,10 @@
                   <i class="bi bi-shield-check text-primary fs-4"></i>
                 </div>
                 <h4 class="fw-bold mb-3">Zero Security Deposit</h4>
-                <p class="text-muted mb-0">
+                <div class="text-muted fw-medium">
                   No deposit requirement. Start earning immediately without
                   heavy upfront investment.
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -439,10 +473,10 @@
                   <i class="bi bi-tools text-primary fs-4"></i>
                 </div>
                 <h4 class="fw-bold mb-3">Free Maintenance</h4>
-                <p class="text-muted mb-0">
+                <div class="text-muted fw-medium">
                   Regular servicing every 1500 km included. Focus on deliveries
                   while we handle maintenance.
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -461,10 +495,10 @@
                   <i class="bi bi-calendar-check text-primary fs-4"></i>
                 </div>
                 <h4 class="fw-bold mb-3">Flexible Duration</h4>
-                <p class="text-muted mb-0">
-                  Daily, weekly, or monthly rentals. Change plans as your
-                  Blinkit earnings grow.
-                </p>
+                <div class="text-muted fw-medium">
+                  Weekly or monthly rentals. Change plans as your Blinkit
+                  earnings grow.
+                </div>
               </div>
             </div>
           </div>
@@ -483,10 +517,10 @@
                   <i class="bi bi-headset text-primary fs-4"></i>
                 </div>
                 <h4 class="fw-bold mb-3">Dedicated Blinkit Support</h4>
-                <p class="text-muted mb-0">
+                <div class="text-muted fw-medium">
                   Special support team for Blinkit partners. Quick issue
                   resolution for uninterrupted earnings.
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -505,10 +539,10 @@
                   <i class="bi bi-lightning-charge text-primary fs-4"></i>
                 </div>
                 <h4 class="fw-bold mb-3">Same Day Delivery</h4>
-                <p class="text-muted mb-0">
+                <div class="text-muted fw-medium">
                   Get your bike delivered on the same day in most areas. Start
                   earning immediately.
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -521,10 +555,10 @@
       <div class="container py-5">
         <div class="row align-items-center">
           <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-            <h2 class="fw-bold mb-4">
+            <h2 class="display-5 fw-bold mb-4">
               Bike Rentals with <span class="text-primary">Ontrack</span>
             </h2>
-            <p class="lead text-muted mb-4">
+            <p class="lead text-muted fw-medium mb-4">
               Special partnership offering for Blinkit delivery partners
             </p>
 
@@ -533,7 +567,9 @@
                 <i class="bi bi-check-circle-fill text-success me-2"></i> Zero
                 Security Deposit
               </h5>
-              <p class="text-muted">Start riding without any upfront deposit</p>
+              <div class="text-muted fw-medium">
+                Start riding without any upfront deposit
+              </div>
             </div>
 
             <div class="mb-4">
@@ -541,9 +577,9 @@
                 <i class="bi bi-check-circle-fill text-success me-2"></i>
                 Flexible Rental Plans
               </h5>
-              <p class="text-muted">
-                Daily, weekly, and monthly plans tailored for delivery partners
-              </p>
+              <div class="text-muted fw-medium">
+                Weekly and monthly plans tailored for delivery partners
+              </div>
             </div>
 
             <div class="mb-4">
@@ -551,9 +587,9 @@
                 <i class="bi bi-check-circle-fill text-success me-2"></i>
                 Maintenance Included
               </h5>
-              <p class="text-muted">
+              <div class="text-muted fw-medium">
                 Regular servicing and breakdown support included
-              </p>
+              </div>
             </div>
 
             <div class="mb-4">
@@ -561,14 +597,14 @@
                 <i class="bi bi-check-circle-fill text-success me-2"></i>
                 Insurance Coverage
               </h5>
-              <p class="text-muted">
+              <div class="text-muted fw-medium">
                 Comprehensive insurance for peace of mind
-              </p>
+              </div>
             </div>
 
             <a
               href="https://book.on-track.in/two-wheeler-rental/models"
-              class="btn btn-primary btn-lg px-4 mt-3"
+              class="btn btn-primary btn-lg px-5 py-3 fw-bold rounded-pill shadow-sm mt-3"
             >
               Rent Now <i class="bi bi-arrow-right ms-2"></i>
             </a>
@@ -580,13 +616,13 @@
                 <div class="card border-0 shadow-sm rounded-3 h-100">
                   <div class="card-body text-center p-4">
                     <i class="bi bi-bicycle display-4 text-primary mb-3"></i>
-                    <h5 class="fw-bold">Monthly Rental</h5>
+                    <h5 class="fw-bold mt-3">Monthly Rental</h5>
                     <h3 class="text-primary fw-bold">
                       ₹4,999<small class="fs-6 text-muted">/month</small>
                     </h3>
-                    <p class="text-muted small">
+                    <div class="text-muted fw-medium">
                       All inclusive with insurance & maintenance
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -595,15 +631,15 @@
                 <div class="card border-0 shadow-sm rounded-3 h-100">
                   <div class="card-body text-center p-4">
                     <i
-                      class="bi bi-calendar-week display-4 text-primary mb-3"
+                      class="bi bi-calendar-week display-5 text-primary mb-3"
                     ></i>
-                    <h5 class="fw-bold">Weekly Rental</h5>
+                    <h5 class="fw-bold mt-3">Weekly Rental</h5>
                     <h3 class="text-primary fw-bold">
-                      ₹1,299<small class="fs-6 text-muted">/week</small>
+                      ₹2,750<small class="fs-6 text-muted">/week</small>
                     </h3>
-                    <p class="text-muted small">
+                    <div class="text-muted fw-medium">
                       Perfect for trying out delivery work
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -611,11 +647,11 @@
               <div class="col-md-6">
                 <div class="card border-0 shadow-sm rounded-3 h-100">
                   <div class="card-body text-center p-4">
-                    <i class="bi bi-tools display-4 text-primary mb-3"></i>
-                    <h5 class="fw-bold">Maintenance Support</h5>
-                    <p class="text-muted">
+                    <i class="bi bi-tools display-5 text-primary mb-3"></i>
+                    <h5 class="fw-bold mt-3">Maintenance Support</h5>
+                    <div class="text-muted fw-medium">
                       Free servicing every 45 days or 1500 kms
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -624,12 +660,12 @@
                 <div class="card border-0 shadow-sm rounded-3 h-100">
                   <div class="card-body text-center p-4">
                     <i
-                      class="bi bi-shield-check display-4 text-primary mb-3"
+                      class="bi bi-shield-check display-5 text-primary mb-3"
                     ></i>
-                    <h5 class="fw-bold">Insurance Cover</h5>
-                    <p class="text-muted">
+                    <h5 class="fw-bold mt-3">Insurance Cover</h5>
+                    <div class="text-muted fw-medium">
                       Third-party liability insurance included
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -643,8 +679,10 @@
     <section class="py-5">
       <div class="container py-5">
         <div class="text-center mb-5" data-aos="fade-up">
-          <h2 class="fw-bold mb-3">Success Stories</h2>
-          <p class="lead text-muted">Hear from our delivery partners</p>
+          <h2 class="display-5 fw-bold mb-3">Success Stories</h2>
+          <p class="lead text-muted fw-medium">
+            Hear from our delivery partners
+          </p>
         </div>
 
         <div class="row g-4">
@@ -666,11 +704,11 @@
                     >
                   </div>
                 </div>
-                <p class="text-muted">
+                <div class="text-muted fw-medium">
                   "With Ontrack bike rental, I started earning immediately
                   without investing in a bike. Now I earn ₹35,000 monthly
-                  working 8 hours daily."
-                </p>
+                  working 8 hours daily"
+                </div>
               </div>
             </div>
           </div>
@@ -693,10 +731,10 @@
                     >
                   </div>
                 </div>
-                <p class="text-muted">
+                <div class="text-muted fw-medium">
                   "The flexible hours allow me to work around my college
                   schedule. I'm able to pay my fees and support my family."
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -719,10 +757,10 @@
                     >
                   </div>
                 </div>
-                <p class="text-muted">
+                <div class="text-muted fw-medium">
                   "The weekly incentives and bonuses make a big difference. Last
                   month I earned ₹12,000 just from incentives!"
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -734,10 +772,10 @@
     <section class="py-5 bg-light">
       <div class="container py-5">
         <div class="text-center mb-5">
-          <h2 class="fw-bold mb-3">
+          <h2 class="display-5 fw-bold mb-3">
             Why Ontrack is Better for Blinkit Partners
           </h2>
-          <p class="lead text-muted">
+          <p class="lead text-muted fw-medium">
             Compare and see why 5000+ Blinkit captains choose Ontrack
           </p>
         </div>
@@ -746,7 +784,9 @@
           <table class="table table-bordered table-hover shadow-sm">
             <thead class="table-primary">
               <tr>
-                <th style="width: 35%" class="align-middle">Feature</th>
+                <th style="width: 35%" class="align-middle">
+                  <span class="fw-bold fs-5">Feature</span>
+                </th>
                 <th style="width: 35%" class="text-center align-middle">
                   <div class="d-flex flex-column align-items-center">
                     <span class="fw-bold fs-5">Ontrack Bike Rentals</span>
@@ -804,9 +844,7 @@
                 </td>
                 <td class="text-center align-middle">
                   <div class="d-flex flex-column align-items-center">
-                    <span class="fw-medium text-muted"
-                      >Mostly Monthly Only</span
-                    >
+                    <span class="fw-medium">Mostly Monthly Only</span>
                     <small class="text-muted">Limited flexibility</small>
                   </div>
                 </td>
@@ -830,9 +868,7 @@
                 </td>
                 <td class="text-center align-middle">
                   <div class="d-flex flex-column align-items-center">
-                    <span class="fw-medium text-muted"
-                      >Extra Charges Apply</span
-                    >
+                    <span class="fw-medium">Extra Charges Apply</span>
                     <small class="text-muted">You pay for servicing</small>
                   </div>
                 </td>
@@ -856,9 +892,7 @@
                 </td>
                 <td class="text-center align-middle">
                   <div class="d-flex flex-column align-items-center">
-                    <span class="fw-medium text-muted"
-                      >Basic or Extra Cost</span
-                    >
+                    <span class="fw-medium">Basic or Extra Cost</span>
                     <small class="text-muted">Additional charges</small>
                   </div>
                 </td>
@@ -888,9 +922,7 @@
                 </td>
                 <td class="text-center align-middle">
                   <div class="d-flex flex-column align-items-center">
-                    <span class="fw-medium text-muted"
-                      >Limited or Extra Cost</span
-                    >
+                    <span class="fw-medium">Limited or Extra Cost</span>
                     <small class="text-muted">Basic helmet only</small>
                   </div>
                 </td>
@@ -916,7 +948,7 @@
                 </td>
                 <td class="text-center align-middle">
                   <div class="d-flex flex-column align-items-center">
-                    <span class="fw-medium text-muted">2-3 Days Minimum</span>
+                    <span class="fw-medium">2-3 Days Minimum</span>
                     <small class="text-muted">Standard processing</small>
                   </div>
                 </td>
@@ -942,7 +974,7 @@
                 </td>
                 <td class="text-center align-middle">
                   <div class="d-flex flex-column align-items-center">
-                    <span class="fw-medium text-muted">3-5 Days Wait</span>
+                    <span class="fw-medium">3-5 Days Wait</span>
                     <small class="text-muted">Loss of earnings</small>
                   </div>
                 </td>
@@ -966,9 +998,7 @@
                 </td>
                 <td class="text-center align-middle">
                   <div class="d-flex flex-column align-items-center">
-                    <span class="fw-medium text-muted"
-                      >100-150 km/day limit</span
-                    >
+                    <span class="fw-medium">100-150 km/day limit</span>
                     <small class="text-muted">Extra charges apply</small>
                   </div>
                 </td>
@@ -1009,8 +1039,10 @@
     <section class="py-5">
       <div class="container py-5">
         <div class="text-center mb-5">
-          <h2 class="fw-bold mb-3">FAQs for Blinkit Delivery Partners</h2>
-          <p class="lead text-muted">
+          <h2 class="display-5 fw-bold mb-3">
+            FAQs for Blinkit Delivery Partners
+          </h2>
+          <p class="lead text-muted fw-medium">
             Common questions about bike rental for Blinkit work
           </p>
         </div>
@@ -1036,7 +1068,7 @@
                   class="accordion-collapse collapse show"
                   data-bs-parent="#BlinkitFAQ"
                 >
-                  <div class="accordion-body">
+                  <div class="accordion-body fw-medium">
                     Blinkit delivery partners need: 1) Aadhar Card, 2) Driving
                     License, 3) PAN Card, 4) 2 Passport Photos, and 5) Blinkit
                     Captain ID (if already registered).
@@ -1061,7 +1093,7 @@
                   class="accordion-collapse collapse"
                   data-bs-parent="#BlinkitFAQ"
                 >
-                  <div class="accordion-body">
+                  <div class="accordion-body fw-medium">
                     Yes, we offer zero security deposit for Blinkit delivery
                     partners. You only pay the rental amount. This is our
                     special offer to help delivery partners start earning
@@ -1088,7 +1120,7 @@
                   class="accordion-collapse collapse"
                   data-bs-parent="#BlinkitFAQ"
                 >
-                  <div class="accordion-body">
+                  <div class="accordion-body fw-medium">
                     We provide free maintenance for monthly and quarterly plans.
                     For weekly plans, basic repairs are covered. We also offer a
                     replacement bike within 24 hours if major repairs are
@@ -1114,7 +1146,7 @@
                   class="accordion-collapse collapse"
                   data-bs-parent="#BlinkitFAQ"
                 >
-                  <div class="accordion-body">
+                  <div class="accordion-body fw-medium">
                     Yes, you can upgrade your plan at any time. Many Blinkit
                     partners start with weekly plans and switch to monthly after
                     confirming they like delivery work and earning potential.
@@ -1139,7 +1171,7 @@
                   class="accordion-collapse collapse"
                   data-bs-parent="#BlinkitFAQ"
                 >
-                  <div class="accordion-body">
+                  <div class="accordion-body fw-medium">
                     For Blinkit partners, we prioritize approvals. You can get
                     your bike delivered within 24 hours of document
                     verification. In urgent cases, same-day delivery is
@@ -1158,20 +1190,22 @@
       <div class="container py-5">
         <div class="row align-items-center">
           <div class="col-lg-8 mb-4 mb-lg-0">
-            <h2 class="fw-bold mb-3">Ready to Start Your Blinkit Journey?</h2>
-            <p class="lead mb-4">
+            <h2 class="display-5 fw-bold mb-3">
+              Ready to Start Your Blinkit Journey?
+            </h2>
+            <p class="lead text-muted fw-medium mb-4">
               Join 5000+ Blinkit delivery partners who trust Ontrack for their
               bike rental needs.
             </p>
             <div class="row">
               <div class="col-md-6 mb-3">
                 <div class="d-flex align-items-center">
-                  <i class="bi bi-whatsapp fs-3 me-3"></i>
+                  <i class="bi bi-whatsapp fs-2 me-3 text-success"></i>
                   <div>
                     <h5 class="fw-bold mb-1">WhatsApp</h5>
                     <a
                       href="https://wa.me/9148518401?text=Hi I am interested in renting a bike for Blinkit delivery"
-                      class="mb-0"
+                      class="mb-0 fw-medium text-decoration-none"
                       >+91-9148518401</a
                     >
                   </div>
@@ -1179,10 +1213,12 @@
               </div>
               <div class="col-md-6 mb-3">
                 <div class="d-flex align-items-center">
-                  <i class="bi bi-telephone fs-3 me-3"></i>
+                  <i class="bi bi-telephone fs-2 me-3 text-primary"></i>
                   <div>
                     <h5 class="fw-bold mb-1">Call Now</h5>
-                    <a href="tel:+919148518401" class="mb-0"
+                    <a
+                      href="tel:+919148518401"
+                      class="mb-0 fw-medium text-decoration-none"
                       >9148518401 (Toll Free)</a
                     >
                   </div>
@@ -1191,13 +1227,34 @@
             </div>
           </div>
           <div class="col-lg-4">
-            <div class="card border-0 shadow-lg">
-              <div class="card-body p-4">
-                <h4 class="fw-bold mb-3 text-dark">Get in touch today</h4>
-                <a href="tel:+919148518401" class="mb-0"
-                  >9148518401 (Toll Free)</a
-                >
-              </div>
+            <div class="d-flex gap-2 align-items-center">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.ontrack.ontrack&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="d-block"
+              >
+                <!-- /images/webp/google-play-badge-logo.webp -->
+                <img
+                  src="https://on-track.in/images/webp/google-play-badge-logo.webp"
+                  alt="Download Ontrack App from Google Play"
+                  class="img-fluid"
+                />
+              </a>
+
+              <a
+                href="https://apps.apple.com/in/app/ontrack-bike-rentals-rto/id1433908606"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="d-block"
+              >
+                <!-- /images/webp/on-the-app-store-apple-logo.webp -->
+                <img
+                  src="https://on-track.in/images/webp/on-the-app-store-apple-logo.webp"
+                  alt="Download Ontrack App from App Store"
+                  class="img-fluid"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -1217,8 +1274,8 @@
             />
             <p class="text-light">
               India's leading bike rental service for delivery partners.
-              Specializing in zero deposit rentals for Blinkit, Blinkit, and
-              Zomato delivery partners.
+              Specializing in zero deposit rentals for Blinkit and Zomato
+              delivery partners.
             </p>
           </div>
           <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
